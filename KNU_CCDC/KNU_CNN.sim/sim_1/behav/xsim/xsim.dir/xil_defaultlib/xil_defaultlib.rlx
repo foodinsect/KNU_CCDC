@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv,1727618008,systemVerilog,,,,tb_Max_Pooling_ReLU,,,,,,,,
+E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv,1727607361,systemVerilog,,,,tb_top,,,,,,,,
+E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv,1727617984,systemVerilog,,E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv,,Max_Pooling_ReLU,,,,,,,,
+E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv,1727607141,systemVerilog,,E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv,,PE_Array,,,,,,,,
+E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv,1727606805,systemVerilog,,E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv,,conv2d_pe,,,,,,,,
+E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv,1727607444,systemVerilog,,E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv,,top,,,,,,,,

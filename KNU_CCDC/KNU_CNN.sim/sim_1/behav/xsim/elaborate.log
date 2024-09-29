@@ -1,24 +1,7 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 5006fee123d24142870b0398cbfb4b9e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_PE_Array_behav xil_defaultlib.tb_PE_Array xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 2 for port 'cycle' [E:/CCDC/PE_5x5_test - 복사본/PE_5x5_test.srcs/sim_1/new/tb_PE_Array.sv:30]
 Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/CCDC/PE_5x5_test - 복사본/PE_5x5_test.srcs/sources_1/new/top.sv" Line 1. Module top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/PE_5x5_test - 복사본/PE_5x5_test.srcs/sources_1/new/PE_Array.sv" Line 1. Module PE_Array_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/PE_5x5_test - 복사본/PE_5x5_test.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/PE_5x5_test - 복사본/PE_5x5_test.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/PE_5x5_test - 복사본/PE_5x5_test.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/PE_5x5_test - 복사본/PE_5x5_test.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/PE_5x5_test - 복사본/PE_5x5_test.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/PE_5x5_test - 복사본/PE_5x5_test.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_PE_Array
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_PE_Array_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
