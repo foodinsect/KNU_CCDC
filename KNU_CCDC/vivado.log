@@ -2,794 +2,88 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Sep 29 21:28:54 2024
-# Process ID: 9796
+# Start of session at: Tue Oct  1 19:56:38 2024
+# Process ID: 12936
 # Current directory: E:/CCDC/KNU_Git/foodbug/KNU_CCDC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2800 E:\CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7000 E:\CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
 # Log file: E:/CCDC/KNU_Git/foodbug/KNU_CCDC/vivado.log
 # Journal file: E:/CCDC/KNU_Git/foodbug/KNU_CCDC\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.xpr
-INFO: [Project 1-313] Project file moved from 'E:/CCDC/KNU_CNN/KNU_CNN' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 720.289 ; gain = 128.324
 update_compile_order -fileset sources_1
-close [ open E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv w ]
-add_files E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv
-update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv w ]
-add_files -fileset sim_1 E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv
-update_compile_order -fileset sim_1
-set_property top tb_Max_Pooling_ReLU [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-set_property top Max_Pooling_ReLU [current_fileset]
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_Max_Pooling_ReLU' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_Max_Pooling_ReLU_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.tb_Max_Pooling_ReLU
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_Max_Pooling_ReLU_behav
-
-****** Webtalk v2019.1 (64-bit)
-  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-source E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/xsim.dir/tb_Max_Pooling_ReLU_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sun Sep 29 22:49:43 2024...
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_Max_Pooling_ReLU_behav -key {Behavioral:sim_1:Functional:tb_Max_Pooling_ReLU} -tclbatch {tb_Max_Pooling_ReLU.tcl} -view {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
-WARNING: Simulation object /tb_PE_Array/clk was not found in the design.
-WARNING: Simulation object /tb_PE_Array/rst_n was not found in the design.
-WARNING: Simulation object /tb_PE_Array/pixels was not found in the design.
-WARNING: Simulation object /tb_PE_Array/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/clear was not found in the design.
-WARNING: Simulation object /tb_PE_Array/cycle was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_11 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_12 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_13 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/bias_1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_o was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY1[0].Ch1 /clear_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter1_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter2_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter3_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /partial_sum was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /partial_sum was not found in the design.
-source tb_Max_Pooling_ReLU.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-Test 1 - data_out: 00a
-Test 2 - data_out: 000
-Test 3 - data_out: 007
-Test 4 - data_out: 000
-$finish called at time : 180 ns : File "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv" Line 87
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_Max_Pooling_ReLU_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 806.246 ; gain = 14.480
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_Max_Pooling_ReLU' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_Max_Pooling_ReLU_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_Max_Pooling_ReLU_behav -key {Behavioral:sim_1:Functional:tb_Max_Pooling_ReLU} -tclbatch {tb_Max_Pooling_ReLU.tcl} -view {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
-WARNING: Simulation object /tb_PE_Array/clk was not found in the design.
-WARNING: Simulation object /tb_PE_Array/rst_n was not found in the design.
-WARNING: Simulation object /tb_PE_Array/pixels was not found in the design.
-WARNING: Simulation object /tb_PE_Array/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/clear was not found in the design.
-WARNING: Simulation object /tb_PE_Array/cycle was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_11 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_12 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_13 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/bias_1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_o was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY1[0].Ch1 /clear_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter1_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter2_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter3_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /partial_sum was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /partial_sum was not found in the design.
-source tb_Max_Pooling_ReLU.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-Test 1 - data_out: 00a
-Test 2 - data_out: 000
-Test 3 - data_out: 007
-Test 4 - data_out: 000
-$finish called at time : 180 ns : File "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv" Line 87
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_Max_Pooling_ReLU_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-run 10 us
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_Max_Pooling_ReLU' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_Max_Pooling_ReLU_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-Test 1 - data_out: 00a
-Test 2 - data_out: 000
-Test 3 - data_out: 007
-Test 4 - data_out: 000
-$finish called at time : 180 ns : File "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv" Line 87
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_Max_Pooling_ReLU' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_Max_Pooling_ReLU_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-Test 1 - data_out: 00a
-Test 2 - data_out: 000
-Test 3 - data_out: 007
-Test 4 - data_out: 000
-$finish called at time : 180 ns : File "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv" Line 87
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_Max_Pooling_ReLU' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_Max_Pooling_ReLU_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_Max_Pooling_ReLU
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.tb_Max_Pooling_ReLU
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_Max_Pooling_ReLU_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-Test 1 - data_out: 00a
-Test 2 - data_out: 000
-Test 3 - data_out: 007
-Test 4 - data_out: 000
-$finish called at time : 180 ns : File "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv" Line 87
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 811.395 ; gain = 0.000
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_Max_Pooling_ReLU' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_Max_Pooling_ReLU_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_Max_Pooling_ReLU
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_Max_Pooling_ReLU_behav xil_defaultlib.tb_Max_Pooling_ReLU xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.tb_Max_Pooling_ReLU
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_Max_Pooling_ReLU_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-Test 1 - data_out: 00a
-Test 2 - data_out: 000
-Test 3 - data_out: 007
-Test 4 - data_out: 000
-$finish called at time : 185 ns : File "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_Max_Pooling_ReLU.sv" Line 87
-relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 812.395 ; gain = 0.000
-set_property top tb_top [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-set_property top top [current_fileset]
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-launch_simulation
-boost::filesystem::remove: 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스 할 수 없습니다: "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/simulate.log"
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" Line 1. Module top doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" Line 1. Module PE_Array_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" Line 1. Module conv2d_pe doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
-
-****** Webtalk v2019.1 (64-bit)
-  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-source E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sun Sep 29 22:55:15 2024...
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -view {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
-WARNING: Simulation object /tb_PE_Array/clk was not found in the design.
-WARNING: Simulation object /tb_PE_Array/rst_n was not found in the design.
-WARNING: Simulation object /tb_PE_Array/pixels was not found in the design.
-WARNING: Simulation object /tb_PE_Array/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/clear was not found in the design.
-WARNING: Simulation object /tb_PE_Array/cycle was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_11 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_12 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_13 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/bias_1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_o was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY1[0].Ch1 /clear_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter1_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter2_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter3_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /partial_sum was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /partial_sum was not found in the design.
-source tb_top.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 819.430 ; gain = 5.977
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 819.430 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -view {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
-WARNING: Simulation object /tb_PE_Array/clk was not found in the design.
-WARNING: Simulation object /tb_PE_Array/rst_n was not found in the design.
-WARNING: Simulation object /tb_PE_Array/pixels was not found in the design.
-WARNING: Simulation object /tb_PE_Array/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/clear was not found in the design.
-WARNING: Simulation object /tb_PE_Array/cycle was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_11 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_12 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_13 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/bias_1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_o was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY1[0].Ch1 /clear_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter1_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter2_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter3_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /partial_sum was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /partial_sum was not found in the design.
-source tb_top.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -view {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
-WARNING: Simulation object /tb_PE_Array/clk was not found in the design.
-WARNING: Simulation object /tb_PE_Array/rst_n was not found in the design.
-WARNING: Simulation object /tb_PE_Array/pixels was not found in the design.
-WARNING: Simulation object /tb_PE_Array/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/idx was not found in the design.
-WARNING: Simulation object /tb_PE_Array/clear was not found in the design.
-WARNING: Simulation object /tb_PE_Array/cycle was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_11 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_12 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/weight_13 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/bias_1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/valid_o was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY1[0].Ch1 /clear_i was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter1_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter2_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/filter3_weights was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out1[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out2[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[0] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/conv_out3[1] was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /partial_sum was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_PE_Array/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /partial_sum was not found in the design.
-source tb_top.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 828.363 ; gain = 5.219
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Sep 29 23:01:43 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  1 19:57:12 2024...
+in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -view {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 785.773 ; gain = 27.648
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 820.914 ; gain = 0.000
