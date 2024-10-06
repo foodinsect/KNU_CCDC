@@ -3,7 +3,7 @@ module PE_Array (
     input wire rstn_i,
     input wire valid_i,
     input wire clear_i,
-    input wire signed [11:0] data_in [0:6],           // 12 rows of input data (each 12 bits)
+    input wire signed [11:0] data_in [0:5],           // 12 rows of input data (each 12 bits)
     input wire signed [7:0] filter1_weights [0:24],    // Weights for Filter 1 (5x5)
     input wire signed [7:0] filter2_weights [0:24],    // Weights for Filter 2 (5x5)
     input wire signed [7:0] filter3_weights [0:24],    // Weights for Filter 3 (5x5)
@@ -41,7 +41,7 @@ module PE_Array (
                 .rstn_i(rstn_i),
                 .valid_i(valid_i),
                 .clear_i(clear_i),
-                .data_in(data_in[i:5+i]),            // Input data slice for this PE
+                .data_in(data_in[i:4+i]),            // Input data slice for this PE
                 .weight_in(filter1_weights),     // Filter 1 weights
                 .bias_in(bias_in[0]),
                 .pe_out(conv_out1[i])            // Output of each PE in the 5x8 array
@@ -57,7 +57,7 @@ module PE_Array (
                 .rstn_i(rstn_i),
                 .valid_i(valid_i),
                 .clear_i(clear_i),
-                .data_in(data_in[i:5+i]),            // Input data slice for this PE
+                .data_in(data_in[i:4+i]),            // Input data slice for this PE
                 .weight_in(filter2_weights),     // Filter 2 weights
                 .bias_in(bias_in[1]),
                 .pe_out(conv_out2[i])            // Output of each PE in the 5x8 array
@@ -73,7 +73,7 @@ module PE_Array (
                 .rstn_i(rstn_i),
                 .valid_i(valid_i),
                 .clear_i(clear_i),
-                .data_in(data_in[i:5+i]),            // Input data slice for this PE
+                .data_in(data_in[i:4+i]),            // Input data slice for this PE
                 .weight_in(filter3_weights),     // Filter 3 weights
                 .bias_in(bias_in[2]),
                 .pe_out(conv_out3[i])            // Output of each PE in the 5x8 array
@@ -107,7 +107,7 @@ module PE_Array (
             end
             if (clear_d[0]) begin
                 valid_o <= 1'b0;
-                buffer_count <= 3'b010;  // Reset buffer count for the next set
+                buffer_count <= 3'b001;  // Reset buffer count for the next set
             end
         end
     end

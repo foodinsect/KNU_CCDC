@@ -1,76 +1,54 @@
-module FIFO_2x2 #(
-    parameter DATA_WIDTH = 12  // Width of each stored data (for conv result)
-)(
+module FIFO (
     input wire clk_i,
     input wire rstn_i,
-    input wire wr_en_i,           // Write enable signal
-    input wire rd_en_i,           // Read enable signal
+    input wire [11:0] data_in_i [1:0],
+    input wire valid_in_i,
 
-    input wire [DATA_WIDTH-1:0] data_in [0:1],  // Data to be written (2 rows at a time)
-    output reg [DATA_WIDTH-1:0] data_out [0:1][0:1], // Data to be read when FIFO is full
-    output reg full_o,           // FIFO full flag
-    output reg ready_o           // FIFO ready to send data flag
+    output wire [11:0] data_out_o [1:0],
+    output wire valid_out_o
 );
-    // 2x2 FIFO memory
-    reg [DATA_WIDTH-1:0] MEM [0:1][0:1]; // 2x2 FIFO memory
 
-    reg wr_row_ptr, wr_col_ptr; // Write row and column pointers
-    reg num_elements; // Number of elements in FIFO (updated to 2 bits)
+    reg [11:0] shift_reg [1:0];
+    reg valid_out;
+    reg [1:0] shift_counter;
 
-    // Reset behavior and write logic
-    always @(posedge clk_i or negedge rstn_i) begin
-        if (!rstn_i) begin
-            wr_row_ptr <= 0;
-            wr_col_ptr <= 0;
-            full_o <= 0;
-            ready_o <= 0;
-            num_elements <= 0;
-        end else if (wr_en_i && !full_o) begin
-            // Write 2 rows of data into MEM for the current column
-            MEM[wr_row_ptr][wr_col_ptr] <= data_in[0];  // Store 1st row
-            MEM[wr_row_ptr+1][wr_col_ptr] <= data_in[1];  // Store 2nd row
+    wire [11:0] max_value;
 
-            // Move to the next column
-            if (wr_col_ptr == 1) begin
-                wr_col_ptr <= 0;
-                wr_row_ptr <= wr_row_ptr + 1;  // Move to the next 2 rows
-            end else begin
-                wr_col_ptr <= wr_col_ptr + 1;
-            end
+    assign valid_out_o = valid_out;
+    assign data_out_o[0] = (valid_out) ? shift_reg[0] : 12'hxxx;
+    assign data_out_o[1] = (valid_out) ? shift_reg[1] : 12'hxxx;
 
-            // Update the number of elements in the FIFO
-            num_elements <= num_elements + 1;
-
-            // Check if FIFO is full (2 data entries, since we are dealing with 2x2 FIFO)
-            if (num_elements == 1) begin
-                full_o <= 1;
-                ready_o <= 1;  // FIFO is ready to send data
-            end else begin
-                full_o <= 0;
-            end
-        end
-    end
-
-    // Automatically output data when FIFO is full
     always @(posedge clk_i) begin
-        if (full_o) begin
-            // Output the entire 2x2 block
-            data_out[0][0] <= MEM[0][0];  // First row, first column
-            data_out[0][1] <= MEM[0][1];  // First row, second column
-            data_out[1][0] <= MEM[1][0];  // Second row, first column
-            data_out[1][1] <= MEM[1][1];  // Second row, second column
-            MEM[0][0] <= 12'hzzz;
-            MEM[0][1] <= 12'hzzz;
-            MEM[1][0] <= 12'hzzz;
-            MEM[1][1] <= 12'hzzz;
-            ready_o <= 0;
+        if (~rstn_i) begin
+            shift_reg[1] <= 0;
+            shift_reg[0] <= 0;
+            shift_counter <= 0;
+            valid_out <= 0;
         end
         else begin
-            data_out[0][0] <= 12'hzzz;
-            data_out[0][1] <= 12'hzzz;
-            data_out[1][0] <= 12'hzzz;
-            data_out[1][1] <= 12'hzzz;
+            if (valid_in_i) begin
+
+                shift_reg[1] <= shift_reg[0];
+                shift_reg[0] <= max_value;
+
+                if (shift_counter == 2'b01) begin
+                    valid_out <= 1;
+                    shift_counter <= 0;
+                end
+                else begin
+                    shift_counter <= shift_counter + 1;
+                    valid_out <= 0;
+                end
+            end
+
+            else begin
+                valid_out <= 0;
+            end
         end
     end
 
+    comparator comparator_inst(
+        .data_in_i(data_in_i),
+        .data_out_o(max_value)
+    );
 endmodule

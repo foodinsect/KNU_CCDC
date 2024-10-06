@@ -4,4 +4,19 @@ Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.global_controller
+Compiling module xil_defaultlib.conv2d_pe
+Compiling module xil_defaultlib.PE_Array_default
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.Max_Pooling_ReLU
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
