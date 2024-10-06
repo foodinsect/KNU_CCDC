@@ -2,10 +2,10 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Oct  6 15:00:18 2024
-# Process ID: 25872
+# Start of session at: Sun Oct  6 18:49:20 2024
+# Process ID: 24752
 # Current directory: E:/CCDC/KNU_Git/foodbug/KNU_CCDC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25084 E:\CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22160 E:\CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
 # Log file: E:/CCDC/KNU_Git/foodbug/KNU_CCDC/vivado.log
 # Journal file: E:/CCDC/KNU_Git/foodbug/KNU_CCDC\vivado.jou
 #-----------------------------------------------------------
@@ -16,26 +16,7 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
-open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 713.984 ; gain = 94.113
-update_compile_order -fileset sources_1
-close [ open E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_cnn1param.sv w ]
-add_files E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_cnn1param.sv
-close [ open E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv w ]
-add_files E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv] -no_script -reset -force -quiet
-remove_files  E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_global_controller.sv w ]
-add_files -fileset sim_1 E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_global_controller.sv
-update_compile_order -fileset sim_1
-close [ open E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv w ]
-add_files E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv
-update_compile_order -fileset sources_1
-close [ open E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv w ]
-add_files E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 708.355 ; gain = 113.137
 update_compile_order -fileset sources_1
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
@@ -46,70 +27,7 @@ INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FIFO
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comparator
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module global_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv:59]
-ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv:69]
-ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv:79]
-ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv:87]
-ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv:96]
-ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv:105]
-ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv:7]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FIFO
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comparator
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module global_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
 "xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
@@ -119,31 +37,8 @@ Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.global_controller
-Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.comparator
-Compiling module xil_defaultlib.FIFO
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
-
-****** Webtalk v2019.1 (64-bit)
-  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-source E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sun Oct  6 15:45:15 2024...
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -152,43 +47,6 @@ INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2019.1
 Time resolution is 1 ps
 open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
-WARNING: Simulation object /tb_top/UUT/PE_inst/valid_i was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/clear_i was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/data_in was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/filter1_weights was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/filter2_weights was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/filter3_weights was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/bias_in was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/valid_o was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/conv_out1 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/conv_out1[0] was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/conv_out1[1] was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/conv_out2 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/conv_out2[0] was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/conv_out2[1] was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/conv_out3 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/conv_out3[0] was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/conv_out3[1] was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[0].Ch2 /partial_sum was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /data_in was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /weight_in was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /bias_in was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /pe_out was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer1 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer2 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer3 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer4 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /line_buffer5 was not found in the design.
-WARNING: Simulation object /tb_top/UUT/PE_inst/\PE_ARRAY2[1].Ch2 /partial_sum was not found in the design.
 source tb_top.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -200,9 +58,10 @@ source tb_top.tcl
 #   }
 # }
 # run 1000ns
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 777.387 ; gain = 27.793
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 813.996 ; gain = 22.254
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 777.387 ; gain = 31.371
 relaunch_sim
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -226,7 +85,7 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_C
 INFO: [VRFC 10-311] analyzing module global_controller
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_top
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
@@ -255,537 +114,16 @@ Compiling module xil_defaultlib.top
 Compiling module xil_defaultlib.tb_top
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_top_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 821.012 ; gain = 0.000
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FIFO
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comparator
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module global_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.global_controller
-Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.comparator
-Compiling module xil_defaultlib.FIFO
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 822.199 ; gain = 0.000
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FIFO
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comparator
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module global_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.global_controller
-Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.comparator
-Compiling module xil_defaultlib.FIFO
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1013.160 ; gain = 0.000
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FIFO
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comparator
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module global_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.global_controller
-Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.comparator
-Compiling module xil_defaultlib.FIFO
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1013.160 ; gain = 0.000
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 Vivado Simulator 2019.1
 Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1013.160 ; gain = 0.000
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FIFO
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comparator
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module global_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-323] array element widths (6, 7) don't match [E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv:46]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FIFO
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comparator
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module global_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-323] array element widths (6, 7) don't match [E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv:46]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FIFO
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comparator
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module global_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.global_controller
-Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.comparator
-Compiling module xil_defaultlib.FIFO
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -view {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
-source tb_top.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1013.160 ; gain = 0.000
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1094.383 ; gain = 0.000
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1094.383 ; gain = 0.000
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FIFO
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PE_Array
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module comparator
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module conv2d_pe
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module global_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.global_controller
-Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.comparator
-Compiling module xil_defaultlib.FIFO
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1094.383 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 805.164 ; gain = 0.000
 save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
 save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
 save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
 save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse -scan_for_includes E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv
-update_compile_order -fileset sim_1
-export_ip_user_files -of_objects  [get_files E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_PE_Array.sv
-save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
-relaunch_sim
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
-"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" Line 1. Module FIFO doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.global_controller
-Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.comparator
-Compiling module xil_defaultlib.FIFO
-Compiling module xil_defaultlib.Max_Pooling_ReLU
-Compiling module xil_defaultlib.top
-Compiling module xil_defaultlib.tb_top
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1094.383 ; gain = 0.000
 save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Oct  6 16:27:46 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Oct  6 18:54:56 2024...

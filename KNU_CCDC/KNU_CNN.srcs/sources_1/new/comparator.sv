@@ -1,6 +1,6 @@
 module comparator(
-    input wire [11:0] data_in_i [1:0],
-    output reg [11:0] data_out_o
+    input wire signed [11:0] data_in_i [1:0],
+    output reg signed [11:0] data_out_o
 );
 
     always @(*) begin
