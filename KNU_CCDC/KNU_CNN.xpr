@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="E:/CCDC/KNU_CNN/KNU_CNN/KNU_CNN.xpr">
+<Project Version="7" Minor="40" Path="E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="016c3969ec4b42579f24e73fc71ce675"/>
@@ -22,6 +22,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
@@ -31,7 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="232"/>
+    <Option Name="WTXSimLaunchSim" Val="325"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -59,28 +60,8 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/PE_Array.sv">
+      <File Path="$PSRCDIR/sources_1/new/Accumulator.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../PE_5x5_test_row2/PE_5x5_test.srcs/sources_1/new/PE_Array.sv"/>
-          <Attr Name="ImportTime" Val="1727607141"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/conv2d_pe.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../PE_5x5_test_row2/PE_5x5_test.srcs/sources_1/new/conv2d_pe.sv"/>
-          <Attr Name="ImportTime" Val="1727606805"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/top.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../PE_5x5_test_row2/PE_5x5_test.srcs/sources_1/new/top.sv"/>
-          <Attr Name="ImportTime" Val="1727607444"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -88,9 +69,93 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/FIFO.sv">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/Max_Pooling_ReLU.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/PE_Array.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../PE_5x5_test_row2/PE_5x5_test.srcs/sources_1/new/PE_Array.sv"/>
+          <Attr Name="ImportTime" Val="1727607141"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/buffer1.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/comparator.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/conv2d_pe.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../PE_5x5_test_row2/PE_5x5_test.srcs/sources_1/new/conv2d_pe.sv"/>
+          <Attr Name="ImportTime" Val="1727606805"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/global_controller.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/top.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../PE_5x5_test_row2/PE_5x5_test.srcs/sources_1/new/top.sv"/>
+          <Attr Name="ImportTime" Val="1727607444"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/ROM_Bias.sv">
+        <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../PE_5x5_test_row2/PE_5x5_test.srcs/sources_1/new/FIFO.sv"/>
-          <Attr Name="ImportTime" Val="1727604380"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/ROM_Image.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/ROM_Weight.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/ROM_cnn1param.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -99,7 +164,6 @@
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="top"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -110,10 +174,8 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/new/tb_PE_Array.sv">
+      <File Path="$PSRCDIR/sim_1/new/tb_top.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../PE_5x5_test_row2/PE_5x5_test.srcs/sim_1/new/tb_PE_Array.sv"/>
-          <Attr Name="ImportTime" Val="1727607361"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -121,7 +183,7 @@
       </File>
       <File Path="$PSRCDIR/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../PE_5x5_test_row2/tb_PE_Array_behav1.wcfg"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../PE_5x5_test_row2/tb_PE_Array_behav1.wcfg"/>
           <Attr Name="ImportTime" Val="1727607164"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -130,12 +192,11 @@
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="tb_top"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../PE_5x5_test_row2/tb_PE_Array_behav.wcfg"/>
-        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../PE_5x5_test_row2/tb_PE_Array_behav1.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../../PE_5x5_test_row2/tb_PE_Array_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../../PE_5x5_test_row2/tb_PE_Array_behav1.wcfg"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
