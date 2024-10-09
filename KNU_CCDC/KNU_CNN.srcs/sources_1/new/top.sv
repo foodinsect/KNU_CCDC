@@ -8,6 +8,11 @@ module top (
     output wire empty_o,                            // FIFO empty flag
     output wire done
 );
+
+////////////////////////////////////////////////////////////////////
+// Signal Declaration
+    
+    // Connection Image rom
     wire signed [11:0] data_in [0:5];
     
     // Connections Weight rom
@@ -62,8 +67,8 @@ module top (
     wire signed [11:0] buffer2_out [0:5];
     wire signed [11:0] buffer3_out [0:5];
     
-        
-    // Instantiate the global_controller
+////////////////////////////////////////////////////////////////////
+// Controller and PE Inst
     global_controller controller (
         .clk_i(clk_i),
         .rstn_i(rstn_i),
@@ -79,7 +84,8 @@ module top (
         .cycle(cycle)
     );
     
-    // Instantiate PE_Array
+////////////////////////////////////////////////////////////////////
+// PE Inst
     PE_Array PE_inst (
         .clk_i(clk_i),
         .rstn_i(rstn_i),
@@ -96,6 +102,8 @@ module top (
         .conv_out3(conv_out3)       // Output from Filter 3
     );
     
+////////////////////////////////////////////////////////////////////
+// FIFO
     FIFO FIFO_Ch1(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
@@ -125,7 +133,9 @@ module top (
         .data_out_o(oFIFO_3),
         .valid_out_o(oMAX_En_3)
     );
-
+    
+////////////////////////////////////////////////////////////////////
+// MaxPooling & ReLU
     Max_Pooling_ReLU MaxPooling_Ch1(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
@@ -152,7 +162,9 @@ module top (
         .data_o(oMAX_3),
         .valid_o(oBuf_En_3)
     );
-
+    
+////////////////////////////////////////////////////////////////////
+// Buf Inst
     buffer1 BUF1(
         .clk_i(clk_i),
         .rstn_i(rstn_i & (~buf_adr_clr)),
@@ -180,9 +192,8 @@ module top (
         .dout_o(buffer3_out) 
     );
     
-    ////////////////////////////////////////////////////////////////////
-    // ROMs
-    
+////////////////////////////////////////////////////////////////////
+// ROMs inst
     ROM_Image image_rom(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
