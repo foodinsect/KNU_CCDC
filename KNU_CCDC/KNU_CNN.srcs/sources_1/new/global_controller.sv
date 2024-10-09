@@ -2,16 +2,16 @@ module global_controller(
     input wire          clk_i,
     input wire          rstn_i,
     input wire          start_i,
-    input wire          iPE_valid_o,
+    input wire          iPE_valid_o,        // PE_valid_PEout_o 
 
-    output reg          oBuf1_we,
-    output reg          oBuf_adr_clr,          
-    output reg          oBuf_valid_en,
-    output reg          oPE_clr,
-    output reg          oPE_valid_i,
-    output reg          oimage_rom_en,
-    output reg   [9:0]  oimage_idx,
-    output reg   [5:0]  ocycle
+    output reg          oBuf1_we,           // buffer1_we
+    output reg          oBuf_adr_clr,       // buf1_adr_clr
+    output reg          oBuf_valid_en,      // buf1_valid_en
+    output reg          oPE_clr,            // PE_clr_o
+    output reg          oPE_valid_i,        // PE_valid_PEin_o
+    output reg          oimage_rom_en,      // rom_conv1_read
+    output reg   [9:0]  oimage_idx,         // PEin_idx
+    output reg   [5:0]  ocycle              // cycle
 );
 
 reg [3:0] current_state, next_state;
