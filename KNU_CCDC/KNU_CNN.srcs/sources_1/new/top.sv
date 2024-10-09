@@ -1,24 +1,45 @@
 module top (
     input wire clk_i,
     input wire rstn_i,
-    input wire valid_i,
-    input wire clear_i,
-    input wire signed [11:0] data_in [0:5],             // 6 rows of input data (each 12 bits)
-    input wire signed [7:0] filter1_weights [0:24],     // Weights for Filter 1 (5x5)
-    input wire signed [7:0] filter2_weights [0:24],     // Weights for Filter 2 (5x5)
-    input wire signed [7:0] filter3_weights [0:24],     // Weights for Filter 3 (5x5)
-    input wire signed [7:0] bias_in [0:2],              // Bias inputs for each filter
+    input wire start_i,
     output wire signed [11:0] fifo_out [0:1][0:1],      // Output data from FIFO (2 rows at a time)
-    input wire [5:0] cycle,
-    input wire  buf1_adr_clr,
-    input wire  buf1_valid_en,
-    input wire  buffer1_we_i,
-    output wire [11:0] buffer1_out [0:5],
     output wire valid_o,
     output wire full_o,                            // FIFO full flag
-    output wire empty_o                            // FIFO empty flag
+    output wire empty_o,                            // FIFO empty flag
+    output wire done
 );
+    wire signed [11:0] data_in [0:5];
+    
+    // Connections Weight rom
+    wire signed [7:0] conv1_weight_1 [0:24]; 
+    wire signed [7:0] conv1_weight_2 [0:24];
+    wire signed [7:0] conv1_weight_3 [0:24];
+    wire signed [7:0] conv2_weight_11 [0:24]; 
+    wire signed [7:0] conv2_weight_12 [0:24];
+    wire signed [7:0] conv2_weight_13 [0:24];
+    wire signed [7:0] conv2_weight_21 [0:24]; 
+    wire signed [7:0] conv2_weight_22 [0:24];
+    wire signed [7:0] conv2_weight_23 [0:24];
+    wire signed [7:0] conv2_weight_31 [0:24]; 
+    wire signed [7:0] conv2_weight_32 [0:24];
+    wire signed [7:0] conv2_weight_33 [0:24];
 
+    // Connections Bias
+    wire signed [7:0] conv1_bias [0:2];
+    wire signed [7:0] conv2_bias [0:2];
+    
+    // Control Signal
+    wire            buf_valid_en;
+    wire            buffer1_we;
+    wire            buf_adr_clr;
+    
+    wire            PE_valid_o;
+    wire            PE_clr_o;
+    wire            PE_valid_i;
+    wire            image_rom_en;
+    wire [9:0]      image_idx;
+    wire [5:0] cycle;
+    
     // Internal connections between PE_Array and FIFO
     wire signed [11:0] conv_out1 [0:1];             // Filter 1 outputs (2 values)
     wire signed [11:0] conv_out2 [0:1];             // Filter 2 outputs (2 values)
@@ -37,20 +58,38 @@ module top (
     wire oBuf_En_1, oBuf_En_2, oBuf_En_3;
     
     // Internal connections between Buffer and Conv Layer 2
+    wire signed [11:0] buffer1_out [0:5];
+    wire signed [11:0] buffer2_out [0:5];
+    wire signed [11:0] buffer3_out [0:5];
     
-
-
+        
+    // Instantiate the global_controller
+    global_controller controller (
+        .clk_i(clk_i),
+        .rstn_i(rstn_i),
+        .start_i(start_i),
+        .PE_valid_PEout_o(PE_valid_o),
+        .buffer1_we(buffer1_we),
+        .Buf_adr_clr(buf_adr_clr),
+        .Buf_valid_en(buf_valid_en),
+        .PE_clr_o(PE_clr_o),
+        .PE_valid_PEin_o(PE_valid_i),
+        .rom_conv1_read(image_rom_en),
+        .PEin_idx(image_idx),
+        .cycle(cycle)
+    );
+    
     // Instantiate PE_Array
     PE_Array PE_inst (
         .clk_i(clk_i),
         .rstn_i(rstn_i),
-        .valid_i(valid_i),
-        .clear_i(clear_i),
+        .valid_i(PE_valid_i),
+        .clear_i(PE_clr_o),
         .data_in(data_in),
-        .filter1_weights(filter1_weights),
-        .filter2_weights(filter2_weights),
-        .filter3_weights(filter3_weights),
-        .bias_in(bias_in),
+        .filter1_weights(conv1_weight_1),
+        .filter2_weights(conv1_weight_2),
+        .filter3_weights(conv1_weight_3),
+        .bias_in(conv1_bias),
         .valid_o(valid_o),
         .conv_out1(conv_out1),      // Output from Filter 1
         .conv_out2(conv_out2),      // Output from Filter 2
@@ -116,33 +155,64 @@ module top (
 
     buffer1 BUF1(
         .clk_i(clk_i),
-        .rstn_i(rstn_i & (~buf1_adr_clr)),
+        .rstn_i(rstn_i & (~buf_adr_clr)),
         .din_i(oMAX_1),
-        .valid_i(oBuf_En_1 | buf1_valid_en),
-        .buffer1_we(buffer1_we_i),
+        .valid_i(oBuf_En_1 | buf_valid_en),
+        .buffer1_we(buffer1_we),
         .dout_o(buffer1_out) 
     );
     
-    /*
     buffer1 BUF2(
         .clk_i(clk_i),
-        .rstn_i(rstn_i & (~buf2_adr_clr)),
+        .rstn_i(rstn_i & (~buf_adr_clr)),
         .din_i(oMAX_2),
-        .valid_i(oBuf_En_2 | buf2_valid_en),
-        .buffer1_we(buffer2_we_i),
+        .valid_i(oBuf_En_2 | buf_valid_en),
+        .buffer1_we(buffer1_we),
         .dout_o(buffer2_out) 
     );
     
     buffer1 BUF3(
         .clk_i(clk_i),
-        .rstn_i(rstn_i & (~buf3_adr_clr)),
+        .rstn_i(rstn_i & (~buf_adr_clr)),
         .din_i(oMAX_3),
-        .valid_i(oBuf_En_3 | buf3_valid_en),
-        .buffer1_we(buffer3_we_i),
+        .valid_i(oBuf_En_3 | buf_valid_en),
+        .buffer1_we(buffer1_we),
         .dout_o(buffer3_out) 
     );
-    */
     
-
+    ////////////////////////////////////////////////////////////////////
+    // ROMs
+    
+    ROM_Image image_rom(
+        .clk_i(clk_i),
+        .rstn_i(rstn_i),
+        .image_rom_en(image_rom_en),
+        .image_idx(image_idx),
+        .cycle(cycle),
+        .done(done),
+        .oDAT(data_in)
+    );
+    
+    ROM_Weight #(
+        .DATA_WIDTH(8)
+    ) weight_rom(
+        .oDAT_conv1_1(conv1_weight_1),
+        .oDAT_conv1_2(conv1_weight_2),
+        .oDAT_conv1_3(conv1_weight_3),
+        .oDAT_conv2_11(conv2_weight_11),
+        .oDAT_conv2_12(conv2_weight_12),
+        .oDAT_conv2_13(conv2_weight_13),
+        .oDAT_conv2_21(conv2_weight_21),
+        .oDAT_conv2_22(conv2_weight_22),
+        .oDAT_conv2_23(conv2_weight_23),
+        .oDAT_conv2_31(conv2_weight_31),
+        .oDAT_conv2_32(conv2_weight_32),
+        .oDAT_conv2_33(conv2_weight_33)
+    );
+    
+    ROM_Bias bias_rom(
+        .oDAT_bias_1(conv1_bias),
+        .oDAT_bias_2(conv2_bias)
+    );
     
 endmodule

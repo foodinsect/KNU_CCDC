@@ -5,8 +5,8 @@ module global_controller(
 
     input wire          PE_valid_PEout_o,
     output reg          buffer1_we,
-    output reg          buf1_adr_clr,          
-    output reg          buf1_valid_en,
+    output reg          Buf_adr_clr,          
+    output reg          Buf_valid_en,
     output reg          PE_clr_o,
     output reg          PE_valid_PEin_o,
     output reg          rom_conv1_read,
@@ -46,8 +46,8 @@ always @(*) begin
     case (current_state)
     4'd0:begin
         buffer1_we = 1'b1;
-        buf1_valid_en = 1'b0;
-        buf1_adr_clr = 1'b0;
+        Buf_valid_en = 1'b0;
+        Buf_adr_clr = 1'b0;
         PE_clr_o_d1 = 1'b0;
         PE_valid_PEin_o = 1'b0;
         rom_conv1_read = 1'b0;
@@ -57,8 +57,8 @@ always @(*) begin
     end 
     4'd1:begin
         buffer1_we = 1'b1;
-        buf1_valid_en = 1'b0;
-        buf1_adr_clr = 1'b0;      
+        Buf_valid_en = 1'b0;
+        Buf_adr_clr = 1'b0;      
         PE_clr_o_d1 = 1'b0;
         PE_valid_PEin_o = 1'b0;
         rom_conv1_read = 1'b1;
@@ -67,8 +67,8 @@ always @(*) begin
     end
     4'd2:begin
         buffer1_we = 1'b1;
-        buf1_valid_en = 1'b0;
-        buf1_adr_clr = 1'b0;
+        Buf_valid_en = 1'b0;
+        Buf_adr_clr = 1'b0;
         PE_clr_o_d1 = 1'b0;
         PE_valid_PEin_o = 1'b1;
         rom_conv1_read = 1'b1;
@@ -77,8 +77,8 @@ always @(*) begin
     end
     4'd3:begin
         buffer1_we = 1'b1;
-        buf1_valid_en = 1'b0;
-        buf1_adr_clr = 1'b0;
+        Buf_valid_en = 1'b0;
+        Buf_adr_clr = 1'b0;
         PE_clr_o_d1 = 1'b1;
         PE_valid_PEin_o = 1'b1;
         rom_conv1_read = 1'b1;
@@ -88,8 +88,8 @@ always @(*) begin
     end
     4'd4:begin // conv1 finish 
         buffer1_we = 1'b1;
-        buf1_valid_en = 1'b0;
-        buf1_adr_clr = 1'b0;
+        Buf_valid_en = 1'b0;
+        Buf_adr_clr = 1'b0;
         PE_clr_o_d1 = 1'b0;
         PE_valid_PEin_o = 1'b0;
         rom_conv1_read = 1'b0;
@@ -100,8 +100,8 @@ always @(*) begin
     4'd5:begin
         // waiting for filling buffer1 complete
         buffer1_we = 1'b1;
-        buf1_valid_en = 1'b0;
-        buf1_adr_clr = 1'b0;
+        Buf_valid_en = 1'b0;
+        Buf_adr_clr = 1'b0;
         PE_clr_o_d1 = 1'b0;
         PE_valid_PEin_o = 1'b0;
         rom_conv1_read = 1'b0;
@@ -111,8 +111,8 @@ always @(*) begin
     end
     4'd6:begin
         buffer1_we = 1'b0;
-        buf1_valid_en = 1'b0;
-        buf1_adr_clr = 1'b1;
+        Buf_valid_en = 1'b0;
+        Buf_adr_clr = 1'b1;
         PE_clr_o_d1 = 1'b0;
         PE_valid_PEin_o = 1'b0;
         rom_conv1_read = 1'b0;
@@ -122,8 +122,8 @@ always @(*) begin
     end
     4'd7:begin
         buffer1_we = 1'b0;
-        buf1_valid_en = 1'b1;
-        buf1_adr_clr = 1'b0;
+        Buf_valid_en = 1'b1;
+        Buf_adr_clr = 1'b0;
         PE_clr_o_d1 = 1'b0;
         PE_valid_PEin_o = 1'b0;
         rom_conv1_read = 1'b0;

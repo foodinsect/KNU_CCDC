@@ -1,16 +1,16 @@
 `timescale 1ns / 1ps
 
 module buffer1(
-    input                   clk_i,
-    input                   rstn_i,
-    input       [11:0]      din_i,
-    input                   valid_i,
-    input                   buffer1_we,
-    output  reg [11:0]      dout_o [0:5]
+    input                           clk_i,
+    input                           rstn_i,
+    input       [11:0]              din_i,
+    input                           valid_i,
+    input                           buffer1_we,
+    output reg signed [11:0]        dout_o [0:5]
 );
 
 integer  i;
-reg [11:0] mem [0:143];
+reg  signed [11:0] mem [0:143];
 reg [7:0]  addr_i;
 
 always @(posedge clk_i) begin
