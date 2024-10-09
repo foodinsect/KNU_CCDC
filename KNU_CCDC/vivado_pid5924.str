@@ -5429,3 +5429,38 @@ selectCodeEditor("top.sv", 340, 238); // cl (w, cl)
 selectCodeEditor("top.sv", 392, 382); // cl (w, cl)
 selectCodeEditor("top.sv", 402, 512); // cl (w, cl)
 selectCodeEditor("top.sv", 280, 478); // cl (w, cl)
+// Elapsed time: 36 seconds
+selectCodeEditor("top.sv", 321, 350); // cl (w, cl)
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), controller : global_controller (global_controller.sv)]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), controller : global_controller (global_controller.sv)]", 2, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), controller : global_controller (global_controller.sv)]", 2, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.sv), controller : global_controller (global_controller.sv)]", 2, false); // B (F, cl)
+// Elapsed time: 12 seconds
+selectCodeEditor("global_controller.sv", 163, 525); // cl (w, cl)
+selectCodeEditor("global_controller.sv", 163, 525, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("global_controller.sv", 106, 619); // cl (w, cl)
+selectCodeEditor("global_controller.sv", 106, 619, false, false, false, false, true); // cl (w, cl) - Double Click
+selectCodeEditor("global_controller.sv", 131, 602); // cl (w, cl)
+selectCodeEditor("global_controller.sv", 416, 488); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 314 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (cS, cl)
+selectCodeEditor("global_controller.sv", 579, 92); // cl (w, cl)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B

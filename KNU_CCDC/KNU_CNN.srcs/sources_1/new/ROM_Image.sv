@@ -9,7 +9,7 @@ module ROM_Image #(
     input wire [9:0] image_idx,
     input wire [5:0] cycle,
     output reg done,
-    output reg signed [11:0] oDAT [0:5]
+    output reg [11:0] oDAT [0:5]
 );
 
     // Declare Image arrays for each output

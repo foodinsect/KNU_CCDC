@@ -25,9 +25,9 @@ always @(posedge clk_i) begin
 end
     
 always @(posedge clk_i) begin
-        if(valid_i & buffer1_we)begin
-            mem[addr_i] <= din_i;
-        end
+    if(valid_i & buffer1_we)begin
+        mem[addr_i] <= din_i;
+    end
 end
 
 always @(*) begin
