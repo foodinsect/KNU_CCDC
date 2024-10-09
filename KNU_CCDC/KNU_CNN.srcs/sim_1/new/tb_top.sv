@@ -16,12 +16,16 @@ module tb_top();
     reg rstn;
     reg start_i;
 
-    wire        PE_VALID_PEout;
-    wire        PE_clr_o;
-    wire        PE_valid_PEin;
-    wire        rom_conv1_read;
-    wire  [9:0] PEin_idx;
-    wire  [5:0] cycle;
+    wire            buf1_valid_en;
+    wire            buffer1_we;
+    wire            buf_adr_clr;
+    wire            PE_VALID_PEout;
+    wire            PE_clr_o;
+    wire            PE_valid_PEin;
+    wire            rom_conv1_read;
+    wire  [9:0]     PEin_idx;
+    wire  [5:0]     cycle;
+    wire  [11:0]    buffer1_ch1_out [0:5];
 
     // Instantiate the global_controller
     global_controller controller (
@@ -29,7 +33,9 @@ module tb_top();
         .rstn_i(rstn),
         .start_i(start_i),
         .PE_valid_PEout_o(PE_VALID_PEout),
-        
+        .buffer1_we(buffer1_we),
+        .buf1_adr_clr(buf_adr_clr),
+        .buf1_valid_en(buf1_valid_en),
         .PE_clr_o(PE_clr_o),
         .PE_valid_PEin_o(PE_valid_PEin),
         .rom_conv1_read(rom_conv1_read),
@@ -49,6 +55,10 @@ module tb_top();
         .filter3_weights(weight_13),
         .bias_in(bias_1),
         .cycle(cycle),
+        .buf1_adr_clr(buf_adr_clr),
+        .buf1_valid_en(buf1_valid_en),
+        .buffer1_we_i(buffer1_we),
+        .buffer1_out(buffer1_ch1_out),
         .valid_o(),
         .full_o(),
         .empty_o(),

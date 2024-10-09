@@ -16,6 +16,7 @@ Compiling module xil_defaultlib.PE_Array_default
 Compiling module xil_defaultlib.comparator
 Compiling module xil_defaultlib.FIFO
 Compiling module xil_defaultlib.Max_Pooling_ReLU
+Compiling module xil_defaultlib.buffer1
 Compiling module xil_defaultlib.top
 Compiling module xil_defaultlib.tb_top
 Compiling module xil_defaultlib.glbl
