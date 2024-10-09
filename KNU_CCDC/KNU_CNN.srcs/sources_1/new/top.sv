@@ -73,15 +73,16 @@ module top (
         .clk_i(clk_i),
         .rstn_i(rstn_i),
         .start_i(start_i),
-        .PE_valid_PEout_o(PE_valid_o),
-        .buffer1_we(buffer1_we),
-        .Buf_adr_clr(buf_adr_clr),
-        .Buf_valid_en(buf_valid_en),
-        .PE_clr_o(PE_clr_o),
-        .PE_valid_PEin_o(PE_valid_i),
-        .rom_conv1_read(image_rom_en),
-        .PEin_idx(image_idx),
-        .cycle(cycle)
+        .iPE_valid_o(PE_valid_o),
+
+        .oBuf1_we(buffer1_we),
+        .oBuf_adr_clr(buf_adr_clr),
+        .oBuf_valid_en(buf_valid_en),
+        .oPE_clr(PE_clr_o),
+        .oPE_valid_i(PE_valid_i),
+        .oimage_rom_en(image_rom_en),
+        .oimage_idx(image_idx),
+        .ocycle(cycle)
     );
     
 ////////////////////////////////////////////////////////////////////
