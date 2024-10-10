@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_acc_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_acc" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="366299000fs"></ZoomStartTime>
+      <ZoomEndTime time="4141299001fs"></ZoomEndTime>
+      <Cursor1Time time="1021299000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="214"></NameColumnWidth>
+      <ValueColumnWidth column_width="62"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/tb_acc/valid_i" type="logic">
+      <obj_property name="ElementShortName">valid_i</obj_property>
+      <obj_property name="ObjectShortName">valid_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/count" type="array">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/phase" type="array">
+      <obj_property name="ElementShortName">phase[1:0]</obj_property>
+      <obj_property name="ObjectShortName">phase[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider248">
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/rstn_i" type="logic">
+      <obj_property name="ElementShortName">rstn_i</obj_property>
+      <obj_property name="ObjectShortName">rstn_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/valid_i" type="logic">
+      <obj_property name="ElementShortName">valid_i</obj_property>
+      <obj_property name="ObjectShortName">valid_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/rd_en_i" type="logic">
+      <obj_property name="ElementShortName">rd_en_i</obj_property>
+      <obj_property name="ObjectShortName">rd_en_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/rd_ptr" type="array">
+      <obj_property name="ElementShortName">rd_ptr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_ptr[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/conv_in" type="array">
+      <obj_property name="ElementShortName">conv_in[0:1][11:0]</obj_property>
+      <obj_property name="ObjectShortName">conv_in[0:1][11:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/conv_sum" type="array">
+      <obj_property name="ElementShortName">conv_sum[0:1][11:0]</obj_property>
+      <obj_property name="ObjectShortName">conv_sum[0:1][11:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/acc" type="array">
+      <obj_property name="ElementShortName">acc[0:63][19:0]</obj_property>
+      <obj_property name="ObjectShortName">acc[0:63][19:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/wr_ptr" type="array">
+      <obj_property name="ElementShortName">wr_ptr[5:0]</obj_property>
+      <obj_property name="ObjectShortName">wr_ptr[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_acc/dut/cycle_count" type="array">
+      <obj_property name="ElementShortName">cycle_count[1:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle_count[1:0]</obj_property>
+   </wvobject>
+</wave_config>
