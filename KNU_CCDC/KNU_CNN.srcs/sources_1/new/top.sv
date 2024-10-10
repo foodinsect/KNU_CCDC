@@ -90,9 +90,9 @@ module top (
         .clear_i(PE_clr_o),
                                             // conv1 : image data       |    conv2 :        1st         ->      2nd         ->      3rd
         .data_in(image_6rows),              // conv1 : image_6rows      |    conv2 : buf1 data          -> buf2 data        -> buf3 data
-        .filter1_weights(conv1_weight_1),   // conv1 : conv1_weight_1   |    conv2 : conv2_weight_11    -> conv2_weight_21  -> conv2_weight_31
-        .filter2_weights(conv1_weight_2),   // conv1 : conv1_weight_2   |    conv2 : conv2_weight_12    -> conv2_weight_22  -> conv2_weight_32
-        .filter3_weights(conv1_weight_3),   // conv1 : conv1_weight_3   |    conv2 : conv2_weight_13    -> conv2_weight_23  -> conv2_weight_33
+        .filter1_weights(conv1_weight_1),   // conv1 : conv1_weight_1   |    conv2 : conv2_weight_11    -> conv2_weight_12  -> conv2_weight_13
+        .filter2_weights(conv1_weight_2),   // conv1 : conv1_weight_2   |    conv2 : conv2_weight_21    -> conv2_weight_22  -> conv2_weight_23
+        .filter3_weights(conv1_weight_3),   // conv1 : conv1_weight_3   |    conv2 : conv2_weight_31    -> conv2_weight_32  -> conv2_weight_33
         .bias_in(bias_1),                   // conv1 :      bias_1      |    conv2 :     bias_2
         
         .valid_o(PE_valid_o),
@@ -106,7 +106,7 @@ module top (
     Accumulator ACC(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
-        .en_i(),                    // enable signal from controller
+        .en_i(),                    // enable signal from controller + PE_valid_o
         .conv_in1(conv_out1),
         .conv_in2(conv_out2),
         .conv_in3(conv_out3),
