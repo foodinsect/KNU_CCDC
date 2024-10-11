@@ -106,11 +106,11 @@ module top (
     Accumulator ACC(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
-        .en_i(),                    // enable signal from controller + PE_valid_o
-        .conv_in1(conv_out1),
-        .conv_in2(conv_out2),
-        .conv_in3(conv_out3),
-        .conv_sum(conv_sum)
+        .valid_i(PE_valid_o),                    // enable signal from controller + PE_valid_o
+        .rd_en_i(),
+        .conv_in(conv_out1),
+        .conv_sum(conv_sum),
+        .done()
     );
     
 ////////////////////////////////////////////////////////////////////
