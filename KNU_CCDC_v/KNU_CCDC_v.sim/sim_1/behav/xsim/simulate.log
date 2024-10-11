@@ -1,0 +1,4 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 3525 ns : File "C:/Users/opqrs/Desktop/CCDC/Conv2d/v/tb_top.v" Line 205
+$finish called at time : 3535 ns : File "C:/Users/opqrs/Desktop/CCDC/Conv2d/v/tb_top.v" Line 205
