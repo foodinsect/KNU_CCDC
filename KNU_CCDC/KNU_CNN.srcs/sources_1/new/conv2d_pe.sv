@@ -5,8 +5,7 @@ module conv2d_pe (
     input wire clear_i,
     input wire signed [11:0] data_in [0:4],             // 5 input data values (input one row at a time)
     input wire signed [7:0] weight_in [0:24],           // 5x5 filter weights
-    input wire signed [7:0] bias_in,                    // Bias input (added after convolution)
-    output reg signed [11:0] pe_out                     // Final convolution output
+    output reg signed [19:0] pe_out                     // Final convolution output
 );
     // Declare 5 line buffers to store 5 rows
     reg [11:0] line_buffer1 [0:4];  
@@ -48,7 +47,7 @@ module conv2d_pe (
                                             ($signed(line_buffer5[i]) * $signed(weight_in[i+20]));
             end
             // After the convolution result is calculated, add the bias
-            pe_out <= $signed(partial_sum[19:8]) + $signed(bias_in);  // Add signed bias after accumulation
+            pe_out <= $signed(partial_sum);  // Add signed bias after accumulation
         end
         // Clear logic
         if (clear_i) begin

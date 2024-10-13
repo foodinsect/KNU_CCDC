@@ -9,10 +9,10 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.global_controller
 Compiling module xil_defaultlib.conv2d_pe
-Compiling module xil_defaultlib.PE_Array_default
-Compiling module xil_defaultlib.Accumulator
+Compiling module xil_defaultlib.Accumulator(BIAS=20'b01010100000...
 Compiling module xil_defaultlib.Accumulator(BIAS=20'b01111111100...
 Compiling module xil_defaultlib.Accumulator(BIAS=20'b01111011000...
+Compiling module xil_defaultlib.PE_Array_default
 Compiling module xil_defaultlib.comparator
 Compiling module xil_defaultlib.FIFO
 Compiling module xil_defaultlib.Max_Pooling_ReLU

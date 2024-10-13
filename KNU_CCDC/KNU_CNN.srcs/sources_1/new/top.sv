@@ -118,9 +118,12 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
 // PE Inst
     PE_Array PE_inst (
         .clk_i(clk_i),
-        .rstn_i(rstn_i & ~PE_rstn),
+        .rstn_i(rstn_i),
+        .PE_rstn_i(PE_rstn),
         .valid_i(PE_valid_i),
         .clear_i(PE_clr_o),
+        .acc_wr_en_i(acc_wr_en),
+        .acc_rd_en_i(1'b0),
                                             // conv1 : image data       |    conv2 :        1st         ->      2nd         ->      3rd
         .data_in(PE_data_i),              // conv1 : image_6rows      |    conv2 : buf1 data          -> buf2 data        -> buf3 data
         .filter1_weights(conv1_weight_1),   // conv1 : conv1_weight_1   |    conv2 : conv2_weight_11    -> conv2_weight_12  -> conv2_weight_13
@@ -129,48 +132,12 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .bias_in(bias_1),                   // conv1 :      bias_1      |    conv2 :     bias_2
         
         .valid_o(PE_valid_o),
+        .acc_full_o(),
         .conv_out1(conv_out1),      // Output from Filter 1
         .conv_out2(conv_out2),      // Output from Filter 2
         .conv_out3(conv_out3)       // Output from Filter 3
     );
     
-////////////////////////////////////////////////////////////////////
-// ACC
-    Accumulator #(
-        .BIAS(20'h01500)
-    ) ACC_Ch1(
-        .clk_i(clk_i),
-        .rstn_i(rstn_i),
-        .valid_i(PE_valid_o & acc_wr_en),                    // enable signal from controller + PE_valid_o
-        .rd_en_i(),
-        .conv_in(conv_out1),
-        .conv_sum(conv_sum_1),
-        .done()
-    );
-    
-    Accumulator #(
-        .BIAS(20'h0ff00)
-    ) ACC_Ch2(
-        .clk_i(clk_i),
-        .rstn_i(rstn_i),
-        .valid_i(PE_valid_o & acc_wr_en),                    // enable signal from controller + PE_valid_o
-        .rd_en_i(),
-        .conv_in(conv_out2),
-        .conv_sum(conv_sum_2),
-        .done()
-    );
-
-    Accumulator #(
-        .BIAS(20'h0f600)
-    ) ACC_Ch3(
-        .clk_i(clk_i),
-        .rstn_i(rstn_i),
-        .valid_i(PE_valid_o & acc_wr_en),                    // enable signal from controller + PE_valid_o
-        .rd_en_i(),
-        .conv_in(conv_out3),
-        .conv_sum(conv_sum_3),
-        .done()
-    );
 
 ////////////////////////////////////////////////////////////////////
 // FIFO
