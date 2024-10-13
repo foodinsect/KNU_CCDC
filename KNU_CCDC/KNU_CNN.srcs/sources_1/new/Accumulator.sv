@@ -1,6 +1,8 @@
 `timescale 1ns / 1ps
 
-module Accumulator(
+module Accumulator#(
+    parameter BIAS = 20'h01500
+)(
     input wire clk_i,
     input wire rstn_i,                          // Clear signal & reset
     input wire valid_i,                         // Enable accumulation
@@ -24,7 +26,7 @@ module Accumulator(
         if (!rstn_i) begin
             integer j;
             for (j = 0; j < 64; j = j + 1) begin
-                acc[j] <= 20'h0;                // Reset all accumulators to 0
+                acc[j] <= BIAS;                // Reset all accumulators to Bias
             end
             wr_ptr <= 6'd0;                    // Reset write pointer
             rd_ptr <= 6'd0;                    // Reset read pointer

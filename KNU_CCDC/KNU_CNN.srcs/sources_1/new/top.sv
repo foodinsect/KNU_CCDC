@@ -10,7 +10,7 @@ module top (
     input wire signed [7:0] conv1_weight_3 [0:24],
     input wire signed [7:0] bias_1 [0:2],
 
-    input wire signed [7:0] conv2_weight_11 [0:24],
+ /*   input wire signed [7:0] conv2_weight_11 [0:24],
     input wire signed [7:0] conv2_weight_12 [0:24],
     input wire signed [7:0] conv2_weight_13 [0:24],
     input wire signed [7:0] conv2_weight_21 [0:24],
@@ -20,11 +20,14 @@ module top (
     input wire signed [7:0] conv2_weight_32 [0:24],
     input wire signed [7:0] conv2_weight_33 [0:24],
     input wire signed [7:0] bias_2 [0:2],
+   */ 
 
     output wire [5:0] cycle,
     output wire [9:0] image_idx,
     output wire image_rom_en,
-    input wire done
+    output wire [1:0] weight_sel,
+    output wire [1:0] bias_sel,
+    input  wire done
 );
 
 ////////////////////////////////////////////////////////////////////
@@ -33,10 +36,18 @@ module top (
     wire            buf_valid_en;
     wire            buffer1_we;
     wire            buf_adr_clr;
+    wire    [1:0]   buf_rd_mod;
     
+    wire            PE_rstn; //convlution phase 1 is done this value must be high
     wire            PE_valid_o;
     wire            PE_clr_o;
     wire            PE_valid_i;
+    wire    [1:0]   PE_mux_sel;
+    
+    wire            acc_wr_en;
+    //PE input data wire
+    wire [11:0]  PE_data_i [0:5];
+
     
     // Internal connections between PE_Array and FIFO
     wire signed [11:0] conv_out1 [0:1];             // Filter 1 outputs (2 values)
@@ -44,7 +55,9 @@ module top (
     wire signed [11:0] conv_out3 [0:1];             // Filter 3 outputs (2 values)
     
     // Internal connections between FIFO and MaxPooling&ReLU
-    wire signed [11:0] conv_sum [0:1];               // FIFO 1 outputs (1 values)
+    wire signed [11:0] conv_sum_1 [0:1];               // FIFO 1 outputs (1 values)
+    wire signed [11:0] conv_sum_2 [0:1];               // FIFO 1 outputs (1 values)
+    wire signed [11:0] conv_sum_3 [0:1];               // FIFO 1 outputs (1 values)
     wire signed [11:0] oFIFO_1 [0:1];               // FIFO 1 outputs (1 values)
     wire signed [11:0] oFIFO_2 [0:1];               // FIFO 2 outputs (1 values)
     wire signed [11:0] oFIFO_3 [0:1];               // FIFO 3 outputs (1 values)
@@ -57,10 +70,24 @@ module top (
     wire oBuf_En_1, oBuf_En_2, oBuf_En_3;
     
     // Internal connections between Buffer and Conv Layer 2
-    wire signed [11:0] buffer1_out [0:5];
-    wire signed [11:0] buffer2_out [0:5];
-    wire signed [11:0] buffer3_out [0:5];
+    wire  [11:0] buffer1_out [0:5];
+    wire  [11:0] buffer2_out [0:5];
+    wire  [11:0] buffer3_out [0:5];
     
+
+
+///////////////////////////////////////////////////////////////////
+// PE input Muxing 
+assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
+                     PE_mux_sel == 2'b01 ? buffer1_out :
+                     PE_mux_sel == 2'b10 ? buffer2_out :
+                     buffer3_out);
+
+// PE weight input Muxing
+
+
+
+
 ////////////////////////////////////////////////////////////////////
 // Controller and PE Inst
     global_controller controller (
@@ -69,8 +96,14 @@ module top (
         .rstn_i(rstn_i),
         .start_i(start_i),
         .iPE_valid_o(PE_valid_o),
-        
+
         // Output port
+        .oacc_wr_en(acc_wr_en),
+        .obuf_rd_mod(buf_rd_mod),
+        .oPE_rstn(PE_rstn),
+        .weight_sel(weight_sel),
+        .bias_sel(bias_sel),
+        .o_PE_mux_sel(PE_mux_sel),
         .oBuf1_we(buffer1_we),
         .oBuf_adr_clr(buf_adr_clr),
         .oBuf_valid_en(buf_valid_en),
@@ -85,11 +118,11 @@ module top (
 // PE Inst
     PE_Array PE_inst (
         .clk_i(clk_i),
-        .rstn_i(rstn_i),
+        .rstn_i(rstn_i & ~PE_rstn),
         .valid_i(PE_valid_i),
         .clear_i(PE_clr_o),
                                             // conv1 : image data       |    conv2 :        1st         ->      2nd         ->      3rd
-        .data_in(image_6rows),              // conv1 : image_6rows      |    conv2 : buf1 data          -> buf2 data        -> buf3 data
+        .data_in(PE_data_i),              // conv1 : image_6rows      |    conv2 : buf1 data          -> buf2 data        -> buf3 data
         .filter1_weights(conv1_weight_1),   // conv1 : conv1_weight_1   |    conv2 : conv2_weight_11    -> conv2_weight_12  -> conv2_weight_13
         .filter2_weights(conv1_weight_2),   // conv1 : conv1_weight_2   |    conv2 : conv2_weight_21    -> conv2_weight_22  -> conv2_weight_23
         .filter3_weights(conv1_weight_3),   // conv1 : conv1_weight_3   |    conv2 : conv2_weight_31    -> conv2_weight_32  -> conv2_weight_33
@@ -103,16 +136,42 @@ module top (
     
 ////////////////////////////////////////////////////////////////////
 // ACC
-    Accumulator ACC(
+    Accumulator #(
+        .BIAS(20'h01500)
+    ) ACC_Ch1(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
-        .valid_i(PE_valid_o),                    // enable signal from controller + PE_valid_o
+        .valid_i(PE_valid_o & acc_wr_en),                    // enable signal from controller + PE_valid_o
         .rd_en_i(),
         .conv_in(conv_out1),
-        .conv_sum(conv_sum),
+        .conv_sum(conv_sum_1),
         .done()
     );
     
+    Accumulator #(
+        .BIAS(20'h0ff00)
+    ) ACC_Ch2(
+        .clk_i(clk_i),
+        .rstn_i(rstn_i),
+        .valid_i(PE_valid_o & acc_wr_en),                    // enable signal from controller + PE_valid_o
+        .rd_en_i(),
+        .conv_in(conv_out2),
+        .conv_sum(conv_sum_2),
+        .done()
+    );
+
+    Accumulator #(
+        .BIAS(20'h0f600)
+    ) ACC_Ch3(
+        .clk_i(clk_i),
+        .rstn_i(rstn_i),
+        .valid_i(PE_valid_o & acc_wr_en),                    // enable signal from controller + PE_valid_o
+        .rd_en_i(),
+        .conv_in(conv_out3),
+        .conv_sum(conv_sum_3),
+        .done()
+    );
+
 ////////////////////////////////////////////////////////////////////
 // FIFO
     FIFO FIFO_Ch1(
@@ -183,6 +242,7 @@ module top (
         .din_i(oMAX_1),
         .valid_i(oBuf_En_1 | buf_valid_en),
         .buffer1_we(buffer1_we),
+        .rd_mod(buf_rd_mod),
         .dout_o(buffer1_out) 
     );
     
@@ -192,6 +252,7 @@ module top (
         .din_i(oMAX_2),
         .valid_i(oBuf_En_2 | buf_valid_en),
         .buffer1_we(buffer1_we),
+        .rd_mod(buf_rd_mod),
         .dout_o(buffer2_out) 
     );
     
@@ -201,6 +262,7 @@ module top (
         .din_i(oMAX_3),
         .valid_i(oBuf_En_3 | buf_valid_en),
         .buffer1_we(buffer1_we),
+        .rd_mod(buf_rd_mod),
         .dout_o(buffer3_out) 
     );
     
