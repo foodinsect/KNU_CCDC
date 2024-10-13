@@ -1,0 +1,12 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/glbl.v,1728576420,verilog,,,,glbl,,,,,,,,
+E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_FC_layer.sv,1728814155,systemVerilog,,,,tb_FC_layer,,,,,,,,
+E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_acc.sv,1728576420,systemVerilog,,,,tb_acc,,,,,,,,
+E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Accumulator.sv,1728576420,systemVerilog,,E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_acc.sv,,Accumulator,,,,,,,,
+E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_layer.sv,1728809689,systemVerilog,,E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sources_1/new/MAC.sv,,FC_layer,,,,,,,,
+E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sources_1/new/MAC.sv,1728811765,systemVerilog,,E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sources_1/new/matmul.sv,,MAC,,,,,,,,
+E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sources_1/new/matmul.sv,1728809430,systemVerilog,,E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sources_1/new/max_finder.sv,,matmul,,,,,,,,
+E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sources_1/new/max_finder.sv,1728815548,systemVerilog,,E:/Verilog/KNU_CCDC-Integrate/KNU_CCDC-Integrate/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_FC_layer.sv,,max_finder,,,,,,,,

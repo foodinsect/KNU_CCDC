@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_FC_layer_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_FC_layer" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="782860000fs"></ZoomStartTime>
+      <ZoomEndTime time="1009860001fs"></ZoomEndTime>
+      <Cursor1Time time="535000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="197"></NameColumnWidth>
+      <ValueColumnWidth column_width="267"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="3" />
+   <wvobject fp_name="group168" type="group">
+      <obj_property name="label">matmul</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="divider" fp_name="divider153">
+         <obj_property name="label">matmul</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/clk_i" type="logic">
+         <obj_property name="ElementShortName">clk_i</obj_property>
+         <obj_property name="ObjectShortName">clk_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/rstn_i" type="logic">
+         <obj_property name="ElementShortName">rstn_i</obj_property>
+         <obj_property name="ObjectShortName">rstn_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/clear_i" type="logic">
+         <obj_property name="ElementShortName">clear_i</obj_property>
+         <obj_property name="ObjectShortName">clear_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/en_i" type="logic">
+         <obj_property name="ElementShortName">en_i</obj_property>
+         <obj_property name="ObjectShortName">en_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/flatten_i" type="array">
+         <obj_property name="ElementShortName">flatten_i[11:0]</obj_property>
+         <obj_property name="ObjectShortName">flatten_i[11:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/weight_i" type="array">
+         <obj_property name="ElementShortName">weight_i[9:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">weight_i[9:0][7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/bias_i" type="array">
+         <obj_property name="ElementShortName">bias_i[9:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">bias_i[9:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/valid_out_o" type="logic">
+         <obj_property name="ElementShortName">valid_out_o</obj_property>
+         <obj_property name="ObjectShortName">valid_out_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/total_valid" type="logic">
+         <obj_property name="ElementShortName">total_valid</obj_property>
+         <obj_property name="ObjectShortName">total_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/mac_valid" type="logic">
+         <obj_property name="ElementShortName">mac_valid</obj_property>
+         <obj_property name="ObjectShortName">mac_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/mac_outputs" type="array">
+         <obj_property name="ElementShortName">mac_outputs[9:0][19:0]</obj_property>
+         <obj_property name="ObjectShortName">mac_outputs[9:0][19:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/sum_outputs" type="array">
+         <obj_property name="ElementShortName">sum_outputs[9:0][19:0]</obj_property>
+         <obj_property name="ObjectShortName">sum_outputs[9:0][19:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/final_outputs" type="array">
+         <obj_property name="ElementShortName">final_outputs[9:0][19:0]</obj_property>
+         <obj_property name="ObjectShortName">final_outputs[9:0][19:0]</obj_property>
+         <obj_property name="CustomSignalColor">#00FF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/data_out_o" type="array">
+         <obj_property name="ElementShortName">data_out_o[9:0][11:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out_o[9:0][11:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group177" type="group">
+      <obj_property name="label">max_finder</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="divider" fp_name="divider169">
+         <obj_property name="label">max_finder</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/max_finder_inst/clk_i" type="logic">
+         <obj_property name="ElementShortName">clk_i</obj_property>
+         <obj_property name="ObjectShortName">clk_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/max_finder_inst/rstn_i" type="logic">
+         <obj_property name="ElementShortName">rstn_i</obj_property>
+         <obj_property name="ObjectShortName">rstn_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/max_finder_inst/valid_i" type="logic">
+         <obj_property name="ElementShortName">valid_i</obj_property>
+         <obj_property name="ObjectShortName">valid_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/max_finder_inst/inputs_i" type="array">
+         <obj_property name="ElementShortName">inputs_i[0:9][11:0]</obj_property>
+         <obj_property name="ObjectShortName">inputs_i[0:9][11:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/max_finder_inst/result_o" type="array">
+         <obj_property name="ElementShortName">result_o[3:0]</obj_property>
+         <obj_property name="ObjectShortName">result_o[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group197" type="group">
+      <obj_property name="label">MAC9</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="divider" fp_name="divider179">
+         <obj_property name="label">mac9</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /clk_i" type="logic">
+         <obj_property name="ElementShortName">clk_i</obj_property>
+         <obj_property name="ObjectShortName">clk_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /rstn_i" type="logic">
+         <obj_property name="ElementShortName">rstn_i</obj_property>
+         <obj_property name="ObjectShortName">rstn_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /clr_i" type="logic">
+         <obj_property name="ElementShortName">clr_i</obj_property>
+         <obj_property name="ObjectShortName">clr_i</obj_property>
+         <obj_property name="CustomSignalColor">#00FF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /clear2" type="logic">
+         <obj_property name="ElementShortName">clear2</obj_property>
+         <obj_property name="ObjectShortName">clear2</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /mac_en_i" type="logic">
+         <obj_property name="ElementShortName">mac_en_i</obj_property>
+         <obj_property name="ObjectShortName">mac_en_i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/cycle" type="array">
+         <obj_property name="ElementShortName">cycle[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cycle[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /mac_en2" type="logic">
+         <obj_property name="ElementShortName">mac_en2</obj_property>
+         <obj_property name="ObjectShortName">mac_en2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /acc_en" type="logic">
+         <obj_property name="ElementShortName">acc_en</obj_property>
+         <obj_property name="ObjectShortName">acc_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /input_ff" type="array">
+         <obj_property name="ElementShortName">input_ff[11:0]</obj_property>
+         <obj_property name="ObjectShortName">input_ff[11:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /weight_ff" type="array">
+         <obj_property name="ElementShortName">weight_ff[7:0]</obj_property>
+         <obj_property name="ObjectShortName">weight_ff[7:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /mult_result" type="array">
+         <obj_property name="ElementShortName">mult_result[19:0]</obj_property>
+         <obj_property name="ObjectShortName">mult_result[19:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /reg_accumlation" type="array">
+         <obj_property name="ElementShortName">reg_accumlation[19:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_accumlation[19:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /valid_out_o" type="logic">
+         <obj_property name="ElementShortName">valid_out_o</obj_property>
+         <obj_property name="ObjectShortName">valid_out_o</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_FC_layer/uut/matmul_inst/\mac_inst[9].MAC_inst /mac_out_o" type="array">
+         <obj_property name="ElementShortName">mac_out_o[19:0]</obj_property>
+         <obj_property name="ObjectShortName">mac_out_o[19:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
