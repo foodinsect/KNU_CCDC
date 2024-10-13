@@ -1,0 +1,10 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+E:/Verilog/soc/lab03/lab03_2/lab03_2.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sim_1/new/tb_PWM_System.v,1728449108,verilog,,,,tb_PWM_System,,,,,,,,
+E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sources_1/new/Decoder.v,1728449041,verilog,,E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sources_1/new/PWM.v,,Decoder,,,,,,,,
+E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sources_1/new/PWM.v,1728449068,verilog,,E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sources_1/new/PWM_System.v,,PWM,,,,,,,,
+E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sources_1/new/PWM_System.v,1728449088,verilog,,E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sources_1/new/Up_Counter.v,,PWM_System,,,,,,,,
+E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sources_1/new/Up_Counter.v,1728449055,verilog,,E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sim_1/new/tb_PWM_System.v,,Up_Counter,,,,,,,,

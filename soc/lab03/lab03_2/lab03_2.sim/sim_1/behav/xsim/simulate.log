@@ -1,0 +1,3 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+$finish called at time : 6000320 ns : File "E:/Verilog/soc/lab03/lab03_2/lab03_2.srcs/sim_1/new/tb_PWM_System.v" Line 163
