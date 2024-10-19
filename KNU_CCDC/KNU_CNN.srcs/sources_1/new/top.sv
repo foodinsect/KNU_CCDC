@@ -45,9 +45,13 @@ module top (
     wire    [1:0]   PE_mux_sel;
     
     wire            acc_wr_en;
-    //PE input data wire
-    wire [11:0]  PE_data_i [0:5];
+    wire            acc_rd_en;
 
+    wire            FIFO_valid;
+
+    wire            shift_en;
+    //PE input data wire
+    wire [11:0]     PE_data_i [0:5];
     
     // Internal connections between PE_Array and FIFO
     wire signed [11:0] conv_out1 [0:1];             // Filter 1 outputs (2 values)
@@ -74,7 +78,10 @@ module top (
     wire  [11:0] buffer2_out [0:5];
     wire  [11:0] buffer3_out [0:5];
     
-
+    // shiftBuffer wire
+    wire  [11:0] shiftBuffer1_out;
+    wire  [11:0] shiftBuffer2_out;
+    wire  [11:0] shiftBuffer3_out;
 
 ///////////////////////////////////////////////////////////////////
 // PE input Muxing 
@@ -111,7 +118,10 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .oPE_valid_i(PE_valid_i),
         .oimage_rom_en(image_rom_en),
         .oimage_idx(image_idx),
-        .ocycle(cycle)
+        .ocycle(cycle),
+        .acc_rd_en(acc_rd_en),
+        .FIFO_valid(FIFO_valid),
+        .shift_en(shift_en)
     );
     
 ////////////////////////////////////////////////////////////////////
@@ -123,7 +133,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .valid_i(PE_valid_i),
         .clear_i(PE_clr_o),
         .acc_wr_en_i(acc_wr_en),
-        .acc_rd_en_i(1'b0),
+        .acc_rd_en_i(acc_rd_en),
                                             // conv1 : image data       |    conv2 :        1st         ->      2nd         ->      3rd
         .data_in(PE_data_i),              // conv1 : image_6rows      |    conv2 : buf1 data          -> buf2 data        -> buf3 data
         .filter1_weights(conv1_weight_1),   // conv1 : conv1_weight_1   |    conv2 : conv2_weight_11    -> conv2_weight_12  -> conv2_weight_13
@@ -145,7 +155,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .clk_i(clk_i),
         .rstn_i(rstn_i),
         .data_in_i(conv_out1),      // conv1 : conv_out1       |    conv2 : conv_sum
-        .valid_in_i(PE_valid_o),
+        .valid_in_i(PE_valid_o|FIFO_valid),
         
         .data_out_o(oFIFO_1),
         .valid_out_o(oMAX_En_1)
@@ -155,7 +165,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .clk_i(clk_i),
         .rstn_i(rstn_i),
         .data_in_i(conv_out2),      // conv1 : conv_out2       |    conv2 : conv_sum
-        .valid_in_i(PE_valid_o),
+        .valid_in_i(PE_valid_o|FIFO_valid),
         
         .data_out_o(oFIFO_2),
         .valid_out_o(oMAX_En_2)
@@ -165,7 +175,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .clk_i(clk_i),
         .rstn_i(rstn_i),
         .data_in_i(conv_out3),      // conv1 : conv_out3       |    conv2 : conv_sum
-        .valid_in_i(PE_valid_o),
+        .valid_in_i(PE_valid_o|FIFO_valid),
         
         .data_out_o(oFIFO_3),
         .valid_out_o(oMAX_En_3)
@@ -233,7 +243,26 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .dout_o(buffer3_out) 
     );
     
+    shiftBuffer shiftBuffer1(
+        .clk_i(clk_i),
+        .data_i(oMAX_1),
+        .shift_en(oBuf_En_1 & shift_en),
+        .data_o(shiftBuffer1_out)
+    );
 
+    shiftBuffer shiftBuffer2(
+        .clk_i(clk_i),
+        .data_i(oMAX_2),
+        .shift_en(oBuf_En_2 & shift_en),
+        .data_o(shiftBuffer2_out)
+    );
+
+    shiftBuffer shiftBuffer3(
+        .clk_i(clk_i),
+        .data_i(oMAX_3),
+        .shift_en(oBuf_En_3 & shift_en),
+        .data_o(shiftBuffer3_out)
+    );
 
 
 endmodule

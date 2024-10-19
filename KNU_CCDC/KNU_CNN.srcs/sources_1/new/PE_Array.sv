@@ -130,7 +130,7 @@ module PE_Array (
         .rd_en_i(acc_rd_en_i),
         .conv_in(pe_out1),
         .conv_sum(conv_sum1),
-        .done(acc_full[0])
+        .acc_full_o(acc_full[0])
     );
     
     Accumulator #(
@@ -154,7 +154,7 @@ module PE_Array (
         .rd_en_i(acc_rd_en_i),
         .conv_in(pe_out3),
         .conv_sum(conv_sum3),
-        .done(acc_full[2])
+        .acc_full_o(acc_full[2])
     );
 
     assign acc_full_o = &acc_full;

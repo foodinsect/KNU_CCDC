@@ -1,0 +1,147 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Oct 13 19:14:59 2024
+# Process ID: 6408
+# Current directory: E:/CCDC/KNU_Git/foodbug/KNU_CCDC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26940 E:\CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
+# Log file: E:/CCDC/KNU_Git/foodbug/KNU_CCDC/vivado.log
+# Journal file: E:/CCDC/KNU_Git/foodbug/KNU_CCDC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
+open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/tb_acc_behav.wcfg
+source tb_top.tcl
+relaunch_sim
+run 1 s
+relaunch_sim
+run 1 s
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+close_sim
+export_ip_user_files -of_objects  [get_files E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_acc.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_acc.sv
+export_ip_user_files -of_objects  [get_files E:/CCDC/KNU_Git/foodbug/KNU_CCDC/tb_acc_behav.wcfg] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 E:/CCDC/KNU_Git/foodbug/KNU_CCDC/tb_acc_behav.wcfg
+launch_simulation
+open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
+source tb_top.tcl
+run 1 us
+relaunch_sim
+relaunch_sim
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+relaunch_sim
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+relaunch_sim
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+run 1 us
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+relaunch_sim
+run 3 us
+run 3 us
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
+source tb_top.tcl
+run 3 us
+run 3 us
+run 3 us
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+relaunch_sim
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+relaunch_sim
+run 3 us
+run 3 us
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+relaunch_sim
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+relaunch_sim
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+run 3 us
+run 3 us
+run 3 us
+run 3 us
+run 3 us
+run 3 us
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+relaunch_sim
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+relaunch_sim
+run 3 us
+run 3 us
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+save_wave_config {E:/CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+close_sim
