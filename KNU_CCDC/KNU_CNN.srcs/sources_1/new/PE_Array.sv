@@ -95,7 +95,7 @@ module PE_Array (
         clear_d[1] <= clear_d[0];
     end
     
-    always @(posedge clk_i or negedge rstn_i) begin
+    always @(posedge clk_i) begin
         if (!(rstn_i & ~PE_rstn_i)) begin
             // Reset all values and buffers
             valid_o <= 1'b0;
@@ -121,37 +121,38 @@ module PE_Array (
 
     ////////////////////////////////////////////////////////////////////
     // ACC
-    Accumulator #(
-        .BIAS(20'h01500)
-    ) ACC_Ch1(
+    Accumulator ACC_Ch1(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
         .valid_i(valid_o & acc_wr_en_i),                    // enable signal from controller + PE_valid_o
         .rd_en_i(acc_rd_en_i),
+        .bias_i(bias_in[0]),
         .conv_in(pe_out1),
         .conv_sum(conv_sum1),
         .acc_full_o(acc_full[0])
     );
     
     Accumulator #(
-        .BIAS(20'h0ff00)
+        .BIAS(8'hff)
     ) ACC_Ch2(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
         .valid_i(valid_o & acc_wr_en_i),                    // enable signal from controller + PE_valid_o
         .rd_en_i(acc_rd_en_i),
+        .bias_i(bias_in[1]),
         .conv_in(pe_out2),
         .conv_sum(conv_sum2),
         .acc_full_o(acc_full[1])
     );
 
     Accumulator #(
-        .BIAS(20'h0f600)
+        .BIAS(8'hf6)
     ) ACC_Ch3(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
         .valid_i(valid_o & acc_wr_en_i),                    // enable signal from controller + PE_valid_o
         .rd_en_i(acc_rd_en_i),
+        .bias_i(bias_in[2]),
         .conv_in(pe_out3),
         .conv_sum(conv_sum3),
         .acc_full_o(acc_full[2])

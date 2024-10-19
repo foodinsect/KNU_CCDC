@@ -3,7 +3,7 @@ module top (
     input wire rstn_i,
     input wire start_i,
     
-    input wire [11:0] image_6rows [0:5],
+    input wire signed [11:0] image_6rows [0:5],
 
     input wire signed [7:0] conv1_weight_1 [0:24],
     input wire signed [7:0] conv1_weight_2 [0:24],
@@ -51,7 +51,7 @@ module top (
 
     wire            shift_en;
     //PE input data wire
-    wire [11:0]     PE_data_i [0:5];
+    wire signed [11:0] PE_data_i [0:5];
     
     // Internal connections between PE_Array and FIFO
     wire signed [11:0] conv_out1 [0:1];             // Filter 1 outputs (2 values)
@@ -74,9 +74,9 @@ module top (
     wire oBuf_En_1, oBuf_En_2, oBuf_En_3;
     
     // Internal connections between Buffer and Conv Layer 2
-    wire  [11:0] buffer1_out [0:5];
-    wire  [11:0] buffer2_out [0:5];
-    wire  [11:0] buffer3_out [0:5];
+    wire signed  [11:0] buffer1_out [0:5];
+    wire signed  [11:0] buffer2_out [0:5];
+    wire signed  [11:0] buffer3_out [0:5];
     
     // shiftBuffer wire
     wire  [11:0] shiftBuffer1_out;
@@ -135,7 +135,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .acc_wr_en_i(acc_wr_en),
         .acc_rd_en_i(acc_rd_en),
                                             // conv1 : image data       |    conv2 :        1st         ->      2nd         ->      3rd
-        .data_in(PE_data_i),              // conv1 : image_6rows      |    conv2 : buf1 data          -> buf2 data        -> buf3 data
+        .data_in(PE_data_i),                // conv1 : image_6rows      |    conv2 : buf1 data          -> buf2 data        -> buf3 data
         .filter1_weights(conv1_weight_1),   // conv1 : conv1_weight_1   |    conv2 : conv2_weight_11    -> conv2_weight_12  -> conv2_weight_13
         .filter2_weights(conv1_weight_2),   // conv1 : conv1_weight_2   |    conv2 : conv2_weight_21    -> conv2_weight_22  -> conv2_weight_23
         .filter3_weights(conv1_weight_3),   // conv1 : conv1_weight_3   |    conv2 : conv2_weight_31    -> conv2_weight_32  -> conv2_weight_33

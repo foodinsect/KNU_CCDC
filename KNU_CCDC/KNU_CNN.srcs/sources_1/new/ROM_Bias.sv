@@ -22,7 +22,7 @@ module ROM_Bias #(
         end
 
         if (WEIGHT_FILE_bias_1 != "") begin
-            $readmemh(WEIGHT_FILE_bias_1, rBias_conv2);
+            $readmemh(WEIGHT_FILE_bias_2, rBias_conv2);
         end else begin
             $error("Weight file conv1_2 not specified.");
         end
@@ -30,6 +30,6 @@ module ROM_Bias #(
 
     // Assign each weight array to its respective output
     assign oDAT_bias_1 = rBias_conv1;
-    assign oDAT_bias_1 = rBias_conv2;
+    assign oDAT_bias_2 = rBias_conv2;
 
 endmodule

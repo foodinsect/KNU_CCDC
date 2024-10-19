@@ -240,7 +240,7 @@ always @(*) begin
         buf_rd_mod_up = 1'b0;
         oPE_rstn = 1'b1; 
         weight_sel = weight_sel + 2'd1;
-        bias_sel = 2'b10;
+        bias_sel = 2'b01;
         o_PE_mux_sel = o_PE_mux_sel + 2'd1;
         oBuf1_we = 1'b0;
         oBuf_valid_en = 1'b0; 
@@ -261,7 +261,7 @@ always @(*) begin
         buf_rd_mod_up = 1'b0;
         oPE_rstn = 1'b0;
         weight_sel = weight_sel;
-        bias_sel = 2'b10;
+        bias_sel = 2'b01;
         o_PE_mux_sel = o_PE_mux_sel;
         oBuf1_we = 1'b0;
         oBuf_valid_en = 1'b1; 
@@ -282,7 +282,7 @@ always @(*) begin
         buf_rd_mod_up = 1'b1;
         oPE_rstn = 1'b0;
         weight_sel = weight_sel;
-        bias_sel = 2'b10;
+        bias_sel = 2'b01;
         o_PE_mux_sel = o_PE_mux_sel;
         oBuf1_we = 1'b0;
         oBuf_valid_en = 1'b1; 
@@ -304,7 +304,7 @@ always @(*) begin
         buf_rd_mod_up = 1'b0;
         oPE_rstn = 1'b0;
         weight_sel = weight_sel;
-        bias_sel = 2'b10;
+        bias_sel = 2'b01;
         o_PE_mux_sel = o_PE_mux_sel;
         oBuf1_we = 1'b0;
         oBuf_valid_en = 1'b0; 
@@ -325,7 +325,7 @@ always @(*) begin
         buf_rd_mod_up = 1'b0;
         oPE_rstn = 1'b1;
         weight_sel = weight_sel;
-        bias_sel = 2'b10;
+        bias_sel = 2'b01;
         o_PE_mux_sel = o_PE_mux_sel;
         oBuf1_we = 1'b0;
         oBuf_valid_en = 1'b0; 
@@ -346,7 +346,7 @@ always @(*) begin
         buf_rd_mod_up = 1'b0;
         oPE_rstn = 1'b0;
         weight_sel = weight_sel;
-        bias_sel = 2'b10;
+        bias_sel = 2'b01;
         o_PE_mux_sel = o_PE_mux_sel;
         oBuf1_we = 1'b0;
         oBuf_valid_en = 1'b0; 
@@ -367,7 +367,7 @@ always @(*) begin
         buf_rd_mod_up = 1'b0;
         oPE_rstn = 1'b0;
         weight_sel = weight_sel;
-        bias_sel = 2'b10;
+        bias_sel = 2'b01;
         o_PE_mux_sel = o_PE_mux_sel;
         oBuf1_we = 1'b0;
         oBuf_valid_en = 1'b0; 

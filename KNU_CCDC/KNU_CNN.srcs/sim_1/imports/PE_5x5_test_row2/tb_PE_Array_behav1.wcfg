@@ -11,15 +11,33 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2383333333fs"></ZoomStartTime>
-      <ZoomEndTime time="7923333334fs"></ZoomEndTime>
-      <Cursor1Time time="7000000000fs"></Cursor1Time>
+      <ZoomStartTime time="5219300000fs"></ZoomStartTime>
+      <ZoomEndTime time="5235600001fs"></ZoomEndTime>
+      <Cursor1Time time="5229960000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="206"></NameColumnWidth>
-      <ValueColumnWidth column_width="271"></ValueColumnWidth>
+      <ValueColumnWidth column_width="267"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="40" />
+   <WVObjectSize size="45" />
+   <wvobject fp_name="/tb_top/bias_rom/oDAT_bias_1" type="array">
+      <obj_property name="ElementShortName">oDAT_bias_1[0:2][7:0]</obj_property>
+      <obj_property name="ObjectShortName">oDAT_bias_1[0:2][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/bias_rom/oDAT_bias_2" type="array">
+      <obj_property name="ElementShortName">oDAT_bias_2[0:2][7:0]</obj_property>
+      <obj_property name="ObjectShortName">oDAT_bias_2[0:2][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/bias_rom/rBias_conv1" type="array">
+      <obj_property name="ElementShortName">rBias_conv1[0:2][7:0]</obj_property>
+      <obj_property name="ObjectShortName">rBias_conv1[0:2][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/bias_rom/rBias_conv2" type="array">
+      <obj_property name="ElementShortName">rBias_conv2[0:2][7:0]</obj_property>
+      <obj_property name="ObjectShortName">rBias_conv2[0:2][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
    <wvobject type="divider" fp_name="divider367">
       <obj_property name="label">tb_top</obj_property>
       <obj_property name="DisplayName">label</obj_property>
@@ -43,6 +61,10 @@
    <wvobject fp_name="/tb_top/TOP_inst/image_idx" type="array">
       <obj_property name="ElementShortName">image_idx[9:0]</obj_property>
       <obj_property name="ObjectShortName">image_idx[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/bias_sel" type="array">
+      <obj_property name="ElementShortName">bias_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_sel[1:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_top/TOP_inst/cycle" type="array">
       <obj_property name="ElementShortName">cycle[5:0]</obj_property>
@@ -99,18 +121,21 @@
       <obj_property name="ObjectShortName">conv_out1[0:1][11:0]</obj_property>
       <obj_property name="CustomSignalColor">#FF00FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_top/TOP_inst/PE_inst/conv_out2" type="array">
       <obj_property name="ElementShortName">conv_out2[0:1][11:0]</obj_property>
       <obj_property name="ObjectShortName">conv_out2[0:1][11:0]</obj_property>
       <obj_property name="CustomSignalColor">#FF00FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_top/TOP_inst/PE_inst/conv_out3" type="array">
       <obj_property name="ElementShortName">conv_out3[0:1][11:0]</obj_property>
       <obj_property name="ObjectShortName">conv_out3[0:1][11:0]</obj_property>
       <obj_property name="CustomSignalColor">#FF00FF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_top/TOP_inst/PE_inst/acc_wr_en_i" type="logic">
       <obj_property name="ElementShortName">acc_wr_en_i</obj_property>
@@ -324,7 +349,6 @@
    <wvobject fp_name="group207" type="group">
       <obj_property name="label">CH3</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="divider" fp_name="divider334">
          <obj_property name="label">FIFO_3</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -510,6 +534,7 @@
       <wvobject fp_name="/tb_top/TOP_inst/PE_inst/ACC_Ch1/acc" type="array">
          <obj_property name="ElementShortName">acc[0:63][19:0]</obj_property>
          <obj_property name="ObjectShortName">acc[0:63][19:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject fp_name="/tb_top/TOP_inst/PE_inst/ACC_Ch1/wr_ptr" type="array">
          <obj_property name="ElementShortName">wr_ptr[6:0]</obj_property>
@@ -524,6 +549,7 @@
    <wvobject fp_name="group665" type="group">
       <obj_property name="label">CH2</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/tb_top/TOP_inst/PE_inst/ACC_Ch2/valid_i" type="logic">
          <obj_property name="ElementShortName">valid_i</obj_property>
          <obj_property name="ObjectShortName">valid_i</obj_property>
@@ -540,10 +566,12 @@
       <wvobject fp_name="/tb_top/TOP_inst/PE_inst/ACC_Ch2/conv_sum" type="array">
          <obj_property name="ElementShortName">conv_sum[0:1][11:0]</obj_property>
          <obj_property name="ObjectShortName">conv_sum[0:1][11:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject fp_name="/tb_top/TOP_inst/PE_inst/ACC_Ch2/acc" type="array">
          <obj_property name="ElementShortName">acc[0:63][19:0]</obj_property>
          <obj_property name="ObjectShortName">acc[0:63][19:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
       </wvobject>
       <wvobject fp_name="/tb_top/TOP_inst/PE_inst/ACC_Ch2/wr_ptr" type="array">
          <obj_property name="ElementShortName">wr_ptr[6:0]</obj_property>
@@ -598,6 +626,7 @@
    <wvobject fp_name="group285" type="group">
       <obj_property name="label">CH1</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/tb_top/TOP_inst/shiftBuffer1/data_i" type="array">
          <obj_property name="ElementShortName">data_i[11:0]</obj_property>
          <obj_property name="ObjectShortName">data_i[11:0]</obj_property>
@@ -618,6 +647,7 @@
    <wvobject fp_name="group286" type="group">
       <obj_property name="label">CH2</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/tb_top/TOP_inst/shiftBuffer2/data_i" type="array">
          <obj_property name="ElementShortName">data_i[11:0]</obj_property>
          <obj_property name="ObjectShortName">data_i[11:0]</obj_property>

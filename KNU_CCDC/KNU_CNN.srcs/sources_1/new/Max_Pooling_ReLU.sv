@@ -27,7 +27,7 @@ module Max_Pooling_ReLU(
     assign data_o = (valid_o) ? data_out : 12'hzzz;
     
     // Sequential logic: Synchronous with clock and valid input
-    always @(posedge clk_i or negedge rstn_i) begin
+    always @(posedge clk_i) begin
         if (!rstn_i) begin
             // Reset logic
             data_out <= 12'b0;

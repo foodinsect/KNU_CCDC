@@ -34,7 +34,7 @@ module tb_top();
     reg [11:0] image_6rows [0:5];
 
     //pe bias in
-    reg  signed[7:0]         zero_bias [0:2];
+    reg  signed[7:0]  zero_bias [0:2];
     wire signed [7:0] bias_in [0:2];
     wire signed [7:0] conv1_bias[0:2];
     wire signed [7:0] conv2_bias[0:2];
