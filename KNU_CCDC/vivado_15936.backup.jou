@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Oct 21 20:51:57 2024
+# Process ID: 15936
+# Current directory: D:/Git_repo/KNU_CCDC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1924 D:\Git_repo\KNU_CCDC\KNU_CNN.xpr
+# Log file: D:/Git_repo/KNU_CCDC/vivado.log
+# Journal file: D:/Git_repo/KNU_CCDC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Git_repo/KNU_CCDC/KNU_CNN.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/Git_repo/KNU_CCDC/tb_top_behav.wcfg
+source tb_top.tcl
+run 10 us
+run 10 us
+close_sim

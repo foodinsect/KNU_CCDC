@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Oct 20 22:28:57 2024
+# Process ID: 6484
+# Current directory: D:/Git_repo/KNU_CCDC/KNU_CCDC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21436 D:\Git_repo\KNU_CCDC\KNU_CCDC\KNU_CNN.xpr
+# Log file: D:/Git_repo/KNU_CCDC/KNU_CCDC/vivado.log
+# Journal file: D:/Git_repo/KNU_CCDC/KNU_CCDC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
+source tb_top.tcl
+run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+close_sim
+launch_simulation
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
+source tb_top.tcl
+relaunch_sim
+run 10 us
+save_wave_config {D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg}
+close_sim
+launch_simulation
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg
+source tb_top.tcl
+current_wave_config {tb_PE_Array_behav1.wcfg}
+add_wave {{/tb_top/clk}} {{/tb_top/rstn}} {{/tb_top/start_i}} {{/tb_top/done}} 
+run 10 us
+relaunch_sim
+current_wave_config {tb_PE_Array_behav1.wcfg}
+add_wave {{/tb_top/TOP_inst/clk_i}} {{/tb_top/TOP_inst/rstn_i}} {{/tb_top/TOP_inst/start_i}} {{/tb_top/TOP_inst/image_6rows}} {{/tb_top/TOP_inst/conv1_weight_1}} {{/tb_top/TOP_inst/conv1_weight_2}} {{/tb_top/TOP_inst/conv1_weight_3}} {{/tb_top/TOP_inst/bias_1}} {{/tb_top/TOP_inst/cycle}} {{/tb_top/TOP_inst/image_idx}} {{/tb_top/TOP_inst/image_rom_en}} {{/tb_top/TOP_inst/weight_sel}} {{/tb_top/TOP_inst/bias_sel}} {{/tb_top/TOP_inst/ready}} {{/tb_top/TOP_inst/done_o}} {{/tb_top/TOP_inst/done}} 
+relaunch_sim
+run 10 us
+relaunch_sim
+current_wave_config {tb_PE_Array_behav1.wcfg}
+add_wave {{/tb_top/TOP_inst/fc_layer/result_o}} 
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+run 10 us
+relaunch_sim
+current_wave_config {tb_PE_Array_behav1.wcfg}
+add_wave {{/tb_top/TOP_inst/result}} 
+relaunch_sim
+run 10 us
+run 10 us
+relaunch_sim
+run 10 us
+run 10 us
+relaunch_sim
+run 10 us
+run 10 us
+relaunch_sim
+run 10 us
+run 10 us
+run 10 us
+current_wave_config {tb_PE_Array_behav1.wcfg}
+add_wave {{/tb_top/TOP_inst/fc_layer/flatten_input_i}} 
+relaunch_sim

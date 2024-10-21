@@ -1,0 +1,175 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Oct 21 20:51:57 2024
+# Process ID: 15936
+# Current directory: D:/Git_repo/KNU_CCDC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1924 D:\Git_repo\KNU_CCDC\KNU_CNN.xpr
+# Log file: D:/Git_repo/KNU_CCDC/vivado.log
+# Journal file: D:/Git_repo/KNU_CCDC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Git_repo/KNU_CCDC/KNU_CNN.xpr
+INFO: [Project 1-313] Project file moved from 'D:/Git_repo/KNU_CCDC/KNU_CCDC' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/opqrs/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git_repo/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/shiftBuffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shiftBuffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Accumulator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_layer.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_layer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/MAC.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MAC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_Array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Bias.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Bias
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Weight
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/buffer1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module buffer1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv2d_pe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/fc_bias_ROM.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fc_bias_ROM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/fc_weight_ROM.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fc_weight_ROM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module global_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/matmul.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matmul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/max_finder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module max_finder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+"xelab -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-2861] module 'Accumulator' does not have a parameter named BIAS [D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv:136]
+WARNING: [VRFC 10-2861] module 'Accumulator' does not have a parameter named BIAS [D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv:149]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'result' [D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv:81]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv:350]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/shiftBuffer.v" Line 1. Module shiftBuffer doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/shiftBuffer.v" Line 1. Module shiftBuffer doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/shiftBuffer.v" Line 1. Module shiftBuffer doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.global_controller
+Compiling module xil_defaultlib.conv2d_pe
+Compiling module xil_defaultlib.Accumulator
+Compiling module xil_defaultlib.PE_Array_default
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.Max_Pooling_ReLU
+Compiling module xil_defaultlib.buffer1
+Compiling module xil_defaultlib.shiftBuffer
+Compiling module xil_defaultlib.MAC
+Compiling module xil_defaultlib.matmul_default
+Compiling module xil_defaultlib.max_finder
+Compiling module xil_defaultlib.FC_layer
+Compiling module xil_defaultlib.FC_controller
+Compiling module xil_defaultlib.fc_weight_ROM
+Compiling module xil_defaultlib.fc_bias_ROM
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.ROM_Weight
+Compiling module xil_defaultlib.ROM_Bias
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -view {D:/Git_repo/KNU_CCDC/tb_top_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/Git_repo/KNU_CCDC/tb_top_behav.wcfg
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: File D:/git_backup/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/fc_weight_transposed.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/fc_weight_ROM.sv at line 15 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/git_backup/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/fc_bias.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/fc_bias_ROM.sv at line 15 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv1_weight_1.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 49 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv1_weight_2.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 55 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv1_weight_3.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 61 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_11.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 67 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_12.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 73 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_13.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 79 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_21.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 85 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_22.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 91 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_23.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 97 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_31.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 103 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_32.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 109 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_33.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Weight.sv at line 115 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv1_bias.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Bias.sv at line 19 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_bias.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sources_1/new/ROM_Bias.sv at line 25 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/0_01.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 89 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv1_weight_1.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 107 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv1_weight_2.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 108 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv1_weight_3.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 109 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv1_bias.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 110 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_11.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 113 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_12.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 114 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_13.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 115 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_21.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 116 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_22.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 117 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_23.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 118 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_31.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 119 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_32.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 120 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_weight_33.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 121 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_bias.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 122 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 958.742 ; gain = 0.000
+run 10 us
+WARNING: File D:/Git_repo/KNU_CCDC/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/0_02.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv at line 99 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+run 10 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 21 20:54:48 2024...

@@ -1,0 +1,8 @@
+00000 00000 00000 00000 fff7f fffa4 fff23 ffe22
+00000 00000 00000 fffaf fffd0 ffe0d ffeb3 ffd47
+00000 00000 00000 ffffc fff3e fff71 fff1e 00035
+00000 00000 fff7e fff8d fff19 fffb5 ffe71 00085
+00000 00000 fffe1 ffe4f 00095 ffe52 000c6 fff79
+00000 fffb0 fffb4 fffbc fff22 fff62 00060 fff72
+fffca fffd2 ffe88 fffce ffe1f 00047 fff6f fffc2
+fff6d fff1b 00068 ffe4d fffa2 fffb9 fff29 00000

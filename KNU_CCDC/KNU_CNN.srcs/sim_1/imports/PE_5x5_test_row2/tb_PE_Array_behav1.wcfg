@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="5433000000fs"></ZoomStartTime>
+      <ZoomEndTime time="8047000001fs"></ZoomEndTime>
+      <Cursor1Time time="5915000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="206"></NameColumnWidth>
+      <ValueColumnWidth column_width="97"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/tb_top/TOP_inst/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/rstn_i" type="logic">
+      <obj_property name="ElementShortName">rstn_i</obj_property>
+      <obj_property name="ObjectShortName">rstn_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/start_i" type="logic">
+      <obj_property name="ElementShortName">start_i</obj_property>
+      <obj_property name="ObjectShortName">start_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/image_6rows" type="array">
+      <obj_property name="ElementShortName">image_6rows[0:5][11:0]</obj_property>
+      <obj_property name="ObjectShortName">image_6rows[0:5][11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/conv1_weight_1" type="array">
+      <obj_property name="ElementShortName">conv1_weight_1[0:24][7:0]</obj_property>
+      <obj_property name="ObjectShortName">conv1_weight_1[0:24][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/conv1_weight_2" type="array">
+      <obj_property name="ElementShortName">conv1_weight_2[0:24][7:0]</obj_property>
+      <obj_property name="ObjectShortName">conv1_weight_2[0:24][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/conv1_weight_3" type="array">
+      <obj_property name="ElementShortName">conv1_weight_3[0:24][7:0]</obj_property>
+      <obj_property name="ObjectShortName">conv1_weight_3[0:24][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/bias_1" type="array">
+      <obj_property name="ElementShortName">bias_1[0:2][7:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_1[0:2][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/cycle" type="array">
+      <obj_property name="ElementShortName">cycle[5:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/image_idx" type="array">
+      <obj_property name="ElementShortName">image_idx[9:0]</obj_property>
+      <obj_property name="ObjectShortName">image_idx[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/image_rom_en" type="logic">
+      <obj_property name="ElementShortName">image_rom_en</obj_property>
+      <obj_property name="ObjectShortName">image_rom_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/weight_sel" type="array">
+      <obj_property name="ElementShortName">weight_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">weight_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/bias_sel" type="array">
+      <obj_property name="ElementShortName">bias_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">bias_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/result" type="array">
+      <obj_property name="ElementShortName">result[3:0]</obj_property>
+      <obj_property name="ObjectShortName">result[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/fc_layer/flatten_input_i" type="array">
+      <obj_property name="ElementShortName">flatten_input_i[11:0]</obj_property>
+      <obj_property name="ObjectShortName">flatten_input_i[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/TOP_inst/fc_layer/result_o" type="array">
+      <obj_property name="ElementShortName">result_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">result_o[3:0]</obj_property>
+   </wvobject>
+</wave_config>

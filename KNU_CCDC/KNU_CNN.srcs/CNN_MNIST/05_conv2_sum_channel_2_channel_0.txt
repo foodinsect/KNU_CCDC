@@ -1,0 +1,8 @@
+fec ff4 009 117 298 279 068 ed5
+ff1 000 085 25d 359 113 e96 e2d
+ff7 02a 1b6 353 265 f74 dfe e7a
+ffe 103 2f0 326 078 e49 e64 ef5
+072 24e 37f 19b eee e2f ec3 f4c
+17f 337 2b3 fe0 e1e e7f f19 f93
+262 343 11f ea2 e35 ed6 f5e fc7
+291 225 fb1 e44 e91 f20 fa5 fda
