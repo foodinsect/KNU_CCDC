@@ -228,7 +228,8 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
 
     buffer1 BUF1(
         .clk_i(clk_i),
-        .rstn_i(rstn_i & (~buf_adr_clr) & ~ready),
+        .rstn_i(rstn_i & (~buf_adr_clr)),
+        .clear_i(ready),
         .din_i(oMAX_1),
         .valid_i(oBuf_En_1 | buf_valid_en),
         .buffer1_we(buffer1_we),
@@ -238,7 +239,8 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     
     buffer1 BUF2(
         .clk_i(clk_i),
-        .rstn_i(rstn_i & (~buf_adr_clr) & ~ready),
+        .rstn_i(rstn_i & (~buf_adr_clr)),
+        .clear_i(ready),
         .din_i(oMAX_2),
         .valid_i(oBuf_En_2 | buf_valid_en),
         .buffer1_we(buffer1_we),
@@ -248,7 +250,8 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     
     buffer1 BUF3(
         .clk_i(clk_i),
-        .rstn_i(rstn_i & (~buf_adr_clr) & ~ready),
+        .rstn_i(rstn_i & (~buf_adr_clr)),
+        .clear_i(ready),
         .din_i(oMAX_3),
         .valid_i(oBuf_En_3 | buf_valid_en),
         .buffer1_we(buffer1_we),
