@@ -30,7 +30,6 @@ module tb_top();
     wire [1:0] weight_sel;
     wire [1:0] bias_sel;
     wire image_rom_en;
-    reg done;
     reg [11:0] image_6rows [0:5];
 
     //pe bias in
@@ -43,6 +42,10 @@ module tb_top();
     wire signed [7:0] conv_weight_in1 [0:24];
     wire signed [7:0] conv_weight_in2 [0:24];
     wire signed [7:0] conv_weight_in3 [0:24];
+
+    wire done;
+    wire ready;
+    wire result;
 
     // Instantiate PE Array module
     top TOP_inst (
@@ -90,6 +93,11 @@ module tb_top();
         #10 rstn <= 1'b1;
         #10 start_i = 1'b1;
         #10 start_i = 1'b0;
+        wait(ready==1);
+        #30;
+        $readmemh("E:/cnn_verilog/data/0_02.txt",pixels);
+        #10 start_i = 1'b1;
+        #10 start_i = 1'b0;
     end
 
     
@@ -117,7 +125,7 @@ module tb_top();
     // image rom
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
-            done <= 1'b0;
+            
         end
         else begin
             integer i;
@@ -133,7 +141,7 @@ module tb_top();
             end
 
             if (cycle == 12) begin
-                done <= 1'b1;
+                
             end
         end
     end

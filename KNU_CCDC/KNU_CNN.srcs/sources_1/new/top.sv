@@ -3,7 +3,7 @@ module top (
     input wire rstn_i,
     input wire start_i,
     
-    input wire signed [11:0] image_6rows [0:5],
+    input wire [11:0] image_6rows [0:5],
 
     input wire signed [7:0] conv1_weight_1 [0:24],
     input wire signed [7:0] conv1_weight_2 [0:24],
@@ -27,7 +27,9 @@ module top (
     output wire image_rom_en,
     output wire [1:0] weight_sel,
     output wire [1:0] bias_sel,
-    input  wire done
+    output wire ready,
+    output wire done,
+    output wire [3:0] result
 );
 
 ////////////////////////////////////////////////////////////////////
@@ -50,8 +52,11 @@ module top (
     wire            FIFO_valid;
 
     wire            shift_en;
+    
+    wire            conv_done;
+
     //PE input data wire
-    wire signed [11:0] PE_data_i [0:5];
+    wire [11:0]     PE_data_i [0:5];
     
     // Internal connections between PE_Array and FIFO
     wire signed [11:0] conv_out1 [0:1];             // Filter 1 outputs (2 values)
@@ -74,14 +79,19 @@ module top (
     wire oBuf_En_1, oBuf_En_2, oBuf_En_3;
     
     // Internal connections between Buffer and Conv Layer 2
-    wire signed  [11:0] buffer1_out [0:5];
-    wire signed  [11:0] buffer2_out [0:5];
-    wire signed  [11:0] buffer3_out [0:5];
+    wire  [11:0] buffer1_out [0:5];
+    wire  [11:0] buffer2_out [0:5];
+    wire  [11:0] buffer3_out [0:5];
     
     // shiftBuffer wire
     wire  [11:0] shiftBuffer1_out;
     wire  [11:0] shiftBuffer2_out;
     wire  [11:0] shiftBuffer3_out;
+
+
+    //////////////////////// fc_layer wire declaration ////////////////////////////////////////////
+    wire [2:0] shifter_en_decoded ;
+
 
 ///////////////////////////////////////////////////////////////////
 // PE input Muxing 
@@ -121,7 +131,9 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .ocycle(cycle),
         .acc_rd_en(acc_rd_en),
         .FIFO_valid(FIFO_valid),
-        .shift_en(shift_en)
+        .shift_en(shift_en),
+        .conv_done(conv_done),
+        .ready(ready)
     );
     
 ////////////////////////////////////////////////////////////////////
@@ -135,7 +147,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .acc_wr_en_i(acc_wr_en),
         .acc_rd_en_i(acc_rd_en),
                                             // conv1 : image data       |    conv2 :        1st         ->      2nd         ->      3rd
-        .data_in(PE_data_i),                // conv1 : image_6rows      |    conv2 : buf1 data          -> buf2 data        -> buf3 data
+        .data_in(PE_data_i),              // conv1 : image_6rows      |    conv2 : buf1 data          -> buf2 data        -> buf3 data
         .filter1_weights(conv1_weight_1),   // conv1 : conv1_weight_1   |    conv2 : conv2_weight_11    -> conv2_weight_12  -> conv2_weight_13
         .filter2_weights(conv1_weight_2),   // conv1 : conv1_weight_2   |    conv2 : conv2_weight_21    -> conv2_weight_22  -> conv2_weight_23
         .filter3_weights(conv1_weight_3),   // conv1 : conv1_weight_3   |    conv2 : conv2_weight_31    -> conv2_weight_32  -> conv2_weight_33
@@ -246,22 +258,98 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     shiftBuffer shiftBuffer1(
         .clk_i(clk_i),
         .data_i(oMAX_1),
-        .shift_en(oBuf_En_1 & shift_en),
+        .shift_en((oBuf_En_1 & shift_en) | (shifter_en_decoded[0])),
         .data_o(shiftBuffer1_out)
     );
 
     shiftBuffer shiftBuffer2(
         .clk_i(clk_i),
         .data_i(oMAX_2),
-        .shift_en(oBuf_En_2 & shift_en),
+        .shift_en((oBuf_En_2 & shift_en) | (shifter_en_decoded[1])),
         .data_o(shiftBuffer2_out)
     );
 
     shiftBuffer shiftBuffer3(
         .clk_i(clk_i),
         .data_i(oMAX_3),
-        .shift_en(oBuf_En_3 & shift_en),
+        .shift_en((oBuf_En_3 & shift_en) | (shifter_en_decoded[2])),
         .data_o(shiftBuffer3_out)
+    );
+////////////////////////////////////////////////////////////////////
+// fc_layer Inst
+/*assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
+                     PE_mux_sel == 2'b01 ? buffer1_out :
+                     PE_mux_sel == 2'b10 ? buffer2_out :
+                     buffer3_out);*/
+    wire en;
+    wire clear;
+    wire next_step;
+    wire [11:0] fc_data;
+    wire [1:0]  fc_data_sel;
+    wire [79:0] weight_input_packed;
+    wire [7:0]  weight_input_unpacked [9:0];
+
+    wire [7:0] fc_bias [0:9]; 
+
+
+    // Unpacking process
+    genvar k;
+    for (k = 0; k < 10 ; k = k + 1) begin
+        assign weight_input_unpacked[k] = weight_input_packed[k*8 +: 8];
+    end
+
+    assign fc_data = (fc_data_sel == 2'b01 ? shiftBuffer1_out :
+                        fc_data_sel == 2'b10 ? shiftBuffer2_out :
+                        fc_data_sel == 2'b11 ? shiftBuffer3_out : 12'hxxx);
+
+    // shift enable decode process
+    assign shifter_en_decoded = (fc_data_sel == 2'b00 ? 3'b000:
+                                 fc_data_sel == 2'b01 ? 3'b001:
+                                 fc_data_sel == 2'b10 ? 3'b010:3'b100);
+
+    wire            weight_enable;
+    wire [5:0]      weight_indexing;
+
+    FC_layer fc_layer(
+        .clk_i(clk_i),
+        .rstn_i(rstn_i),
+        .en_i(en),
+        .clear_i(clear),
+        .flatten_input_i(fc_data),
+        .weight_input_i(weight_input_unpacked),
+        .bias_input_i(fc_bias),
+    
+        .result_o(result),//3bit
+        .done_o(next_step)
+    );
+
+    FC_controller fc_controller(
+        .clk_i(clk_i),
+        .rstn_i(rstn_i),
+        .start_i(conv_done),
+        .next_i(next_step), //from fc_layer
+        .select_o(fc_data_sel),
+        .clear_o(clear),
+        .en_o(en),
+        .weight_en(weight_enable),
+        .weight_idx(weight_indexing),
+        .done(done)
+    );
+
+    fc_weight_ROM fc_weight_ROM_inst(
+        .clk_i(clk_i),
+        .weight_rom_en(weight_enable),
+        .weight_idx(weight_indexing),
+
+        .oDAT(weight_input_packed)
+    );
+
+    fc_bias_ROM fc_bias_ROM_inst(
+        .clk_i(clk_i),
+        .bias_rom_en(weight_enable),
+        .bias_idx(weight_indexing),
+
+        .oDAT(fc_bias)
     );
 
 

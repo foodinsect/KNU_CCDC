@@ -21,7 +21,8 @@ module global_controller(
     output reg          acc_rd_en,
     output reg          FIFO_valid,
     output reg          shift_en,
-    output reg          conv_done
+    output reg          conv_done,
+    output reg          ready
 );
 
 reg [4:0] current_state, next_state;
@@ -92,23 +93,24 @@ always @(*) begin
     5'd0:begin
         oacc_wr_en = 1'b0;
         buf_rd_mod_up = 1'b0;
-        oPE_rstn = 1'b0;
+        oPE_rstn = 1'b1;
         weight_sel = 2'b00;
         bias_sel = 2'b00;
         o_PE_mux_sel = 2'b00;
         oBuf1_we = 1'b1;
         oBuf_valid_en = 1'b0;
-        oBuf_adr_clr = 1'b0;
-        oPE_clr_d1 = 1'b0;
+        oBuf_adr_clr = 1'b1;
+        oPE_clr_d1 = 1'b1;
         oPE_valid_i = 1'b0;
         oimage_rom_en = 1'b0;
         idx_en = 1'b0;
-        idx_clear_d1 = 1'b0;
+        idx_clear_d1 = 1'b1;
         ocycle = 6'd0;
         acc_rd_en = 1'b0;
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b1;
     end 
     5'd1:begin
         oacc_wr_en = 1'b0;
@@ -129,6 +131,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd2:begin
         oacc_wr_en = 1'b0;
@@ -149,6 +152,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd3:begin
         oacc_wr_en = 1'b0;
@@ -170,6 +174,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd4:begin // conv1 finish 
         oacc_wr_en = 1'b0;
@@ -191,6 +196,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd5:begin
         // waiting for filling buffer1 complete
@@ -213,6 +219,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd6:begin
         oacc_wr_en = 1'b0;
@@ -234,6 +241,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd7:begin
         oacc_wr_en = 1'b0;
@@ -255,6 +263,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd8:begin
         oacc_wr_en = 1'b1;
@@ -276,6 +285,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd9:begin // PE CLEAR
         oacc_wr_en = 1'b1;
@@ -297,6 +307,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
 
     5'd10:begin 
@@ -319,6 +330,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd11:begin
         oacc_wr_en = 1'b0;
@@ -340,6 +352,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd12:begin
         oacc_wr_en = 1'b0;
@@ -361,6 +374,7 @@ always @(*) begin
         FIFO_valid = 1'b1;
         state12_cntEn = 1'b1;
         conv_done = 1'b0;
+        ready = 1'b0;
     end
     5'd13:begin
         oacc_wr_en = 1'b0;
@@ -382,6 +396,7 @@ always @(*) begin
         FIFO_valid = 1'b0;
         state12_cntEn = 1'b0;
         conv_done = 1'b1;
+        ready = 1'b0;
     end
 
 
@@ -405,6 +420,7 @@ always @(*) begin
     5'd10:if(oimage_idx == 10'd1) next_state = 5'd11; else next_state = 5'd10;
     5'd11:if(ocycle != 3)next_state = 5'd7;else next_state = 5'd12;
     5'd12:if(oimage_idx == 10'd66) next_state = 5'd13; else next_state = 5'd12;
+    5'd13:next_state = 5'd0; 
     default:;
     endcase
 end
