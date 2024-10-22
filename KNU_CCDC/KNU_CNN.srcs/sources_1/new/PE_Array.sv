@@ -1,7 +1,6 @@
 module PE_Array (
     input wire clk_i,
     input wire rstn_i,
-    input wire rst_i,
     input wire PE_rstn_i,
     input wire valid_i,
     input wire clear_i,
@@ -46,7 +45,7 @@ module PE_Array (
         for (i = 0; i < 2; i = i + 1) begin : PE_ARRAY1
             conv2d_pe Ch1 (
                 .clk_i(clk_i),
-                .rst_i(rst_i),
+                .rstn_i(rstn_i),
                 .valid_i(valid_i),
                 .clear_i(clear_i),
                 .data_in(data_in[i:4+i]),            // Input data slice for this PE
@@ -62,7 +61,7 @@ module PE_Array (
         for (i = 0; i < 2; i = i + 1) begin : PE_ARRAY2
             conv2d_pe Ch2 (
                 .clk_i(clk_i),
-                .rst_i(rst_i),
+                .rstn_i(rstn_i),
                 .valid_i(valid_i),
                 .clear_i(clear_i),
                 .data_in(data_in[i:4+i]),            // Input data slice for this PE
@@ -78,7 +77,7 @@ module PE_Array (
         for (i = 0; i < 2; i = i + 1) begin : PE_ARRAY3
             conv2d_pe Ch3 (
                 .clk_i(clk_i),
-                .rst_i(rst_i),
+                .rstn_i(rstn_i),
                 .valid_i(valid_i),
                 .clear_i(clear_i),
                 .data_in(data_in[i:4+i]),            // Input data slice for this PE
@@ -124,7 +123,7 @@ module PE_Array (
     // ACC
     Accumulator ACC_Ch1(
         .clk_i(clk_i),
-        .rstn_i(rstn_i & ~rst_i),
+        .rstn_i(rstn_i),
         .valid_i(valid_o & acc_wr_en_i),                    // enable signal from controller + PE_valid_o
         .rd_en_i(acc_rd_en_i),
         .bias_i(bias_in[0]),
@@ -137,7 +136,7 @@ module PE_Array (
         .BIAS(8'hff)
     ) ACC_Ch2(
         .clk_i(clk_i),
-        .rstn_i(rstn_i& ~rst_i),
+        .rstn_i(rstn_i),
         .valid_i(valid_o & acc_wr_en_i),                    // enable signal from controller + PE_valid_o
         .rd_en_i(acc_rd_en_i),
         .bias_i(bias_in[1]),
@@ -150,7 +149,7 @@ module PE_Array (
         .BIAS(8'hf6)
     ) ACC_Ch3(
         .clk_i(clk_i),
-        .rstn_i(rstn_i& ~rst_i),
+        .rstn_i(rstn_i),
         .valid_i(valid_o & acc_wr_en_i),                    // enable signal from controller + PE_valid_o
         .rd_en_i(acc_rd_en_i),
         .bias_i(bias_in[2]),

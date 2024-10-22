@@ -1,7 +1,6 @@
 module FIFO (
     input wire clk_i,
     input wire rstn_i,
-    input wire clear_i,
     input wire signed [11:0] data_in_i [1:0],
     input wire valid_in_i,
 
@@ -20,7 +19,7 @@ module FIFO (
     assign data_out_o[1] = (valid_out) ? shift_reg[1] : 12'hxxx;
 
     always @(posedge clk_i) begin
-        if (~rstn_i|clear_i) begin
+        if (~rstn_i) begin
             shift_reg[1] <= 0;
             shift_reg[0] <= 0;
             shift_counter <= 0;
