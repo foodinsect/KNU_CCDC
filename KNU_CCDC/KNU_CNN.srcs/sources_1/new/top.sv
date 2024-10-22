@@ -113,6 +113,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .rstn_i(rstn_i),
         .start_i(start_i),
         .iPE_valid_o(PE_valid_o),
+        .fc_done_i(done),
 
         // Output port
         .oacc_wr_en(acc_wr_en),
@@ -141,9 +142,10 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     PE_Array PE_inst (
         .clk_i(clk_i),
         .rstn_i(rstn_i),
+        .rst_i(done),
         .PE_rstn_i(PE_rstn),
         .valid_i(PE_valid_i),
-        .clear_i(PE_clr_o),
+        .clear_i(PE_clr_o|done),
         .acc_wr_en_i(acc_wr_en),
         .acc_rd_en_i(acc_rd_en),
                                             // conv1 : image data       |    conv2 :        1st         ->      2nd         ->      3rd
@@ -166,6 +168,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     FIFO FIFO_Ch1(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
+        .clear_i(ready),
         .data_in_i(conv_out1),      // conv1 : conv_out1       |    conv2 : conv_sum
         .valid_in_i(PE_valid_o|FIFO_valid),
         
@@ -176,6 +179,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     FIFO FIFO_Ch2(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
+        .clear_i(ready),
         .data_in_i(conv_out2),      // conv1 : conv_out2       |    conv2 : conv_sum
         .valid_in_i(PE_valid_o|FIFO_valid),
         
@@ -186,6 +190,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     FIFO FIFO_Ch3(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
+        .clear_i(ready),
         .data_in_i(conv_out3),      // conv1 : conv_out3       |    conv2 : conv_sum
         .valid_in_i(PE_valid_o|FIFO_valid),
         
@@ -198,6 +203,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     Max_Pooling_ReLU MaxPooling_Ch1(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
+        .clear_i(ready),
         .valid_i(oMAX_En_1),
         .data_in(oFIFO_1),
         .data_o(oMAX_1),
@@ -207,6 +213,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     Max_Pooling_ReLU MaxPooling_Ch2(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
+        .clear_i(ready),
         .valid_i(oMAX_En_2),
         .data_in(oFIFO_2),
         .data_o(oMAX_2),
@@ -216,6 +223,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     Max_Pooling_ReLU MaxPooling_Ch3(
         .clk_i(clk_i),
         .rstn_i(rstn_i),
+        .clear_i(ready),
         .valid_i(oMAX_En_3),
         .data_in(oFIFO_3),
         .data_o(oMAX_3),
@@ -228,6 +236,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     buffer1 BUF1(
         .clk_i(clk_i),
         .rstn_i(rstn_i & (~buf_adr_clr)),
+        .clear_i(ready),
         .din_i(oMAX_1),
         .valid_i(oBuf_En_1 | buf_valid_en),
         .buffer1_we(buffer1_we),
@@ -238,6 +247,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     buffer1 BUF2(
         .clk_i(clk_i),
         .rstn_i(rstn_i & (~buf_adr_clr)),
+        .clear_i(ready),
         .din_i(oMAX_2),
         .valid_i(oBuf_En_2 | buf_valid_en),
         .buffer1_we(buffer1_we),
@@ -248,6 +258,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     buffer1 BUF3(
         .clk_i(clk_i),
         .rstn_i(rstn_i & (~buf_adr_clr)),
+        .clear_i(ready),
         .din_i(oMAX_3),
         .valid_i(oBuf_En_3 | buf_valid_en),
         .buffer1_we(buffer1_we),

@@ -1,6 +1,6 @@
 module conv2d_pe (
     input wire clk_i,
-    input wire rstn_i,                                  // Reset signal (when 1, initialize)
+    input wire rst_i,                                  // Reset signal (when 1, initialize)
     input wire valid_i,                                 // Valid signal (perform calculations only when data is valid)
     input wire clear_i,
     input wire signed [11:0] data_in [0:4],             // 5 input data values (input one row at a time)
@@ -51,6 +51,13 @@ module conv2d_pe (
         end
         // Clear logic
         if (clear_i) begin
+            if (rst_i) begin
+                line_buffer1[4] <= 12'hxx;
+                line_buffer2[4] <= 12'hxx;
+                line_buffer3[4] <= 12'hxx;
+                line_buffer4[4] <= 12'hxx;
+                line_buffer5[4] <= 12'hxx;
+            end
             for (i = 0; i < 4; i = i + 1) begin
                 line_buffer1[i] <= 12'hxx;
                 line_buffer2[i] <= 12'hxx;

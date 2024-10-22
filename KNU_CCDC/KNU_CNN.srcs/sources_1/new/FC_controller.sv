@@ -129,7 +129,7 @@ always @(*) begin
         4'd5:next_state = 4'd6;
         4'd6:next_state = 4'd7;
         4'd7:if(weight_idx == 6'd52) next_state = 4'd8;else next_state = 4'd7;
-        4'd8:if(start_i) next_state = 4'd1; else next_state = 4'd8;
+        4'd8:next_state = 4'd0;
         default:;
     endcase
 end

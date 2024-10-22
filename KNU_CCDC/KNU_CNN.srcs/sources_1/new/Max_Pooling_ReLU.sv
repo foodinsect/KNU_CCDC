@@ -14,6 +14,7 @@
 module Max_Pooling_ReLU(
     input wire clk_i,                         // Clock input for synchronous design
     input wire rstn_i,                        // Reset signal (active low)
+    input wire clear_i,
     input wire valid_i,                       // Valid signal to trigger calculation
     input wire signed [11:0] data_in [0:1], // 2x2 input data for MaxPooling
     output wire [11:0] data_o,               // MaxPooling + ReLU result
@@ -28,10 +29,11 @@ module Max_Pooling_ReLU(
     
     // Sequential logic: Synchronous with clock and valid input
     always @(posedge clk_i) begin
-        if (!rstn_i) begin
+        if (!rstn_i|clear_i) begin
             // Reset logic
             data_out <= 12'b0;
             relu_en <= 1'b0;
+            max_value <= 12'b0;
         end else if (valid_i) begin
             // Perform all comparisons in parallel
             max_value <= (data_in[0] > data_in[1]) ? data_in[0] : data_in[1];  // First comparison
