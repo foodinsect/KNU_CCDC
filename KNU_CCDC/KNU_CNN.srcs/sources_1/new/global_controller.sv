@@ -406,7 +406,7 @@ end
 
 always @(*) begin
     case (current_state)
-    5'd0: if(start_i|fc_done_i) next_state = 5'd1; else next_state = 5'd0;
+    5'd0: if(start_i) next_state = 5'd1; else next_state = 5'd0;
     5'd1: next_state = 5'd2;
     5'd2: if(oimage_idx == 10'd27) next_state = 5'd3; else next_state = 5'd2;
     5'd3: if(ocycle == 12) next_state = 5'd4; else next_state = 5'd2;

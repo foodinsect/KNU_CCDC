@@ -45,7 +45,7 @@ module tb_top();
 
     wire done;
     wire ready;
-    wire result;
+    wire [3:0] result;
 
     // Instantiate PE Array module
     top TOP_inst (
@@ -77,6 +77,8 @@ module tb_top();
         .image_rom_en(image_rom_en),
         .weight_sel(weight_sel),
         .bias_sel(bias_sel),
+        .ready(ready),
+        .result(result),
         .done(done)
     );
 
@@ -93,11 +95,33 @@ module tb_top();
         #10 rstn <= 1'b1;
         #10 start_i = 1'b1;
         #10 start_i = 1'b0;
-        wait(ready==1);
+        wait(done==1);
         #30;
         $readmemh("E:/cnn_verilog/data/0_02.txt",pixels);
         #10 start_i = 1'b1;
         #10 start_i = 1'b0;
+        wait(done==1);
+        #30;
+        $readmemh("E:/cnn_verilog/data/0_04.txt",pixels);
+        #10 start_i = 1'b1;
+        #10 start_i = 1'b0;
+        wait(done==1);
+        #30;
+        $readmemh("E:/cnn_verilog/data/0_07.txt",pixels);
+        #10 start_i = 1'b1;
+        #10 start_i = 1'b0;
+        wait(done==1);
+        #30;
+        $readmemh("E:/cnn_verilog/data/0_09.txt",pixels);
+        #10 start_i = 1'b1;
+        #10 start_i = 1'b0;
+        wait(done==1);
+        #30;
+        $readmemh("E:/cnn_verilog/data/0_00.txt",pixels);
+        #10 start_i = 1'b1;
+        #10 start_i = 1'b0;
+        wait(done==1);
+        $finish;
     end
 
     
@@ -121,27 +145,25 @@ module tb_top();
         $readmemh("E:/cnn_verilog/data/conv2_bias.txt", bias_2);
     end
 
-    
+    integer i;
     // image rom
     always @(posedge clk or negedge rstn) begin
-        if (!rstn) begin
-            
+        if (!rstn|done) begin
+            for (i = 0  ; i < 6; i = i + 1) begin
+                image_6rows[i] <= 12'hxxx;  
+            end 
         end
         else begin
-            integer i;
             // Valid signal 
             if (image_rom_en) begin
                 for (i = 0; i < 6; i = i + 1) begin
                     image_6rows[i] <= {4'h0, pixels[(i + cycle * 2) * 28 + image_idx]};  
                 end
-
-                for (i = 6; i < 12; i = i + 1) begin
-                    image_6rows[i] <= {4'h0, pixels[(i + (cycle * 2) - 6) * 28 + image_idx]};  
-                end
             end
-
-            if (cycle == 12) begin
-                
+            else begin
+                for (i = 0  ; i < 6; i = i + 1) begin
+                    image_6rows[i] <= 12'hxxx;  
+                end 
             end
         end
     end

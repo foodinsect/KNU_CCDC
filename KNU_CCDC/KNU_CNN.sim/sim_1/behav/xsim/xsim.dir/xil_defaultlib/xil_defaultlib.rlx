@@ -3,7 +3,7 @@
 May 24 2019
 15:06:07
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/glbl.v,1728575207,verilog,,,,glbl,,,,,,,,
-E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv,1729635609,systemVerilog,,,,tb_top,,,,,,,,
+E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv,1729636473,systemVerilog,,,,tb_top,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Accumulator.sv,1729628485,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_controller.sv,,Accumulator,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_controller.sv,1729630519,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_layer.sv,,FC_controller,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_layer.sv,1729628583,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv,,FC_layer,,,,,,,,
@@ -18,7 +18,7 @@ E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/comparator.sv,172
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/conv2d_pe.sv,1729634558,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/fc_bias_ROM.sv,,conv2d_pe,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/fc_bias_ROM.sv,1729629342,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/fc_weight_ROM.sv,,fc_bias_ROM,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/fc_weight_ROM.sv,1729629354,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv,,fc_weight_ROM,,,,,,,,
-E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv,1729632051,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/matmul.sv,,global_controller,,,,,,,,
+E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/global_controller.sv,1729636001,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/matmul.sv,,global_controller,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/matmul.sv,1729628607,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/max_finder.sv,,matmul,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/max_finder.sv,1729628985,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv,,max_finder,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/shiftBuffer.v,1729302581,verilog,,,,shiftBuffer,,,,,,,,
