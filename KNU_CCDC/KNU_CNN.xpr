@@ -33,7 +33,7 @@
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSABoardId" Val="zybo-z7-20"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="548"/>
+    <Option Name="WTXSimLaunchSim" Val="577"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -238,10 +238,23 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sim_1/new/tb_top_1000.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/imports/PE_5x5_test_row2/tb_PE_Array_behav1.wcfg">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../PE_5x5_test_row2/tb_PE_Array_behav1.wcfg"/>
           <Attr Name="ImportTime" Val="1727607164"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/tb_top_1000_behav.wcfg">
+        <FileInfo>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -255,6 +268,7 @@
         <Option Name="XSimWcfgFile" Val="$PPRDIR/../../../PE_5x5_test_row2/tb_PE_Array_behav.wcfg"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/../../../PE_5x5_test_row2/tb_PE_Array_behav1.wcfg"/>
         <Option Name="XSimWcfgFile" Val="$PPRDIR/tb_acc_behav.wcfg"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/tb_top_1000_behav.wcfg"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">

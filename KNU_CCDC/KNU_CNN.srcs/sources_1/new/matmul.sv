@@ -4,11 +4,11 @@ module matmul( //2024.10.13 update
     input wire clear_i,
     input wire en_i,
     input wire signed [11:0] flatten_i,
-    input wire signed [7:0] weight_i [9:0],
-    input wire signed [7:0] bias_i [9:0],
+    input wire signed [7:0] weight_i [0:9],
+    input wire signed [7:0] bias_i [0:9],
 
     output wire valid_out_o,
-    output wire signed [11:0] data_out_o [9:0]
+    output wire signed [11:0] data_out_o [0:9]
 );
 
     wire mac_valid;
@@ -43,9 +43,9 @@ module matmul( //2024.10.13 update
         end
     end
 
-    wire signed [19:0] mac_outputs [9:0];
-    reg signed [19:0] sum_outputs [9:0];
-    wire signed [19:0] final_outputs [9:0];
+    wire signed [19:0] mac_outputs [0:9];
+    reg signed [19:0] sum_outputs [0:9];
+    wire signed [19:0] final_outputs [0:9];
 
     generate
         genvar i;

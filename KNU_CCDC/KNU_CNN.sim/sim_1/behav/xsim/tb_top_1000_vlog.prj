@@ -1,0 +1,30 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../KNU_CNN.srcs/sources_1/new/shiftBuffer.v" \
+
+sv xil_defaultlib  \
+"../../../../KNU_CNN.srcs/sources_1/new/Accumulator.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/FC_controller.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/FC_layer.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/FIFO.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/MAC.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/PE_Array.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/ROM_Bias.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/ROM_Weight.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/buffer1.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/comparator.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/conv2d_pe.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/fc_bias_ROM.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/fc_weight_ROM.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/global_controller.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/matmul.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/max_finder.sv" \
+"../../../../KNU_CNN.srcs/sources_1/new/top.sv" \
+"../../../../KNU_CNN.srcs/sim_1/new/tb_top_1000.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

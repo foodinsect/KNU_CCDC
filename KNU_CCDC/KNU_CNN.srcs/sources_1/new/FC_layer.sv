@@ -5,7 +5,7 @@ module FC_layer( //2024.10.13 update
     input wire clear_i,
     input wire signed [11:0] flatten_input_i,
     input wire signed [7:0] weight_input_i [0:9],
-    input wire signed [7:0] bias_input_i [9:0],
+    input wire signed [7:0] bias_input_i [0:9],
     
     output wire [3:0] result_o,
     output wire done_o
@@ -13,7 +13,7 @@ module FC_layer( //2024.10.13 update
 
     // Intermediate wires
     wire valid_out;
-    wire signed [11:0] data_out [9:0];
+    wire signed [11:0] data_out [0:9];
     
     assign done_o = valid_out;
     
