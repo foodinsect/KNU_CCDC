@@ -3,10 +3,10 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Oct 31 08:27:29 2024
-# Process ID: 28436
+# Start of session at: Wed Oct 30 11:11:07 2024
+# Process ID: 6736
 # Current directory: E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26512 E:\02_CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22196 E:\02_CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
 # Log file: E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/vivado.log
 # Journal file: E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC\vivado.jou
 # Running On: DESKTOP-LUJNASU, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 33948 MB
@@ -29,4 +29,4 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 avail
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 31 08:28:05 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 30 11:11:33 2024...

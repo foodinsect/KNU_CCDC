@@ -5,7 +5,7 @@ Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-2861] module 'Accumulator' does not have a parameter named BIAS [E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv:136]
 WARNING: [VRFC 10-2861] module 'Accumulator' does not have a parameter named BIAS [E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv:149]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/top.sv:354]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top_1000.sv:229]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4099] "E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/shiftBuffer.v" Line 1. Module shiftBuffer doesn't have a timescale but at least one module in design has a timescale.
@@ -27,9 +27,9 @@ Compiling module xil_defaultlib.matmul_default
 Compiling module xil_defaultlib.max_finder
 Compiling module xil_defaultlib.FC_layer
 Compiling module xil_defaultlib.FC_controller
+Compiling module xil_defaultlib.top
 Compiling module xil_defaultlib.fc_weight_ROM
 Compiling module xil_defaultlib.fc_bias_ROM
-Compiling module xil_defaultlib.top
 Compiling module xil_defaultlib.ROM_Weight
 Compiling module xil_defaultlib.ROM_Bias
 Compiling module xil_defaultlib.tb_top_1000

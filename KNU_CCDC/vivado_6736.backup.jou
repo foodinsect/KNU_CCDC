@@ -3,10 +3,10 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Oct 31 08:27:29 2024
-# Process ID: 28436
+# Start of session at: Wed Oct 30 11:11:07 2024
+# Process ID: 6736
 # Current directory: E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26512 E:\02_CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22196 E:\02_CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
 # Log file: E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/vivado.log
 # Journal file: E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC\vivado.jou
 # Running On: DESKTOP-LUJNASU, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 33948 MB

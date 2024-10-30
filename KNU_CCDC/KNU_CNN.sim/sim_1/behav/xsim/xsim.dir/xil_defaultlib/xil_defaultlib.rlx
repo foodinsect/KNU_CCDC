@@ -6,7 +6,7 @@ E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.sim/sim_1/behav/xsim/glbl.v,17296460
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top.sv,1729641502,systemVerilog,,,,tb_top,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sim_1/new/tb_top_1000.sv,1729639426,systemVerilog,,,,tb_top_1000,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Accumulator.sv,1729646018,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_controller.sv,,Accumulator,,,,,,,,
-E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_controller.sv,1729646018,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_layer.sv,,FC_controller,,,,,,,,
+E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_controller.sv,1730330567,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_layer.sv,,FC_controller,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FC_layer.sv,1730259389,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv,,FC_layer,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/FIFO.sv,1729646018,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/MAC.sv,,FIFO,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/MAC.sv,1730261555,systemVerilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/Max_Pooling_ReLU.sv,,MAC,,,,,,,,

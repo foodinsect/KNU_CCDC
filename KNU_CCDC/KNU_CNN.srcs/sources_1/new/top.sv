@@ -5,22 +5,17 @@ module top (
     
     input wire [11:0] image_6rows [0:5],
 
+    input wire [79:0] weight_input_packed,    // Fc_layer weight input
+    input wire signed [7:0] fc_bias [0:9],    // FC_layer bias input
+
     input wire signed [7:0] conv1_weight_1 [0:24],
     input wire signed [7:0] conv1_weight_2 [0:24],
     input wire signed [7:0] conv1_weight_3 [0:24],
     input wire signed [7:0] bias_1 [0:2],
 
- /*   input wire signed [7:0] conv2_weight_11 [0:24],
-    input wire signed [7:0] conv2_weight_12 [0:24],
-    input wire signed [7:0] conv2_weight_13 [0:24],
-    input wire signed [7:0] conv2_weight_21 [0:24],
-    input wire signed [7:0] conv2_weight_22 [0:24],
-    input wire signed [7:0] conv2_weight_23 [0:24],
-    input wire signed [7:0] conv2_weight_31 [0:24],
-    input wire signed [7:0] conv2_weight_32 [0:24],
-    input wire signed [7:0] conv2_weight_33 [0:24],
-    input wire signed [7:0] bias_2 [0:2],
-   */ 
+    // FC_Layer weight ROM contriol
+    output wire       weight_enable, 
+    output wire [5:0] weight_indexing,
 
     output wire [5:0] cycle,
     output wire [9:0] image_idx,
@@ -290,11 +285,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     wire next_step;
     wire signed [11:0] fc_data;
     wire [1:0]  fc_data_sel;
-    wire [79:0] weight_input_packed;
     wire [7:0]  weight_input_unpacked [9:0];
-
-    wire signed [7:0] fc_bias [0:9]; 
-
 
     // Unpacking process
     genvar k;
@@ -311,8 +302,6 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
                                  fc_data_sel == 2'b01 ? 3'b001:
                                  fc_data_sel == 2'b10 ? 3'b010:3'b100);
 
-    wire            weight_enable;
-    wire [5:0]      weight_indexing;
 
     FC_layer fc_layer(
         .clk_i(clk_i),
@@ -340,21 +329,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .done(done)
     );
 
-    fc_weight_ROM fc_weight_ROM_inst(
-        .clk_i(clk_i),
-        .weight_rom_en(weight_enable),
-        .weight_idx(weight_indexing),
 
-        .oDAT(weight_input_packed)
-    );
-
-    fc_bias_ROM fc_bias_ROM_inst(
-        .clk_i(clk_i),
-        .bias_rom_en(weight_enable),
-        .bias_idx(weight_indexing),
-
-        .oDAT(fc_bias)
-    );
 
 
 endmodule
