@@ -1,6 +1,6 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 016c3969ec4b42579f24e73fc71ce675 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_1000_behav xil_defaultlib.tb_top_1000 xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-2861] module 'Accumulator' does not have a parameter named BIAS [E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/KNU_CNN.srcs/sources_1/new/PE_Array.sv:136]
@@ -32,6 +32,6 @@ Compiling module xil_defaultlib.fc_bias_ROM
 Compiling module xil_defaultlib.top
 Compiling module xil_defaultlib.ROM_Weight
 Compiling module xil_defaultlib.ROM_Bias
-Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.tb_top_1000
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
+Built simulation snapshot tb_top_1000_behav
