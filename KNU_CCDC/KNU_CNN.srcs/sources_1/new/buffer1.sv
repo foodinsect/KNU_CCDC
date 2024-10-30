@@ -3,6 +3,7 @@
 module buffer1(
     input                           clk_i,
     input                           rstn_i,
+    input                           clear_i,
     input       [11:0]              din_i,
     input                           valid_i,
     input                           buffer1_we,
@@ -19,6 +20,11 @@ always @(posedge clk_i) begin
     if(!rstn_i)begin
         addr_i <= 7'd0;
         cnt_sub <= 5'd0;
+        if (clear_i) begin
+            for (i=0; i < 144; i=i+1) begin
+                mem[i] <= 12'hxxx;
+            end
+        end
     end
     else begin
         if(valid_i&(~buffer1_we))begin
@@ -42,6 +48,7 @@ always @(posedge clk_i) begin
         mem[addr_i] <= din_i;
     end
 end
+
 
 always @(*) begin
     dout_o[0] = mem[addr_i + rd_mod*8'd12];

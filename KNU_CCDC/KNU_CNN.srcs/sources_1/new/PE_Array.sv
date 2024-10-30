@@ -45,7 +45,7 @@ module PE_Array (
         for (i = 0; i < 2; i = i + 1) begin : PE_ARRAY1
             conv2d_pe Ch1 (
                 .clk_i(clk_i),
-                .rstn_i(rstn_i & ~PE_rstn_i),
+                .rstn_i(rstn_i),
                 .valid_i(valid_i),
                 .clear_i(clear_i),
                 .data_in(data_in[i:4+i]),            // Input data slice for this PE
@@ -61,7 +61,7 @@ module PE_Array (
         for (i = 0; i < 2; i = i + 1) begin : PE_ARRAY2
             conv2d_pe Ch2 (
                 .clk_i(clk_i),
-                .rstn_i(rstn_i & ~PE_rstn_i),
+                .rstn_i(rstn_i),
                 .valid_i(valid_i),
                 .clear_i(clear_i),
                 .data_in(data_in[i:4+i]),            // Input data slice for this PE
@@ -77,7 +77,7 @@ module PE_Array (
         for (i = 0; i < 2; i = i + 1) begin : PE_ARRAY3
             conv2d_pe Ch3 (
                 .clk_i(clk_i),
-                .rstn_i(rstn_i & ~PE_rstn_i),
+                .rstn_i(rstn_i),
                 .valid_i(valid_i),
                 .clear_i(clear_i),
                 .data_in(data_in[i:4+i]),            // Input data slice for this PE

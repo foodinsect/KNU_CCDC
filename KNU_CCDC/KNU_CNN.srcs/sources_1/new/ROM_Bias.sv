@@ -2,8 +2,8 @@
 
 module ROM_Bias #(
     parameter DATA_WIDTH = 8, 
-    parameter WEIGHT_FILE_bias_1 = "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv1_bias.txt", 
-    parameter WEIGHT_FILE_bias_2 = "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/conv2_bias.txt"
+    parameter WEIGHT_FILE_bias_1 = "", 
+    parameter WEIGHT_FILE_bias_2 = ""
 ) (
     output wire signed [DATA_WIDTH-1:0] oDAT_bias_1 [0:2],
     output wire signed [DATA_WIDTH-1:0] oDAT_bias_2 [0:2]

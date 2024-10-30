@@ -5,6 +5,9 @@ module top (
     
     input wire [11:0] image_6rows [0:5],
 
+    input wire [79:0] weight_input_packed,    // Fc_layer weight input
+    input wire signed [7:0] fc_bias [0:9],    // FC_layer bias input
+
     input wire signed [7:0] conv1_weight_1 [0:24],
     input wire signed [7:0] conv1_weight_2 [0:24],
     input wire signed [7:0] conv1_weight_3 [0:24],
@@ -21,6 +24,10 @@ module top (
     input wire signed [7:0] conv2_weight_33 [0:24],
     input wire signed [7:0] bias_2 [0:2],
    */ 
+
+    // FC_Layer weight ROM contriol
+    output wire       weight_enable, 
+    output wire [5:0] weight_indexing,
 
     output wire [5:0] cycle,
     output wire [9:0] image_idx,
@@ -84,9 +91,9 @@ module top (
     wire  [11:0] buffer3_out [0:5];
     
     // shiftBuffer wire
-    wire  [11:0] shiftBuffer1_out;
-    wire  [11:0] shiftBuffer2_out;
-    wire  [11:0] shiftBuffer3_out;
+    wire signed [11:0] shiftBuffer1_out;
+    wire signed [11:0] shiftBuffer2_out;
+    wire signed [11:0] shiftBuffer3_out;
 
 
     //////////////////////// fc_layer wire declaration ////////////////////////////////////////////
@@ -113,6 +120,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .rstn_i(rstn_i),
         .start_i(start_i),
         .iPE_valid_o(PE_valid_o),
+        .fc_done_i(done),
 
         // Output port
         .oacc_wr_en(acc_wr_en),
@@ -140,7 +148,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
 // PE Inst
     PE_Array PE_inst (
         .clk_i(clk_i),
-        .rstn_i(rstn_i),
+        .rstn_i(rstn_i & ~done),
         .PE_rstn_i(PE_rstn),
         .valid_i(PE_valid_i),
         .clear_i(PE_clr_o),
@@ -165,7 +173,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
 // FIFO
     FIFO FIFO_Ch1(
         .clk_i(clk_i),
-        .rstn_i(rstn_i),
+        .rstn_i(rstn_i & ~ready),
         .data_in_i(conv_out1),      // conv1 : conv_out1       |    conv2 : conv_sum
         .valid_in_i(PE_valid_o|FIFO_valid),
         
@@ -175,7 +183,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
 
     FIFO FIFO_Ch2(
         .clk_i(clk_i),
-        .rstn_i(rstn_i),
+        .rstn_i(rstn_i & ~ready),
         .data_in_i(conv_out2),      // conv1 : conv_out2       |    conv2 : conv_sum
         .valid_in_i(PE_valid_o|FIFO_valid),
         
@@ -185,7 +193,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
 
     FIFO FIFO_Ch3(
         .clk_i(clk_i),
-        .rstn_i(rstn_i),
+        .rstn_i(rstn_i & ~ready),
         .data_in_i(conv_out3),      // conv1 : conv_out3       |    conv2 : conv_sum
         .valid_in_i(PE_valid_o|FIFO_valid),
         
@@ -197,7 +205,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
 // MaxPooling & ReLU
     Max_Pooling_ReLU MaxPooling_Ch1(
         .clk_i(clk_i),
-        .rstn_i(rstn_i),
+        .rstn_i(rstn_i & ~ready),
         .valid_i(oMAX_En_1),
         .data_in(oFIFO_1),
         .data_o(oMAX_1),
@@ -206,7 +214,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     
     Max_Pooling_ReLU MaxPooling_Ch2(
         .clk_i(clk_i),
-        .rstn_i(rstn_i),
+        .rstn_i(rstn_i & ~ready),
         .valid_i(oMAX_En_2),
         .data_in(oFIFO_2),
         .data_o(oMAX_2),
@@ -215,7 +223,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     
     Max_Pooling_ReLU MaxPooling_Ch3(
         .clk_i(clk_i),
-        .rstn_i(rstn_i),
+        .rstn_i(rstn_i & ~ready),
         .valid_i(oMAX_En_3),
         .data_in(oFIFO_3),
         .data_o(oMAX_3),
@@ -228,6 +236,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     buffer1 BUF1(
         .clk_i(clk_i),
         .rstn_i(rstn_i & (~buf_adr_clr)),
+        .clear_i(ready),
         .din_i(oMAX_1),
         .valid_i(oBuf_En_1 | buf_valid_en),
         .buffer1_we(buffer1_we),
@@ -238,6 +247,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     buffer1 BUF2(
         .clk_i(clk_i),
         .rstn_i(rstn_i & (~buf_adr_clr)),
+        .clear_i(ready),
         .din_i(oMAX_2),
         .valid_i(oBuf_En_2 | buf_valid_en),
         .buffer1_we(buffer1_we),
@@ -248,6 +258,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     buffer1 BUF3(
         .clk_i(clk_i),
         .rstn_i(rstn_i & (~buf_adr_clr)),
+        .clear_i(ready),
         .din_i(oMAX_3),
         .valid_i(oBuf_En_3 | buf_valid_en),
         .buffer1_we(buffer1_we),
@@ -284,13 +295,9 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     wire en;
     wire clear;
     wire next_step;
-    wire [11:0] fc_data;
+    wire signed [11:0] fc_data;
     wire [1:0]  fc_data_sel;
-    wire [79:0] weight_input_packed;
     wire [7:0]  weight_input_unpacked [9:0];
-
-    wire [7:0] fc_bias [0:9]; 
-
 
     // Unpacking process
     genvar k;
@@ -307,8 +314,6 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
                                  fc_data_sel == 2'b01 ? 3'b001:
                                  fc_data_sel == 2'b10 ? 3'b010:3'b100);
 
-    wire            weight_enable;
-    wire [5:0]      weight_indexing;
 
     FC_layer fc_layer(
         .clk_i(clk_i),
@@ -336,21 +341,7 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
         .done(done)
     );
 
-    fc_weight_ROM fc_weight_ROM_inst(
-        .clk_i(clk_i),
-        .weight_rom_en(weight_enable),
-        .weight_idx(weight_indexing),
 
-        .oDAT(weight_input_packed)
-    );
-
-    fc_bias_ROM fc_bias_ROM_inst(
-        .clk_i(clk_i),
-        .bias_rom_en(weight_enable),
-        .bias_idx(weight_indexing),
-
-        .oDAT(fc_bias)
-    );
 
 
 endmodule

@@ -3,6 +3,7 @@ module global_controller(
     input wire          rstn_i,
     input wire          start_i,
     input wire          iPE_valid_o,        // PE_valid_PEout_o 
+    input wire          fc_done_i,
 
     output reg          oacc_wr_en,
     output reg    [1:0] obuf_rd_mod,
@@ -33,8 +34,6 @@ reg       idx_clear_d1;
 reg       oPE_clr_d1;
 reg       buf_rd_mod_up;
 reg       state12_cntEn;
-
-
 
 always @(posedge clk_i) begin
     idx_clear <= idx_clear_d1;

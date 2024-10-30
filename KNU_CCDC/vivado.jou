@@ -1,19 +1,14 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Oct 21 20:56:06 2024
-# Process ID: 14888
-# Current directory: D:/Git_repo/KNU_CCDC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5864 D:\Git_repo\KNU_CCDC\KNU_CNN.xpr
-# Log file: D:/Git_repo/KNU_CCDC/vivado.log
-# Journal file: D:/Git_repo/KNU_CCDC\vivado.jou
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Oct 30 11:11:07 2024
+# Process ID: 6736
+# Current directory: E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22196 E:\02_CCDC\KNU_Git\foodbug\KNU_CCDC\KNU_CNN.xpr
+# Log file: E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC/vivado.log
+# Journal file: E:/02_CCDC/KNU_Git/foodbug/KNU_CCDC\vivado.jou
+# Running On: DESKTOP-LUJNASU, OS: Windows, CPU Frequency: 3693 MHz, CPU Physical cores: 12, Host memory: 33948 MB
 #-----------------------------------------------------------
 start_gui
-open_project D:/Git_repo/KNU_CCDC/KNU_CNN.xpr
-launch_simulation
-open_wave_config D:/Git_repo/KNU_CCDC/tb_top_behav.wcfg
-source tb_top.tcl
-run 10 us
-update_compile_order -fileset sources_1
-run 10 us

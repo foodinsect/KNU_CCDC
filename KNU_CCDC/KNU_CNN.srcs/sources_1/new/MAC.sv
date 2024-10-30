@@ -20,7 +20,6 @@ reg valid_out;
 
 //2024.10.12
 reg clear1;
-reg clear2;
 
 assign valid_out_o = valid_out;
 
@@ -31,11 +30,10 @@ end
 
 always @(posedge clk_i) begin
     clear1 <= clr_i;
-    clear2 <= clear1;
 end
 
 always @(posedge clk_i) begin
-    if (~rstn_i | clear2) begin
+    if (~rstn_i | clear1) begin
         reg_accumlation[19:0] <= 20'h0000_0;
         mult_result[19:0] <= 20'h0000_0;
         weight_ff <= 8'h00;
@@ -47,13 +45,11 @@ always @(posedge clk_i) begin
             weight_ff[7:0] <= weight_i[7:0];
             input_ff[11:0] <= input_i[11:0];
             mult_result[19:0] <= $signed(input_ff) * $signed(weight_ff);
-
-            if (acc_en) begin
-                reg_accumlation[19:0] <= reg_accumlation[19:0] + mult_result[19:0];
-            end
         end
-        else
-        if (acc_en == 1'b1 && mac_en2 == 1'b0) begin
+        if (acc_en) begin
+            reg_accumlation[19:0] <= $signed(reg_accumlation[19:0]) + $signed(mult_result[19:0]);
+        end
+        if (mac_en2 == 1'b1 && mac_en_i == 1'b0) begin
             valid_out <= 1'b1;
         end
     end

@@ -1,5 +1,5 @@
 module fc_bias_ROM #(
-    parameter BIAS_FILE = "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/fc_bias.txt"
+    parameter BIAS_FILE = ""
 )(  
     input wire clk_i,
     input wire bias_rom_en,

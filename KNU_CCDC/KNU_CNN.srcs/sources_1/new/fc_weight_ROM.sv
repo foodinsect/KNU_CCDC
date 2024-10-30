@@ -1,5 +1,5 @@
 module fc_weight_ROM #(
-    parameter WEIGHT_FILE = "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/fc_weight_transposed.txt"
+    parameter WEIGHT_FILE = ""
 )(
     input wire clk_i,
     input wire weight_rom_en,
@@ -8,7 +8,7 @@ module fc_weight_ROM #(
     output reg [8*10-1:0] oDAT
 );
 
-    reg [8*10-1:0] weight [0:47]; // packed 타입으로 선언된 1차원 배열
+    reg [8*10-1:0] weight [0:47]; 
 
     initial begin
         if (WEIGHT_FILE != "") begin

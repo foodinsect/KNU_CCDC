@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module ROM_Image #(
-    parameter IMAGE_FILE = "D:/Git_repo/KNU_CCDC/KNU_CNN.srcs/CNN_MNIST/0_01.txt"
+    parameter IMAGE_FILE = ""
 ) (
     input wire clk_i,
     input wire rstn_i,

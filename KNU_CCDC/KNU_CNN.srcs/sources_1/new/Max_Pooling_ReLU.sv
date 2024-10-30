@@ -32,6 +32,7 @@ module Max_Pooling_ReLU(
             // Reset logic
             data_out <= 12'b0;
             relu_en <= 1'b0;
+            max_value <= 12'b0;
         end else if (valid_i) begin
             // Perform all comparisons in parallel
             max_value <= (data_in[0] > data_in[1]) ? data_in[0] : data_in[1];  // First comparison
