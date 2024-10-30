@@ -87,7 +87,7 @@ module tb_top();
 
     // Read image text file
     initial begin
-        $readmemh("E:/cnn_verilog/debug/input_3.txt", pixels);
+        $readmemh("E:/cnn_verilog/debug/input_3.txt", pixels);  // 3
         clk <= 1'b0;;
         rstn <= 1'b1;
         start_i = 1'b0;
@@ -97,27 +97,27 @@ module tb_top();
         #10 start_i = 1'b0;
         wait(done==1);
         #30;
-        $readmemh("E:/cnn_verilog/debug/input_37.txt",pixels);
+        $readmemh("E:/cnn_verilog/debug/input_37.txt",pixels);  // 7
         #10 start_i = 1'b1;
         #10 start_i = 1'b0;
         wait(done==1);
         #30;
-        $readmemh("E:/cnn_verilog/debug/input_55.txt",pixels);
+        $readmemh("E:/cnn_verilog/debug/input_55.txt",pixels);  // 5
         #10 start_i = 1'b1;
         #10 start_i = 1'b0;
         wait(done==1);
         #30;
-        $readmemh("E:/cnn_verilog/debug/input_62.txt",pixels);
+        $readmemh("E:/cnn_verilog/debug/input_103.txt",pixels);  // 3
         #10 start_i = 1'b1;
         #10 start_i = 1'b0;
         wait(done==1);
         #30;
-        $readmemh("E:/cnn_verilog/debug/input_103.txt",pixels);
+        $readmemh("E:/cnn_verilog/debug/input_155.txt",pixels); // 5
         #10 start_i = 1'b1;
         #10 start_i = 1'b0;
         wait(done==1);
         #30;
-        $readmemh("E:/cnn_verilog/debug/input_162.txt",pixels);
+        $readmemh("E:/cnn_verilog/debug/input_237.txt",pixels); // 7
         #10 start_i = 1'b1;
         #10 start_i = 1'b0;
         wait(done==1);

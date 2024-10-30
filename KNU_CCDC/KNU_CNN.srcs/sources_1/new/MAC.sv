@@ -49,7 +49,7 @@ always @(posedge clk_i) begin
             mult_result[19:0] <= $signed(input_ff) * $signed(weight_ff);
 
             if (acc_en) begin
-                reg_accumlation[19:0] <= reg_accumlation[19:0] + mult_result[19:0];
+                reg_accumlation[19:0] <= $signed(reg_accumlation[19:0]) + $signed(mult_result[19:0]);
             end
         end
         else

@@ -84,9 +84,9 @@ module top (
     wire  [11:0] buffer3_out [0:5];
     
     // shiftBuffer wire
-    wire  [11:0] shiftBuffer1_out;
-    wire  [11:0] shiftBuffer2_out;
-    wire  [11:0] shiftBuffer3_out;
+    wire signed [11:0] shiftBuffer1_out;
+    wire signed [11:0] shiftBuffer2_out;
+    wire signed [11:0] shiftBuffer3_out;
 
 
     //////////////////////// fc_layer wire declaration ////////////////////////////////////////////
@@ -288,12 +288,12 @@ assign PE_data_i =  (PE_mux_sel == 2'b00 ? image_6rows :
     wire en;
     wire clear;
     wire next_step;
-    wire [11:0] fc_data;
+    wire signed [11:0] fc_data;
     wire [1:0]  fc_data_sel;
     wire [79:0] weight_input_packed;
     wire [7:0]  weight_input_unpacked [9:0];
 
-    wire [7:0] fc_bias [0:9]; 
+    wire signed [7:0] fc_bias [0:9]; 
 
 
     // Unpacking process
