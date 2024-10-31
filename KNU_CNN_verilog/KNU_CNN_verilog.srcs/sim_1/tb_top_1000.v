@@ -77,7 +77,7 @@ module tb_top_1000;
 		.done(done)
 	);
 
-	always #(5) clk = ~clk;
+	always #(1) clk = ~clk;
 
 	initial begin
 		$readmemh({VIVADO_PROJECT_LOCATION, "/data/input_1000.txt"}, pixels);

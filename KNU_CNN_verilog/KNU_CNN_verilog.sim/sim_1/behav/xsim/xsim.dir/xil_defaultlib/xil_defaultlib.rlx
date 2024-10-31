@@ -3,8 +3,8 @@
 May 24 2019
 15:06:07
 E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
-E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v,1730334350,verilog,,,,tb_top,,,,,,,,
-E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v,1730332951,verilog,,,,tb_top_1000,,,,,,,,
+E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v,1730336938,verilog,,,,tb_top,,,,,,,,
+E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v,1730336732,verilog,,,,tb_top_1000,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Accumulator.v,1730331509,verilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_controller.v,,Accumulator,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_controller.v,1730296342,verilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_layer.v,,FC_controller,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_layer.v,1730296402,verilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FIFO.v,,FC_layer,,,,,,,,
@@ -23,4 +23,4 @@ E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/global_
 E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/matmul.v,1730297714,verilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v,,matmul,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v,1730335814,verilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/shiftBuffer.v,,max_finder,,,,,,,,
 E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/shiftBuffer.v,1730332545,verilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v,,shiftBuffer,,,,,,,,
-E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v,1730332486,verilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v,,top,,,,,,,,
+E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v,1730332486,verilog,,E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v,,top,,,,,,,,

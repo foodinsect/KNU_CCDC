@@ -36,5 +36,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_
 INFO: [VRFC 10-311] analyzing module shiftBuffer
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_top_1000
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top

@@ -61,17 +61,17 @@ module tb_top;
 		.done(done)
 	);
 
-	always #(5) clk = ~clk;
+	always #(1) clk = ~clk;
 
 	initial begin
 		$readmemh({VIVADO_PROJECT_LOCATION, "/data/0_03.txt"}, pixels);
 		clk <= 1'b0;
 		rstn <= 1'b1;
 		start_i = 1'b0;
-		#(10) rstn <= 1'b0;
-		#(10) rstn <= 1'b1;
-		#(10) start_i = 1'b1;
-		#(10) start_i = 1'b0;
+		#(3) rstn <= 1'b0;
+		#(2) rstn <= 1'b1;
+		#(2) start_i = 1'b1;
+		#(2) start_i = 1'b0;
 		wait (done == 1);
 		$finish;
 	end
