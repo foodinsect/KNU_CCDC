@@ -1,11 +1,11 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_1000_behav xil_defaultlib.tb_top_1000 xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-2861] module 'Accumulator' does not have a parameter named BIAS [E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/PE_Array.v:116]
 WARNING: [VRFC 10-2861] module 'Accumulator' does not have a parameter named BIAS [E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/PE_Array.v:126]
-WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v:113]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v:151]
 Completed static elaboration
 Starting simulation data flow analysis
 WARNING: [XSIM 43-4100] "E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
@@ -30,6 +30,6 @@ Compiling module xil_defaultlib.fc_weight_ROM(WEIGHT_FILE="E:/cn...
 Compiling module xil_defaultlib.fc_bias_ROM(BIAS_FILE="E:/cnn_ve...
 Compiling module xil_defaultlib.ROM_Weight(WEIGHT_FILE_conv1_1="...
 Compiling module xil_defaultlib.ROM_Bias(WEIGHT_FILE_bias_1="E:/...
-Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.tb_top_1000
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_top_behav
+Built simulation snapshot tb_top_1000_behav
