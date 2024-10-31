@@ -113,7 +113,7 @@ module PE_Array (
 		.conv_sum(conv_sum1),
 		.acc_full_o(acc_full[0])
 	);
-	Accumulator #(.BIAS(8'hff)) ACC_Ch2(
+	Accumulator ACC_Ch2(
 		.clk_i(clk_i),
 		.rstn_i(rstn_i),
 		.valid_i(valid_o & acc_wr_en_i),
@@ -123,7 +123,7 @@ module PE_Array (
 		.conv_sum(conv_sum2),
 		.acc_full_o(acc_full[1])
 	);
-	Accumulator #(.BIAS(8'hf6)) ACC_Ch3(
+	Accumulator ACC_Ch3(
 		.clk_i(clk_i),
 		.rstn_i(rstn_i),
 		.valid_i(valid_o & acc_wr_en_i),

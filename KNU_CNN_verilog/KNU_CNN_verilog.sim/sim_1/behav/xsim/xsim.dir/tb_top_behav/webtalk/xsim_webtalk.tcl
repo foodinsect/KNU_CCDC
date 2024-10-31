@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu Oct 31 10:10:43 2024" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Thu Oct 31 10:36:05 2024" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2019.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2552052" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "6dc6023a-df47-4aa1-83b0-585c8b3671cb" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "f56de015da3246728a8e513befab3aea" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "38" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "40" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Windows Server 2016 or Windows 10" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "AMD Ryzen 5 7500F 6-Core Processor             " -context "user_environment"
@@ -26,7 +26,7 @@ webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
 webtalk_add_data -client xsim -key runtime -value "4287 ns" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.03_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "8880_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 3338588861 -regid "" -xml E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/usage_statistics_ext_xsim.xml -html E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/usage_statistics_ext_xsim.html -wdm E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.08_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "9428_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2822498354 -regid "" -xml E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/usage_statistics_ext_xsim.xml -html E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/usage_statistics_ext_xsim.html -wdm E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

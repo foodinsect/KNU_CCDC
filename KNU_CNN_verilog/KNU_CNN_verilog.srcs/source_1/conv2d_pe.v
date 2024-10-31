@@ -47,7 +47,7 @@ module conv2d_pe (
 
 				for (i = 0; i < 5; i = i + 1)
 					partial_sum = ((((partial_sum + ($signed(line_buffer1[i]) * $signed(weight_in[(24 - i) * 8+:8]))) + ($signed(line_buffer2[i]) * $signed(weight_in[(24 - (i + 5)) * 8+:8]))) + ($signed(line_buffer3[i]) * $signed(weight_in[(24 - (i + 10)) * 8+:8]))) + ($signed(line_buffer4[i]) * $signed(weight_in[(24 - (i + 15)) * 8+:8]))) + ($signed(line_buffer5[i]) * $signed(weight_in[(24 - (i + 20)) * 8+:8]));
-					pe_out <= $signed(partial_sum);
+				pe_out <= $signed(partial_sum);
 			end
 
 			if (clear_i)
