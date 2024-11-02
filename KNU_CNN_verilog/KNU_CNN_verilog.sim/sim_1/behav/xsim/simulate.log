@@ -1004,4 +1004,4 @@ Image 999: Success, Prediction = 9, True Label = 9
 
 ------ Final Accuracy for 1000 Input Image ------
 Accuracy :  98%
-$stop called at time : 1290025 ns : File "E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v" Line 113
+$stop called at time : 1290025 ns : File "E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v" Line 111

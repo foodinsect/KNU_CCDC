@@ -1,5 +1,4 @@
 module tb_top;
-	parameter VIVADO_PROJECT_LOCATION = "E:/cnn_verilog";
 	reg clk;
 	reg rstn;
 	reg start_i;
@@ -64,7 +63,7 @@ module tb_top;
 	always #(1) clk = ~clk;
 
 	initial begin
-		$readmemh({VIVADO_PROJECT_LOCATION, "/data/0_03.txt"}, pixels);
+		$readmemh("./data/0_03.txt", pixels);
 		clk <= 1'b0;
 		rstn <= 1'b1;
 		start_i = 1'b0;
@@ -100,14 +99,14 @@ module tb_top;
 		zero_bias[0+:8] = 8'd0;
 	end
 
-	fc_weight_ROM #(.WEIGHT_FILE({VIVADO_PROJECT_LOCATION, "/data/fc_weight_transposed.txt"})) fc_weight_ROM_inst(
+	fc_weight_ROM #(.WEIGHT_FILE("./data/fc_weight_transposed.txt")) fc_weight_ROM_inst(
 		.clk_i(clk),
 		.weight_rom_en(weight_enable),
 		.weight_idx(weight_indexing),
 		.oDAT(weight_input_packed)
 	);
 
-	fc_bias_ROM #(.BIAS_FILE({VIVADO_PROJECT_LOCATION, "/data/fc_bias.txt"})) fc_bias_ROM_inst(
+	fc_bias_ROM #(.BIAS_FILE("./data/fc_bias.txt")) fc_bias_ROM_inst(
 		.clk_i(clk),
 		.bias_rom_en(weight_enable),
 		.bias_idx(weight_indexing),
@@ -116,18 +115,18 @@ module tb_top;
 
 	ROM_Weight #(
 		.DATA_WIDTH(8),
-		.WEIGHT_FILE_conv1_1({VIVADO_PROJECT_LOCATION, "/data/conv1_weight_1.txt"}),
-		.WEIGHT_FILE_conv1_2({VIVADO_PROJECT_LOCATION, "/data/conv1_weight_2.txt"}),
-		.WEIGHT_FILE_conv1_3({VIVADO_PROJECT_LOCATION, "/data/conv1_weight_3.txt"}),
-		.WEIGHT_FILE_conv2_11({VIVADO_PROJECT_LOCATION, "/data/conv2_weight_11.txt"}),
-		.WEIGHT_FILE_conv2_12({VIVADO_PROJECT_LOCATION, "/data/conv2_weight_12.txt"}),
-		.WEIGHT_FILE_conv2_13({VIVADO_PROJECT_LOCATION, "/data/conv2_weight_13.txt"}),
-		.WEIGHT_FILE_conv2_21({VIVADO_PROJECT_LOCATION, "/data/conv2_weight_21.txt"}),
-		.WEIGHT_FILE_conv2_22({VIVADO_PROJECT_LOCATION, "/data/conv2_weight_22.txt"}),
-		.WEIGHT_FILE_conv2_23({VIVADO_PROJECT_LOCATION, "/data/conv2_weight_23.txt"}),
-		.WEIGHT_FILE_conv2_31({VIVADO_PROJECT_LOCATION, "/data/conv2_weight_31.txt"}),
-		.WEIGHT_FILE_conv2_32({VIVADO_PROJECT_LOCATION, "/data/conv2_weight_32.txt"}),
-		.WEIGHT_FILE_conv2_33({VIVADO_PROJECT_LOCATION, "/data/conv2_weight_33.txt"})
+		.WEIGHT_FILE_conv1_1("./data/conv1_weight_1.txt"),
+		.WEIGHT_FILE_conv1_2("./data/conv1_weight_2.txt"),
+		.WEIGHT_FILE_conv1_3("./data/conv1_weight_3.txt"),
+		.WEIGHT_FILE_conv2_11("./data/conv2_weight_11.txt"),
+		.WEIGHT_FILE_conv2_12("./data/conv2_weight_12.txt"),
+		.WEIGHT_FILE_conv2_13("./data/conv2_weight_13.txt"),
+		.WEIGHT_FILE_conv2_21("./data/conv2_weight_21.txt"),
+		.WEIGHT_FILE_conv2_22("./data/conv2_weight_22.txt"),
+		.WEIGHT_FILE_conv2_23("./data/conv2_weight_23.txt"),
+		.WEIGHT_FILE_conv2_31("./data/conv2_weight_31.txt"),
+		.WEIGHT_FILE_conv2_32("./data/conv2_weight_32.txt"),
+		.WEIGHT_FILE_conv2_33("./data/conv2_weight_33.txt")
 	) weight_rom(
 		.oDAT_conv1_1(conv1_weight_1),
 		.oDAT_conv1_2(conv1_weight_2),
@@ -144,8 +143,8 @@ module tb_top;
 	);
 
 	ROM_Bias #(
-		.WEIGHT_FILE_bias_1({VIVADO_PROJECT_LOCATION, "/data/conv1_bias.txt"}),
-		.WEIGHT_FILE_bias_2({VIVADO_PROJECT_LOCATION, "/data/conv2_bias.txt"})
+		.WEIGHT_FILE_bias_1("./data/conv1_bias.txt"),
+		.WEIGHT_FILE_bias_2("./data/conv2_bias.txt")
 	) bias_rom(
 		.oDAT_bias_1(conv1_bias),
 		.oDAT_bias_2(conv2_bias)
