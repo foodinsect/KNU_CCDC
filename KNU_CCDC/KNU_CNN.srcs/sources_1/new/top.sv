@@ -13,18 +13,6 @@ module top (
     input wire signed [7:0] conv1_weight_3 [0:24],
     input wire signed [7:0] bias_1 [0:2],
 
- /*   input wire signed [7:0] conv2_weight_11 [0:24],
-    input wire signed [7:0] conv2_weight_12 [0:24],
-    input wire signed [7:0] conv2_weight_13 [0:24],
-    input wire signed [7:0] conv2_weight_21 [0:24],
-    input wire signed [7:0] conv2_weight_22 [0:24],
-    input wire signed [7:0] conv2_weight_23 [0:24],
-    input wire signed [7:0] conv2_weight_31 [0:24],
-    input wire signed [7:0] conv2_weight_32 [0:24],
-    input wire signed [7:0] conv2_weight_33 [0:24],
-    input wire signed [7:0] bias_2 [0:2],
-   */ 
-
     // FC_Layer weight ROM contriol
     output wire       weight_enable, 
     output wire [5:0] weight_indexing,

@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov  1 19:57:23 2024
+# Process ID: 19888
+# Current directory: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24036 D:\Git_repo\KNU_CCDC\KNU_CNN_verilog\KNU_CNN_verilog.xpr
+# Log file: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/vivado.log
+# Journal file: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_behav.wcfg
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_1000_behav.wcfg
+source tb_top.tcl
+current_wave_config {tb_top_1000_behav.wcfg}
+add_wave {{/tb_top/TOP_inst/shiftBuffer1}} 
+current_wave_config {tb_top_1000_behav.wcfg}
+add_wave {{/tb_top/TOP_inst/fc_layer/flatten_input_i}} 
+relaunch_sim
+run 10 us
+current_wave_config {tb_top_1000_behav.wcfg}
+add_wave {{/tb_top/TOP_inst/shiftBuffer2}} 
+relaunch_sim
+run 10 us
+synth_design -rtl -name rtl_1

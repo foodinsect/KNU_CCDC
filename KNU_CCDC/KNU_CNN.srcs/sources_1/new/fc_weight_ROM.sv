@@ -1,5 +1,5 @@
 module fc_weight_ROM #(
-    parameter WEIGHT_FILE = ""
+    parameter WEIGHT_FILE = "E:/cnn_verilog/data/fc_weight_transposed.txt"
 )(
     input wire clk_i,
     input wire weight_rom_en,

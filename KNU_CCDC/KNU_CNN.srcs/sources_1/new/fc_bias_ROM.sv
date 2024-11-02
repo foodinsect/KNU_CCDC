@@ -1,5 +1,5 @@
 module fc_bias_ROM #(
-    parameter BIAS_FILE = ""
+    parameter BIAS_FILE = "E:/cnn_verilog/data/fc_bias.txt"
 )(  
     input wire clk_i,
     input wire bias_rom_en,

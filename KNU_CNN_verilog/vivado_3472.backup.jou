@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov  1 12:59:26 2024
+# Process ID: 3472
+# Current directory: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24832 D:\Git_repo\KNU_CCDC\KNU_CNN_verilog\KNU_CNN_verilog.xpr
+# Log file: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/vivado.log
+# Journal file: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_behav.wcfg
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_1000_behav.wcfg
+source tb_top_1000.tcl
+run all
+close_sim
+launch_simulation
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_behav.wcfg
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_1000_behav.wcfg
+source tb_top_1000.tcl
+run all
+close_sim

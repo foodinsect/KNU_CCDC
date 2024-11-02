@@ -1,0 +1,1905 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov  1 12:59:26 2024
+# Process ID: 3472
+# Current directory: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24832 D:\Git_repo\KNU_CCDC\KNU_CNN_verilog\KNU_CNN_verilog.xpr
+# Log file: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/vivado.log
+# Journal file: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.xpr
+INFO: [Project 1-313] Project file moved from 'E:/02_CCDC/KNU_Git/foodbug/KNU_CNN_verilog' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/opqrs/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 798.781 ; gain = 196.598
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top_1000' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_1000_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Accumulator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Accumulator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_layer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_layer
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/MAC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MAC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Max_Pooling_ReLU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/PE_Array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_Array
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Bias.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Bias
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Weight
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/buffer1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module buffer1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/conv2d_pe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv2d_pe
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_bias_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fc_bias_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_weight_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fc_weight_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/global_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module global_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/matmul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matmul
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module max_finder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/shiftBuffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shiftBuffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top_1000
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xelab -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_1000_behav xil_defaultlib.tb_top_1000 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_1000_behav xil_defaultlib.tb_top_1000 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.global_controller
+Compiling module xil_defaultlib.conv2d_pe
+Compiling module xil_defaultlib.Accumulator
+Compiling module xil_defaultlib.PE_Array_default
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.Max_Pooling_ReLU
+Compiling module xil_defaultlib.buffer1
+Compiling module xil_defaultlib.shiftBuffer
+Compiling module xil_defaultlib.MAC
+Compiling module xil_defaultlib.matmul_default
+Compiling module xil_defaultlib.max_finder
+Compiling module xil_defaultlib.FC_layer
+Compiling module xil_defaultlib.FC_controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.fc_weight_ROM(WEIGHT_FILE="E:/cn...
+Compiling module xil_defaultlib.fc_bias_ROM(BIAS_FILE="E:/cnn_ve...
+Compiling module xil_defaultlib.ROM_Weight(WEIGHT_FILE_conv1_1="...
+Compiling module xil_defaultlib.ROM_Bias(WEIGHT_FILE_bias_1="E:/...
+Compiling module xil_defaultlib.tb_top_1000
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_1000_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/xsim.dir/tb_top_1000_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov  1 13:00:13 2024...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 824.543 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_1000_behav -key {Behavioral:sim_1:Functional:tb_top_1000} -tclbatch {tb_top_1000.tcl} -view {D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_behav.wcfg} -view {D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_1000_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_behav.wcfg
+WARNING: Simulation object /tb_top/clk was not found in the design.
+WARNING: Simulation object /tb_top/rstn was not found in the design.
+WARNING: Simulation object /tb_top/start_i was not found in the design.
+WARNING: Simulation object /tb_top/pixels was not found in the design.
+WARNING: Simulation object /tb_top/conv1_weight_1 was not found in the design.
+WARNING: Simulation object /tb_top/conv1_weight_2 was not found in the design.
+WARNING: Simulation object /tb_top/conv1_weight_3 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_11 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_12 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_13 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_21 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_22 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_23 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_31 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_32 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_33 was not found in the design.
+WARNING: Simulation object /tb_top/image_6rows was not found in the design.
+WARNING: Simulation object /tb_top/zero_bias was not found in the design.
+WARNING: Simulation object /tb_top/cycle was not found in the design.
+WARNING: Simulation object /tb_top/image_idx was not found in the design.
+WARNING: Simulation object /tb_top/weight_sel was not found in the design.
+WARNING: Simulation object /tb_top/bias_sel was not found in the design.
+WARNING: Simulation object /tb_top/image_rom_en was not found in the design.
+WARNING: Simulation object /tb_top/weight_input_packed was not found in the design.
+WARNING: Simulation object /tb_top/weight_enable was not found in the design.
+WARNING: Simulation object /tb_top/weight_indexing was not found in the design.
+WARNING: Simulation object /tb_top/fc_bias was not found in the design.
+WARNING: Simulation object /tb_top/bias_in was not found in the design.
+WARNING: Simulation object /tb_top/conv1_bias was not found in the design.
+WARNING: Simulation object /tb_top/conv2_bias was not found in the design.
+WARNING: Simulation object /tb_top/conv_weight_in1 was not found in the design.
+WARNING: Simulation object /tb_top/conv_weight_in2 was not found in the design.
+WARNING: Simulation object /tb_top/conv_weight_in3 was not found in the design.
+WARNING: Simulation object /tb_top/done was not found in the design.
+WARNING: Simulation object /tb_top/ready was not found in the design.
+WARNING: Simulation object /tb_top/result was not found in the design.
+WARNING: Simulation object /tb_top/i was not found in the design.
+WARNING: Simulation object /tb_top/VIVADO_PROJECT_LOCATION was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/data_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/filter1_weights was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/filter2_weights was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/filter3_weights was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/bias_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/acc_full_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/conv_out1 was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/conv_out2 was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/conv_out3 was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/data_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/valid_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/data_out_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/shift_reg was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/max_value was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch2/data_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch2/valid_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch2/data_out_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch3/data_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch3/valid_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch3/data_out_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch1/data_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch1/data_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch1/data_out was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch1/max_value was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch2/data_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch2/data_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch3/data_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch3/data_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF1/din_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF1/dout_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF1/mem was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF2/din_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF2/dout_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF2/mem was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF3/din_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF3/dout_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF3/mem was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/acc_full_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/bias_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/signed_bias was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/conv_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/conv_sum was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/acc was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/wr_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/rd_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/cycle_count was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/bias_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/signed_bias was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/conv_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/conv_sum was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/acc_full_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/acc was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/wr_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/rd_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/cycle_count was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/bias_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/conv_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/conv_sum was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/acc_full_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/acc was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/wr_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/rd_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/cycle_count was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/signed_bias was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/shiftBuffer1/register was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/shiftBuffer2/register was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/shiftBuffer3/register was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/flatten_input_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/weight_input_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/data_out was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/bias_input_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/matmul_inst/data_out_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/result_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/valid_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/inputs_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/result_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/input_wires was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/max_value was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/max_index was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/i was not found in the design.
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_1000_behav.wcfg
+source tb_top_1000.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: File E:/cnn_verilog/data/fc_weight_transposed.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_weight_ROM.v at line 13 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/fc_bias.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_bias_ROM.v at line 14 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv1_weight_1.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 45 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv1_weight_2.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 49 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv1_weight_3.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 53 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_weight_11.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 57 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_weight_12.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 61 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_weight_13.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 65 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_weight_21.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 69 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_weight_22.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 73 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_weight_23.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 77 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_weight_31.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 81 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_weight_32.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 85 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_weight_33.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v at line 89 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv1_bias.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Bias.v at line 15 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/conv2_bias.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Bias.v at line 19 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/input_1000.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v at line 83 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+WARNING: File E:/cnn_verilog/data/labels_1000.txt referenced on D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v at line 84 cannot be opened for reading. Please ensure that this file is available in the current working directory.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_1000_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 850.398 ; gain = 25.855
+run all
+Image 0: Fail, Prediction = 0, True Label = x
+Image 1: Fail, Prediction = 0, True Label = x
+Image 2: Fail, Prediction = 0, True Label = x
+Image 3: Fail, Prediction = 0, True Label = x
+Image 4: Fail, Prediction = 0, True Label = x
+Image 5: Fail, Prediction = 0, True Label = x
+Image 6: Fail, Prediction = 0, True Label = x
+Image 7: Fail, Prediction = 0, True Label = x
+Image 8: Fail, Prediction = 0, True Label = x
+Image 9: Fail, Prediction = 0, True Label = x
+Image 10: Fail, Prediction = 0, True Label = x
+Image 11: Fail, Prediction = 0, True Label = x
+Image 12: Fail, Prediction = 0, True Label = x
+Image 13: Fail, Prediction = 0, True Label = x
+Image 14: Fail, Prediction = 0, True Label = x
+Image 15: Fail, Prediction = 0, True Label = x
+Image 16: Fail, Prediction = 0, True Label = x
+Image 17: Fail, Prediction = 0, True Label = x
+Image 18: Fail, Prediction = 0, True Label = x
+Image 19: Fail, Prediction = 0, True Label = x
+Image 20: Fail, Prediction = 0, True Label = x
+Image 21: Fail, Prediction = 0, True Label = x
+Image 22: Fail, Prediction = 0, True Label = x
+Image 23: Fail, Prediction = 0, True Label = x
+Image 24: Fail, Prediction = 0, True Label = x
+Image 25: Fail, Prediction = 0, True Label = x
+Image 26: Fail, Prediction = 0, True Label = x
+Image 27: Fail, Prediction = 0, True Label = x
+Image 28: Fail, Prediction = 0, True Label = x
+Image 29: Fail, Prediction = 0, True Label = x
+Image 30: Fail, Prediction = 0, True Label = x
+Image 31: Fail, Prediction = 0, True Label = x
+Image 32: Fail, Prediction = 0, True Label = x
+Image 33: Fail, Prediction = 0, True Label = x
+Image 34: Fail, Prediction = 0, True Label = x
+Image 35: Fail, Prediction = 0, True Label = x
+Image 36: Fail, Prediction = 0, True Label = x
+Image 37: Fail, Prediction = 0, True Label = x
+Image 38: Fail, Prediction = 0, True Label = x
+Image 39: Fail, Prediction = 0, True Label = x
+Image 40: Fail, Prediction = 0, True Label = x
+Image 41: Fail, Prediction = 0, True Label = x
+Image 42: Fail, Prediction = 0, True Label = x
+Image 43: Fail, Prediction = 0, True Label = x
+Image 44: Fail, Prediction = 0, True Label = x
+Image 45: Fail, Prediction = 0, True Label = x
+Image 46: Fail, Prediction = 0, True Label = x
+Image 47: Fail, Prediction = 0, True Label = x
+Image 48: Fail, Prediction = 0, True Label = x
+Image 49: Fail, Prediction = 0, True Label = x
+Image 50: Fail, Prediction = 0, True Label = x
+Image 51: Fail, Prediction = 0, True Label = x
+Image 52: Fail, Prediction = 0, True Label = x
+Image 53: Fail, Prediction = 0, True Label = x
+Image 54: Fail, Prediction = 0, True Label = x
+Image 55: Fail, Prediction = 0, True Label = x
+Image 56: Fail, Prediction = 0, True Label = x
+Image 57: Fail, Prediction = 0, True Label = x
+Image 58: Fail, Prediction = 0, True Label = x
+Image 59: Fail, Prediction = 0, True Label = x
+Image 60: Fail, Prediction = 0, True Label = x
+Image 61: Fail, Prediction = 0, True Label = x
+Image 62: Fail, Prediction = 0, True Label = x
+Image 63: Fail, Prediction = 0, True Label = x
+Image 64: Fail, Prediction = 0, True Label = x
+Image 65: Fail, Prediction = 0, True Label = x
+Image 66: Fail, Prediction = 0, True Label = x
+Image 67: Fail, Prediction = 0, True Label = x
+Image 68: Fail, Prediction = 0, True Label = x
+Image 69: Fail, Prediction = 0, True Label = x
+Image 70: Fail, Prediction = 0, True Label = x
+Image 71: Fail, Prediction = 0, True Label = x
+Image 72: Fail, Prediction = 0, True Label = x
+Image 73: Fail, Prediction = 0, True Label = x
+Image 74: Fail, Prediction = 0, True Label = x
+Image 75: Fail, Prediction = 0, True Label = x
+Image 76: Fail, Prediction = 0, True Label = x
+Image 77: Fail, Prediction = 0, True Label = x
+Image 78: Fail, Prediction = 0, True Label = x
+Image 79: Fail, Prediction = 0, True Label = x
+Image 80: Fail, Prediction = 0, True Label = x
+Image 81: Fail, Prediction = 0, True Label = x
+Image 82: Fail, Prediction = 0, True Label = x
+Image 83: Fail, Prediction = 0, True Label = x
+Image 84: Fail, Prediction = 0, True Label = x
+Image 85: Fail, Prediction = 0, True Label = x
+Image 86: Fail, Prediction = 0, True Label = x
+Image 87: Fail, Prediction = 0, True Label = x
+Image 88: Fail, Prediction = 0, True Label = x
+Image 89: Fail, Prediction = 0, True Label = x
+Image 90: Fail, Prediction = 0, True Label = x
+Image 91: Fail, Prediction = 0, True Label = x
+Image 92: Fail, Prediction = 0, True Label = x
+Image 93: Fail, Prediction = 0, True Label = x
+Image 94: Fail, Prediction = 0, True Label = x
+Image 95: Fail, Prediction = 0, True Label = x
+Image 96: Fail, Prediction = 0, True Label = x
+Image 97: Fail, Prediction = 0, True Label = x
+Image 98: Fail, Prediction = 0, True Label = x
+Image 99: Fail, Prediction = 0, True Label = x
+Image 100: Fail, Prediction = 0, True Label = x
+Image 101: Fail, Prediction = 0, True Label = x
+Image 102: Fail, Prediction = 0, True Label = x
+Image 103: Fail, Prediction = 0, True Label = x
+Image 104: Fail, Prediction = 0, True Label = x
+Image 105: Fail, Prediction = 0, True Label = x
+Image 106: Fail, Prediction = 0, True Label = x
+Image 107: Fail, Prediction = 0, True Label = x
+Image 108: Fail, Prediction = 0, True Label = x
+Image 109: Fail, Prediction = 0, True Label = x
+Image 110: Fail, Prediction = 0, True Label = x
+Image 111: Fail, Prediction = 0, True Label = x
+Image 112: Fail, Prediction = 0, True Label = x
+Image 113: Fail, Prediction = 0, True Label = x
+Image 114: Fail, Prediction = 0, True Label = x
+Image 115: Fail, Prediction = 0, True Label = x
+Image 116: Fail, Prediction = 0, True Label = x
+Image 117: Fail, Prediction = 0, True Label = x
+Image 118: Fail, Prediction = 0, True Label = x
+Image 119: Fail, Prediction = 0, True Label = x
+Image 120: Fail, Prediction = 0, True Label = x
+Image 121: Fail, Prediction = 0, True Label = x
+Image 122: Fail, Prediction = 0, True Label = x
+Image 123: Fail, Prediction = 0, True Label = x
+Image 124: Fail, Prediction = 0, True Label = x
+Image 125: Fail, Prediction = 0, True Label = x
+Image 126: Fail, Prediction = 0, True Label = x
+Image 127: Fail, Prediction = 0, True Label = x
+Image 128: Fail, Prediction = 0, True Label = x
+Image 129: Fail, Prediction = 0, True Label = x
+Image 130: Fail, Prediction = 0, True Label = x
+Image 131: Fail, Prediction = 0, True Label = x
+Image 132: Fail, Prediction = 0, True Label = x
+Image 133: Fail, Prediction = 0, True Label = x
+Image 134: Fail, Prediction = 0, True Label = x
+Image 135: Fail, Prediction = 0, True Label = x
+Image 136: Fail, Prediction = 0, True Label = x
+Image 137: Fail, Prediction = 0, True Label = x
+Image 138: Fail, Prediction = 0, True Label = x
+Image 139: Fail, Prediction = 0, True Label = x
+Image 140: Fail, Prediction = 0, True Label = x
+Image 141: Fail, Prediction = 0, True Label = x
+Image 142: Fail, Prediction = 0, True Label = x
+Image 143: Fail, Prediction = 0, True Label = x
+Image 144: Fail, Prediction = 0, True Label = x
+Image 145: Fail, Prediction = 0, True Label = x
+Image 146: Fail, Prediction = 0, True Label = x
+Image 147: Fail, Prediction = 0, True Label = x
+Image 148: Fail, Prediction = 0, True Label = x
+Image 149: Fail, Prediction = 0, True Label = x
+Image 150: Fail, Prediction = 0, True Label = x
+Image 151: Fail, Prediction = 0, True Label = x
+Image 152: Fail, Prediction = 0, True Label = x
+Image 153: Fail, Prediction = 0, True Label = x
+Image 154: Fail, Prediction = 0, True Label = x
+Image 155: Fail, Prediction = 0, True Label = x
+Image 156: Fail, Prediction = 0, True Label = x
+Image 157: Fail, Prediction = 0, True Label = x
+Image 158: Fail, Prediction = 0, True Label = x
+Image 159: Fail, Prediction = 0, True Label = x
+Image 160: Fail, Prediction = 0, True Label = x
+Image 161: Fail, Prediction = 0, True Label = x
+Image 162: Fail, Prediction = 0, True Label = x
+Image 163: Fail, Prediction = 0, True Label = x
+Image 164: Fail, Prediction = 0, True Label = x
+Image 165: Fail, Prediction = 0, True Label = x
+Image 166: Fail, Prediction = 0, True Label = x
+Image 167: Fail, Prediction = 0, True Label = x
+Image 168: Fail, Prediction = 0, True Label = x
+Image 169: Fail, Prediction = 0, True Label = x
+Image 170: Fail, Prediction = 0, True Label = x
+Image 171: Fail, Prediction = 0, True Label = x
+Image 172: Fail, Prediction = 0, True Label = x
+Image 173: Fail, Prediction = 0, True Label = x
+Image 174: Fail, Prediction = 0, True Label = x
+Image 175: Fail, Prediction = 0, True Label = x
+Image 176: Fail, Prediction = 0, True Label = x
+Image 177: Fail, Prediction = 0, True Label = x
+Image 178: Fail, Prediction = 0, True Label = x
+Image 179: Fail, Prediction = 0, True Label = x
+Image 180: Fail, Prediction = 0, True Label = x
+Image 181: Fail, Prediction = 0, True Label = x
+Image 182: Fail, Prediction = 0, True Label = x
+Image 183: Fail, Prediction = 0, True Label = x
+Image 184: Fail, Prediction = 0, True Label = x
+Image 185: Fail, Prediction = 0, True Label = x
+Image 186: Fail, Prediction = 0, True Label = x
+Image 187: Fail, Prediction = 0, True Label = x
+Image 188: Fail, Prediction = 0, True Label = x
+Image 189: Fail, Prediction = 0, True Label = x
+Image 190: Fail, Prediction = 0, True Label = x
+Image 191: Fail, Prediction = 0, True Label = x
+Image 192: Fail, Prediction = 0, True Label = x
+Image 193: Fail, Prediction = 0, True Label = x
+Image 194: Fail, Prediction = 0, True Label = x
+Image 195: Fail, Prediction = 0, True Label = x
+Image 196: Fail, Prediction = 0, True Label = x
+Image 197: Fail, Prediction = 0, True Label = x
+Image 198: Fail, Prediction = 0, True Label = x
+Image 199: Fail, Prediction = 0, True Label = x
+Image 200: Fail, Prediction = 0, True Label = x
+Image 201: Fail, Prediction = 0, True Label = x
+Image 202: Fail, Prediction = 0, True Label = x
+Image 203: Fail, Prediction = 0, True Label = x
+Image 204: Fail, Prediction = 0, True Label = x
+Image 205: Fail, Prediction = 0, True Label = x
+Image 206: Fail, Prediction = 0, True Label = x
+Image 207: Fail, Prediction = 0, True Label = x
+Image 208: Fail, Prediction = 0, True Label = x
+Image 209: Fail, Prediction = 0, True Label = x
+Image 210: Fail, Prediction = 0, True Label = x
+Image 211: Fail, Prediction = 0, True Label = x
+Image 212: Fail, Prediction = 0, True Label = x
+Image 213: Fail, Prediction = 0, True Label = x
+Image 214: Fail, Prediction = 0, True Label = x
+Image 215: Fail, Prediction = 0, True Label = x
+Image 216: Fail, Prediction = 0, True Label = x
+Image 217: Fail, Prediction = 0, True Label = x
+Image 218: Fail, Prediction = 0, True Label = x
+Image 219: Fail, Prediction = 0, True Label = x
+Image 220: Fail, Prediction = 0, True Label = x
+Image 221: Fail, Prediction = 0, True Label = x
+Image 222: Fail, Prediction = 0, True Label = x
+Image 223: Fail, Prediction = 0, True Label = x
+Image 224: Fail, Prediction = 0, True Label = x
+Image 225: Fail, Prediction = 0, True Label = x
+Image 226: Fail, Prediction = 0, True Label = x
+Image 227: Fail, Prediction = 0, True Label = x
+Image 228: Fail, Prediction = 0, True Label = x
+Image 229: Fail, Prediction = 0, True Label = x
+Image 230: Fail, Prediction = 0, True Label = x
+Image 231: Fail, Prediction = 0, True Label = x
+Image 232: Fail, Prediction = 0, True Label = x
+Image 233: Fail, Prediction = 0, True Label = x
+Image 234: Fail, Prediction = 0, True Label = x
+Image 235: Fail, Prediction = 0, True Label = x
+Image 236: Fail, Prediction = 0, True Label = x
+Image 237: Fail, Prediction = 0, True Label = x
+Image 238: Fail, Prediction = 0, True Label = x
+Image 239: Fail, Prediction = 0, True Label = x
+Image 240: Fail, Prediction = 0, True Label = x
+Image 241: Fail, Prediction = 0, True Label = x
+Image 242: Fail, Prediction = 0, True Label = x
+Image 243: Fail, Prediction = 0, True Label = x
+Image 244: Fail, Prediction = 0, True Label = x
+Image 245: Fail, Prediction = 0, True Label = x
+Image 246: Fail, Prediction = 0, True Label = x
+Image 247: Fail, Prediction = 0, True Label = x
+Image 248: Fail, Prediction = 0, True Label = x
+Image 249: Fail, Prediction = 0, True Label = x
+Image 250: Fail, Prediction = 0, True Label = x
+Image 251: Fail, Prediction = 0, True Label = x
+Image 252: Fail, Prediction = 0, True Label = x
+Image 253: Fail, Prediction = 0, True Label = x
+Image 254: Fail, Prediction = 0, True Label = x
+Image 255: Fail, Prediction = 0, True Label = x
+Image 256: Fail, Prediction = 0, True Label = x
+Image 257: Fail, Prediction = 0, True Label = x
+Image 258: Fail, Prediction = 0, True Label = x
+Image 259: Fail, Prediction = 0, True Label = x
+Image 260: Fail, Prediction = 0, True Label = x
+Image 261: Fail, Prediction = 0, True Label = x
+Image 262: Fail, Prediction = 0, True Label = x
+Image 263: Fail, Prediction = 0, True Label = x
+Image 264: Fail, Prediction = 0, True Label = x
+Image 265: Fail, Prediction = 0, True Label = x
+Image 266: Fail, Prediction = 0, True Label = x
+Image 267: Fail, Prediction = 0, True Label = x
+Image 268: Fail, Prediction = 0, True Label = x
+Image 269: Fail, Prediction = 0, True Label = x
+Image 270: Fail, Prediction = 0, True Label = x
+Image 271: Fail, Prediction = 0, True Label = x
+Image 272: Fail, Prediction = 0, True Label = x
+Image 273: Fail, Prediction = 0, True Label = x
+Image 274: Fail, Prediction = 0, True Label = x
+Image 275: Fail, Prediction = 0, True Label = x
+Image 276: Fail, Prediction = 0, True Label = x
+Image 277: Fail, Prediction = 0, True Label = x
+Image 278: Fail, Prediction = 0, True Label = x
+Image 279: Fail, Prediction = 0, True Label = x
+Image 280: Fail, Prediction = 0, True Label = x
+Image 281: Fail, Prediction = 0, True Label = x
+Image 282: Fail, Prediction = 0, True Label = x
+Image 283: Fail, Prediction = 0, True Label = x
+Image 284: Fail, Prediction = 0, True Label = x
+Image 285: Fail, Prediction = 0, True Label = x
+Image 286: Fail, Prediction = 0, True Label = x
+Image 287: Fail, Prediction = 0, True Label = x
+Image 288: Fail, Prediction = 0, True Label = x
+Image 289: Fail, Prediction = 0, True Label = x
+Image 290: Fail, Prediction = 0, True Label = x
+Image 291: Fail, Prediction = 0, True Label = x
+Image 292: Fail, Prediction = 0, True Label = x
+Image 293: Fail, Prediction = 0, True Label = x
+Image 294: Fail, Prediction = 0, True Label = x
+Image 295: Fail, Prediction = 0, True Label = x
+Image 296: Fail, Prediction = 0, True Label = x
+Image 297: Fail, Prediction = 0, True Label = x
+Image 298: Fail, Prediction = 0, True Label = x
+Image 299: Fail, Prediction = 0, True Label = x
+Image 300: Fail, Prediction = 0, True Label = x
+Image 301: Fail, Prediction = 0, True Label = x
+Image 302: Fail, Prediction = 0, True Label = x
+Image 303: Fail, Prediction = 0, True Label = x
+Image 304: Fail, Prediction = 0, True Label = x
+Image 305: Fail, Prediction = 0, True Label = x
+Image 306: Fail, Prediction = 0, True Label = x
+Image 307: Fail, Prediction = 0, True Label = x
+Image 308: Fail, Prediction = 0, True Label = x
+Image 309: Fail, Prediction = 0, True Label = x
+Image 310: Fail, Prediction = 0, True Label = x
+Image 311: Fail, Prediction = 0, True Label = x
+Image 312: Fail, Prediction = 0, True Label = x
+Image 313: Fail, Prediction = 0, True Label = x
+Image 314: Fail, Prediction = 0, True Label = x
+Image 315: Fail, Prediction = 0, True Label = x
+Image 316: Fail, Prediction = 0, True Label = x
+Image 317: Fail, Prediction = 0, True Label = x
+Image 318: Fail, Prediction = 0, True Label = x
+Image 319: Fail, Prediction = 0, True Label = x
+Image 320: Fail, Prediction = 0, True Label = x
+Image 321: Fail, Prediction = 0, True Label = x
+Image 322: Fail, Prediction = 0, True Label = x
+Image 323: Fail, Prediction = 0, True Label = x
+Image 324: Fail, Prediction = 0, True Label = x
+Image 325: Fail, Prediction = 0, True Label = x
+Image 326: Fail, Prediction = 0, True Label = x
+Image 327: Fail, Prediction = 0, True Label = x
+Image 328: Fail, Prediction = 0, True Label = x
+Image 329: Fail, Prediction = 0, True Label = x
+Image 330: Fail, Prediction = 0, True Label = x
+Image 331: Fail, Prediction = 0, True Label = x
+Image 332: Fail, Prediction = 0, True Label = x
+Image 333: Fail, Prediction = 0, True Label = x
+Image 334: Fail, Prediction = 0, True Label = x
+Image 335: Fail, Prediction = 0, True Label = x
+Image 336: Fail, Prediction = 0, True Label = x
+Image 337: Fail, Prediction = 0, True Label = x
+Image 338: Fail, Prediction = 0, True Label = x
+Image 339: Fail, Prediction = 0, True Label = x
+Image 340: Fail, Prediction = 0, True Label = x
+Image 341: Fail, Prediction = 0, True Label = x
+Image 342: Fail, Prediction = 0, True Label = x
+Image 343: Fail, Prediction = 0, True Label = x
+Image 344: Fail, Prediction = 0, True Label = x
+Image 345: Fail, Prediction = 0, True Label = x
+Image 346: Fail, Prediction = 0, True Label = x
+Image 347: Fail, Prediction = 0, True Label = x
+Image 348: Fail, Prediction = 0, True Label = x
+Image 349: Fail, Prediction = 0, True Label = x
+Image 350: Fail, Prediction = 0, True Label = x
+Image 351: Fail, Prediction = 0, True Label = x
+Image 352: Fail, Prediction = 0, True Label = x
+Image 353: Fail, Prediction = 0, True Label = x
+Image 354: Fail, Prediction = 0, True Label = x
+Image 355: Fail, Prediction = 0, True Label = x
+Image 356: Fail, Prediction = 0, True Label = x
+Image 357: Fail, Prediction = 0, True Label = x
+Image 358: Fail, Prediction = 0, True Label = x
+Image 359: Fail, Prediction = 0, True Label = x
+Image 360: Fail, Prediction = 0, True Label = x
+Image 361: Fail, Prediction = 0, True Label = x
+Image 362: Fail, Prediction = 0, True Label = x
+Image 363: Fail, Prediction = 0, True Label = x
+Image 364: Fail, Prediction = 0, True Label = x
+Image 365: Fail, Prediction = 0, True Label = x
+Image 366: Fail, Prediction = 0, True Label = x
+Image 367: Fail, Prediction = 0, True Label = x
+Image 368: Fail, Prediction = 0, True Label = x
+Image 369: Fail, Prediction = 0, True Label = x
+Image 370: Fail, Prediction = 0, True Label = x
+Image 371: Fail, Prediction = 0, True Label = x
+Image 372: Fail, Prediction = 0, True Label = x
+Image 373: Fail, Prediction = 0, True Label = x
+Image 374: Fail, Prediction = 0, True Label = x
+Image 375: Fail, Prediction = 0, True Label = x
+Image 376: Fail, Prediction = 0, True Label = x
+Image 377: Fail, Prediction = 0, True Label = x
+Image 378: Fail, Prediction = 0, True Label = x
+Image 379: Fail, Prediction = 0, True Label = x
+Image 380: Fail, Prediction = 0, True Label = x
+Image 381: Fail, Prediction = 0, True Label = x
+Image 382: Fail, Prediction = 0, True Label = x
+Image 383: Fail, Prediction = 0, True Label = x
+Image 384: Fail, Prediction = 0, True Label = x
+Image 385: Fail, Prediction = 0, True Label = x
+Image 386: Fail, Prediction = 0, True Label = x
+Image 387: Fail, Prediction = 0, True Label = x
+Image 388: Fail, Prediction = 0, True Label = x
+Image 389: Fail, Prediction = 0, True Label = x
+Image 390: Fail, Prediction = 0, True Label = x
+Image 391: Fail, Prediction = 0, True Label = x
+Image 392: Fail, Prediction = 0, True Label = x
+Image 393: Fail, Prediction = 0, True Label = x
+Image 394: Fail, Prediction = 0, True Label = x
+Image 395: Fail, Prediction = 0, True Label = x
+Image 396: Fail, Prediction = 0, True Label = x
+Image 397: Fail, Prediction = 0, True Label = x
+Image 398: Fail, Prediction = 0, True Label = x
+Image 399: Fail, Prediction = 0, True Label = x
+Image 400: Fail, Prediction = 0, True Label = x
+Image 401: Fail, Prediction = 0, True Label = x
+Image 402: Fail, Prediction = 0, True Label = x
+Image 403: Fail, Prediction = 0, True Label = x
+Image 404: Fail, Prediction = 0, True Label = x
+Image 405: Fail, Prediction = 0, True Label = x
+Image 406: Fail, Prediction = 0, True Label = x
+Image 407: Fail, Prediction = 0, True Label = x
+Image 408: Fail, Prediction = 0, True Label = x
+Image 409: Fail, Prediction = 0, True Label = x
+Image 410: Fail, Prediction = 0, True Label = x
+Image 411: Fail, Prediction = 0, True Label = x
+Image 412: Fail, Prediction = 0, True Label = x
+Image 413: Fail, Prediction = 0, True Label = x
+Image 414: Fail, Prediction = 0, True Label = x
+Image 415: Fail, Prediction = 0, True Label = x
+Image 416: Fail, Prediction = 0, True Label = x
+Image 417: Fail, Prediction = 0, True Label = x
+Image 418: Fail, Prediction = 0, True Label = x
+Image 419: Fail, Prediction = 0, True Label = x
+Image 420: Fail, Prediction = 0, True Label = x
+Image 421: Fail, Prediction = 0, True Label = x
+Image 422: Fail, Prediction = 0, True Label = x
+Image 423: Fail, Prediction = 0, True Label = x
+Image 424: Fail, Prediction = 0, True Label = x
+Image 425: Fail, Prediction = 0, True Label = x
+Image 426: Fail, Prediction = 0, True Label = x
+Image 427: Fail, Prediction = 0, True Label = x
+Image 428: Fail, Prediction = 0, True Label = x
+Image 429: Fail, Prediction = 0, True Label = x
+Image 430: Fail, Prediction = 0, True Label = x
+Image 431: Fail, Prediction = 0, True Label = x
+Image 432: Fail, Prediction = 0, True Label = x
+Image 433: Fail, Prediction = 0, True Label = x
+Image 434: Fail, Prediction = 0, True Label = x
+Image 435: Fail, Prediction = 0, True Label = x
+Image 436: Fail, Prediction = 0, True Label = x
+Image 437: Fail, Prediction = 0, True Label = x
+Image 438: Fail, Prediction = 0, True Label = x
+Image 439: Fail, Prediction = 0, True Label = x
+Image 440: Fail, Prediction = 0, True Label = x
+Image 441: Fail, Prediction = 0, True Label = x
+Image 442: Fail, Prediction = 0, True Label = x
+Image 443: Fail, Prediction = 0, True Label = x
+Image 444: Fail, Prediction = 0, True Label = x
+Image 445: Fail, Prediction = 0, True Label = x
+Image 446: Fail, Prediction = 0, True Label = x
+Image 447: Fail, Prediction = 0, True Label = x
+Image 448: Fail, Prediction = 0, True Label = x
+Image 449: Fail, Prediction = 0, True Label = x
+Image 450: Fail, Prediction = 0, True Label = x
+Image 451: Fail, Prediction = 0, True Label = x
+Image 452: Fail, Prediction = 0, True Label = x
+Image 453: Fail, Prediction = 0, True Label = x
+Image 454: Fail, Prediction = 0, True Label = x
+Image 455: Fail, Prediction = 0, True Label = x
+Image 456: Fail, Prediction = 0, True Label = x
+Image 457: Fail, Prediction = 0, True Label = x
+Image 458: Fail, Prediction = 0, True Label = x
+Image 459: Fail, Prediction = 0, True Label = x
+Image 460: Fail, Prediction = 0, True Label = x
+Image 461: Fail, Prediction = 0, True Label = x
+Image 462: Fail, Prediction = 0, True Label = x
+Image 463: Fail, Prediction = 0, True Label = x
+Image 464: Fail, Prediction = 0, True Label = x
+Image 465: Fail, Prediction = 0, True Label = x
+Image 466: Fail, Prediction = 0, True Label = x
+Image 467: Fail, Prediction = 0, True Label = x
+Image 468: Fail, Prediction = 0, True Label = x
+Image 469: Fail, Prediction = 0, True Label = x
+Image 470: Fail, Prediction = 0, True Label = x
+Image 471: Fail, Prediction = 0, True Label = x
+Image 472: Fail, Prediction = 0, True Label = x
+Image 473: Fail, Prediction = 0, True Label = x
+Image 474: Fail, Prediction = 0, True Label = x
+Image 475: Fail, Prediction = 0, True Label = x
+Image 476: Fail, Prediction = 0, True Label = x
+Image 477: Fail, Prediction = 0, True Label = x
+Image 478: Fail, Prediction = 0, True Label = x
+Image 479: Fail, Prediction = 0, True Label = x
+Image 480: Fail, Prediction = 0, True Label = x
+Image 481: Fail, Prediction = 0, True Label = x
+Image 482: Fail, Prediction = 0, True Label = x
+Image 483: Fail, Prediction = 0, True Label = x
+Image 484: Fail, Prediction = 0, True Label = x
+Image 485: Fail, Prediction = 0, True Label = x
+Image 486: Fail, Prediction = 0, True Label = x
+Image 487: Fail, Prediction = 0, True Label = x
+Image 488: Fail, Prediction = 0, True Label = x
+Image 489: Fail, Prediction = 0, True Label = x
+Image 490: Fail, Prediction = 0, True Label = x
+Image 491: Fail, Prediction = 0, True Label = x
+Image 492: Fail, Prediction = 0, True Label = x
+Image 493: Fail, Prediction = 0, True Label = x
+Image 494: Fail, Prediction = 0, True Label = x
+Image 495: Fail, Prediction = 0, True Label = x
+Image 496: Fail, Prediction = 0, True Label = x
+Image 497: Fail, Prediction = 0, True Label = x
+Image 498: Fail, Prediction = 0, True Label = x
+Image 499: Fail, Prediction = 0, True Label = x
+Image 500: Fail, Prediction = 0, True Label = x
+Image 501: Fail, Prediction = 0, True Label = x
+Image 502: Fail, Prediction = 0, True Label = x
+Image 503: Fail, Prediction = 0, True Label = x
+Image 504: Fail, Prediction = 0, True Label = x
+Image 505: Fail, Prediction = 0, True Label = x
+Image 506: Fail, Prediction = 0, True Label = x
+Image 507: Fail, Prediction = 0, True Label = x
+Image 508: Fail, Prediction = 0, True Label = x
+Image 509: Fail, Prediction = 0, True Label = x
+Image 510: Fail, Prediction = 0, True Label = x
+Image 511: Fail, Prediction = 0, True Label = x
+Image 512: Fail, Prediction = 0, True Label = x
+Image 513: Fail, Prediction = 0, True Label = x
+Image 514: Fail, Prediction = 0, True Label = x
+Image 515: Fail, Prediction = 0, True Label = x
+Image 516: Fail, Prediction = 0, True Label = x
+Image 517: Fail, Prediction = 0, True Label = x
+Image 518: Fail, Prediction = 0, True Label = x
+Image 519: Fail, Prediction = 0, True Label = x
+Image 520: Fail, Prediction = 0, True Label = x
+Image 521: Fail, Prediction = 0, True Label = x
+Image 522: Fail, Prediction = 0, True Label = x
+Image 523: Fail, Prediction = 0, True Label = x
+Image 524: Fail, Prediction = 0, True Label = x
+Image 525: Fail, Prediction = 0, True Label = x
+Image 526: Fail, Prediction = 0, True Label = x
+Image 527: Fail, Prediction = 0, True Label = x
+Image 528: Fail, Prediction = 0, True Label = x
+Image 529: Fail, Prediction = 0, True Label = x
+Image 530: Fail, Prediction = 0, True Label = x
+Image 531: Fail, Prediction = 0, True Label = x
+Image 532: Fail, Prediction = 0, True Label = x
+Image 533: Fail, Prediction = 0, True Label = x
+Image 534: Fail, Prediction = 0, True Label = x
+Image 535: Fail, Prediction = 0, True Label = x
+Image 536: Fail, Prediction = 0, True Label = x
+Image 537: Fail, Prediction = 0, True Label = x
+Image 538: Fail, Prediction = 0, True Label = x
+Image 539: Fail, Prediction = 0, True Label = x
+Image 540: Fail, Prediction = 0, True Label = x
+Image 541: Fail, Prediction = 0, True Label = x
+Image 542: Fail, Prediction = 0, True Label = x
+Image 543: Fail, Prediction = 0, True Label = x
+Image 544: Fail, Prediction = 0, True Label = x
+Image 545: Fail, Prediction = 0, True Label = x
+Image 546: Fail, Prediction = 0, True Label = x
+Image 547: Fail, Prediction = 0, True Label = x
+Image 548: Fail, Prediction = 0, True Label = x
+Image 549: Fail, Prediction = 0, True Label = x
+Image 550: Fail, Prediction = 0, True Label = x
+Image 551: Fail, Prediction = 0, True Label = x
+Image 552: Fail, Prediction = 0, True Label = x
+Image 553: Fail, Prediction = 0, True Label = x
+Image 554: Fail, Prediction = 0, True Label = x
+Image 555: Fail, Prediction = 0, True Label = x
+Image 556: Fail, Prediction = 0, True Label = x
+Image 557: Fail, Prediction = 0, True Label = x
+Image 558: Fail, Prediction = 0, True Label = x
+Image 559: Fail, Prediction = 0, True Label = x
+Image 560: Fail, Prediction = 0, True Label = x
+Image 561: Fail, Prediction = 0, True Label = x
+Image 562: Fail, Prediction = 0, True Label = x
+Image 563: Fail, Prediction = 0, True Label = x
+Image 564: Fail, Prediction = 0, True Label = x
+Image 565: Fail, Prediction = 0, True Label = x
+Image 566: Fail, Prediction = 0, True Label = x
+Image 567: Fail, Prediction = 0, True Label = x
+Image 568: Fail, Prediction = 0, True Label = x
+Image 569: Fail, Prediction = 0, True Label = x
+Image 570: Fail, Prediction = 0, True Label = x
+Image 571: Fail, Prediction = 0, True Label = x
+Image 572: Fail, Prediction = 0, True Label = x
+Image 573: Fail, Prediction = 0, True Label = x
+Image 574: Fail, Prediction = 0, True Label = x
+Image 575: Fail, Prediction = 0, True Label = x
+Image 576: Fail, Prediction = 0, True Label = x
+Image 577: Fail, Prediction = 0, True Label = x
+Image 578: Fail, Prediction = 0, True Label = x
+Image 579: Fail, Prediction = 0, True Label = x
+Image 580: Fail, Prediction = 0, True Label = x
+Image 581: Fail, Prediction = 0, True Label = x
+Image 582: Fail, Prediction = 0, True Label = x
+Image 583: Fail, Prediction = 0, True Label = x
+Image 584: Fail, Prediction = 0, True Label = x
+Image 585: Fail, Prediction = 0, True Label = x
+Image 586: Fail, Prediction = 0, True Label = x
+Image 587: Fail, Prediction = 0, True Label = x
+Image 588: Fail, Prediction = 0, True Label = x
+Image 589: Fail, Prediction = 0, True Label = x
+Image 590: Fail, Prediction = 0, True Label = x
+Image 591: Fail, Prediction = 0, True Label = x
+Image 592: Fail, Prediction = 0, True Label = x
+Image 593: Fail, Prediction = 0, True Label = x
+Image 594: Fail, Prediction = 0, True Label = x
+Image 595: Fail, Prediction = 0, True Label = x
+Image 596: Fail, Prediction = 0, True Label = x
+Image 597: Fail, Prediction = 0, True Label = x
+Image 598: Fail, Prediction = 0, True Label = x
+Image 599: Fail, Prediction = 0, True Label = x
+Image 600: Fail, Prediction = 0, True Label = x
+Image 601: Fail, Prediction = 0, True Label = x
+Image 602: Fail, Prediction = 0, True Label = x
+Image 603: Fail, Prediction = 0, True Label = x
+Image 604: Fail, Prediction = 0, True Label = x
+Image 605: Fail, Prediction = 0, True Label = x
+Image 606: Fail, Prediction = 0, True Label = x
+Image 607: Fail, Prediction = 0, True Label = x
+Image 608: Fail, Prediction = 0, True Label = x
+Image 609: Fail, Prediction = 0, True Label = x
+Image 610: Fail, Prediction = 0, True Label = x
+Image 611: Fail, Prediction = 0, True Label = x
+Image 612: Fail, Prediction = 0, True Label = x
+Image 613: Fail, Prediction = 0, True Label = x
+Image 614: Fail, Prediction = 0, True Label = x
+Image 615: Fail, Prediction = 0, True Label = x
+Image 616: Fail, Prediction = 0, True Label = x
+Image 617: Fail, Prediction = 0, True Label = x
+Image 618: Fail, Prediction = 0, True Label = x
+Image 619: Fail, Prediction = 0, True Label = x
+Image 620: Fail, Prediction = 0, True Label = x
+Image 621: Fail, Prediction = 0, True Label = x
+Image 622: Fail, Prediction = 0, True Label = x
+Image 623: Fail, Prediction = 0, True Label = x
+Image 624: Fail, Prediction = 0, True Label = x
+Image 625: Fail, Prediction = 0, True Label = x
+Image 626: Fail, Prediction = 0, True Label = x
+Image 627: Fail, Prediction = 0, True Label = x
+Image 628: Fail, Prediction = 0, True Label = x
+Image 629: Fail, Prediction = 0, True Label = x
+Image 630: Fail, Prediction = 0, True Label = x
+Image 631: Fail, Prediction = 0, True Label = x
+Image 632: Fail, Prediction = 0, True Label = x
+Image 633: Fail, Prediction = 0, True Label = x
+Image 634: Fail, Prediction = 0, True Label = x
+Image 635: Fail, Prediction = 0, True Label = x
+Image 636: Fail, Prediction = 0, True Label = x
+Image 637: Fail, Prediction = 0, True Label = x
+Image 638: Fail, Prediction = 0, True Label = x
+Image 639: Fail, Prediction = 0, True Label = x
+Image 640: Fail, Prediction = 0, True Label = x
+Image 641: Fail, Prediction = 0, True Label = x
+Image 642: Fail, Prediction = 0, True Label = x
+Image 643: Fail, Prediction = 0, True Label = x
+Image 644: Fail, Prediction = 0, True Label = x
+Image 645: Fail, Prediction = 0, True Label = x
+Image 646: Fail, Prediction = 0, True Label = x
+Image 647: Fail, Prediction = 0, True Label = x
+Image 648: Fail, Prediction = 0, True Label = x
+Image 649: Fail, Prediction = 0, True Label = x
+Image 650: Fail, Prediction = 0, True Label = x
+Image 651: Fail, Prediction = 0, True Label = x
+Image 652: Fail, Prediction = 0, True Label = x
+Image 653: Fail, Prediction = 0, True Label = x
+Image 654: Fail, Prediction = 0, True Label = x
+Image 655: Fail, Prediction = 0, True Label = x
+Image 656: Fail, Prediction = 0, True Label = x
+Image 657: Fail, Prediction = 0, True Label = x
+Image 658: Fail, Prediction = 0, True Label = x
+Image 659: Fail, Prediction = 0, True Label = x
+Image 660: Fail, Prediction = 0, True Label = x
+Image 661: Fail, Prediction = 0, True Label = x
+Image 662: Fail, Prediction = 0, True Label = x
+Image 663: Fail, Prediction = 0, True Label = x
+Image 664: Fail, Prediction = 0, True Label = x
+Image 665: Fail, Prediction = 0, True Label = x
+Image 666: Fail, Prediction = 0, True Label = x
+Image 667: Fail, Prediction = 0, True Label = x
+Image 668: Fail, Prediction = 0, True Label = x
+Image 669: Fail, Prediction = 0, True Label = x
+Image 670: Fail, Prediction = 0, True Label = x
+Image 671: Fail, Prediction = 0, True Label = x
+Image 672: Fail, Prediction = 0, True Label = x
+Image 673: Fail, Prediction = 0, True Label = x
+Image 674: Fail, Prediction = 0, True Label = x
+Image 675: Fail, Prediction = 0, True Label = x
+Image 676: Fail, Prediction = 0, True Label = x
+Image 677: Fail, Prediction = 0, True Label = x
+Image 678: Fail, Prediction = 0, True Label = x
+Image 679: Fail, Prediction = 0, True Label = x
+Image 680: Fail, Prediction = 0, True Label = x
+Image 681: Fail, Prediction = 0, True Label = x
+Image 682: Fail, Prediction = 0, True Label = x
+Image 683: Fail, Prediction = 0, True Label = x
+Image 684: Fail, Prediction = 0, True Label = x
+Image 685: Fail, Prediction = 0, True Label = x
+Image 686: Fail, Prediction = 0, True Label = x
+Image 687: Fail, Prediction = 0, True Label = x
+Image 688: Fail, Prediction = 0, True Label = x
+Image 689: Fail, Prediction = 0, True Label = x
+Image 690: Fail, Prediction = 0, True Label = x
+Image 691: Fail, Prediction = 0, True Label = x
+Image 692: Fail, Prediction = 0, True Label = x
+Image 693: Fail, Prediction = 0, True Label = x
+Image 694: Fail, Prediction = 0, True Label = x
+Image 695: Fail, Prediction = 0, True Label = x
+Image 696: Fail, Prediction = 0, True Label = x
+Image 697: Fail, Prediction = 0, True Label = x
+Image 698: Fail, Prediction = 0, True Label = x
+Image 699: Fail, Prediction = 0, True Label = x
+Image 700: Fail, Prediction = 0, True Label = x
+Image 701: Fail, Prediction = 0, True Label = x
+Image 702: Fail, Prediction = 0, True Label = x
+Image 703: Fail, Prediction = 0, True Label = x
+Image 704: Fail, Prediction = 0, True Label = x
+Image 705: Fail, Prediction = 0, True Label = x
+Image 706: Fail, Prediction = 0, True Label = x
+Image 707: Fail, Prediction = 0, True Label = x
+Image 708: Fail, Prediction = 0, True Label = x
+Image 709: Fail, Prediction = 0, True Label = x
+Image 710: Fail, Prediction = 0, True Label = x
+Image 711: Fail, Prediction = 0, True Label = x
+Image 712: Fail, Prediction = 0, True Label = x
+Image 713: Fail, Prediction = 0, True Label = x
+Image 714: Fail, Prediction = 0, True Label = x
+Image 715: Fail, Prediction = 0, True Label = x
+Image 716: Fail, Prediction = 0, True Label = x
+Image 717: Fail, Prediction = 0, True Label = x
+Image 718: Fail, Prediction = 0, True Label = x
+Image 719: Fail, Prediction = 0, True Label = x
+Image 720: Fail, Prediction = 0, True Label = x
+Image 721: Fail, Prediction = 0, True Label = x
+Image 722: Fail, Prediction = 0, True Label = x
+Image 723: Fail, Prediction = 0, True Label = x
+Image 724: Fail, Prediction = 0, True Label = x
+Image 725: Fail, Prediction = 0, True Label = x
+Image 726: Fail, Prediction = 0, True Label = x
+Image 727: Fail, Prediction = 0, True Label = x
+Image 728: Fail, Prediction = 0, True Label = x
+Image 729: Fail, Prediction = 0, True Label = x
+Image 730: Fail, Prediction = 0, True Label = x
+Image 731: Fail, Prediction = 0, True Label = x
+Image 732: Fail, Prediction = 0, True Label = x
+Image 733: Fail, Prediction = 0, True Label = x
+Image 734: Fail, Prediction = 0, True Label = x
+Image 735: Fail, Prediction = 0, True Label = x
+Image 736: Fail, Prediction = 0, True Label = x
+Image 737: Fail, Prediction = 0, True Label = x
+Image 738: Fail, Prediction = 0, True Label = x
+Image 739: Fail, Prediction = 0, True Label = x
+Image 740: Fail, Prediction = 0, True Label = x
+Image 741: Fail, Prediction = 0, True Label = x
+Image 742: Fail, Prediction = 0, True Label = x
+Image 743: Fail, Prediction = 0, True Label = x
+Image 744: Fail, Prediction = 0, True Label = x
+Image 745: Fail, Prediction = 0, True Label = x
+Image 746: Fail, Prediction = 0, True Label = x
+Image 747: Fail, Prediction = 0, True Label = x
+Image 748: Fail, Prediction = 0, True Label = x
+Image 749: Fail, Prediction = 0, True Label = x
+Image 750: Fail, Prediction = 0, True Label = x
+Image 751: Fail, Prediction = 0, True Label = x
+Image 752: Fail, Prediction = 0, True Label = x
+Image 753: Fail, Prediction = 0, True Label = x
+Image 754: Fail, Prediction = 0, True Label = x
+Image 755: Fail, Prediction = 0, True Label = x
+Image 756: Fail, Prediction = 0, True Label = x
+Image 757: Fail, Prediction = 0, True Label = x
+Image 758: Fail, Prediction = 0, True Label = x
+Image 759: Fail, Prediction = 0, True Label = x
+Image 760: Fail, Prediction = 0, True Label = x
+Image 761: Fail, Prediction = 0, True Label = x
+Image 762: Fail, Prediction = 0, True Label = x
+Image 763: Fail, Prediction = 0, True Label = x
+Image 764: Fail, Prediction = 0, True Label = x
+Image 765: Fail, Prediction = 0, True Label = x
+Image 766: Fail, Prediction = 0, True Label = x
+Image 767: Fail, Prediction = 0, True Label = x
+Image 768: Fail, Prediction = 0, True Label = x
+Image 769: Fail, Prediction = 0, True Label = x
+Image 770: Fail, Prediction = 0, True Label = x
+Image 771: Fail, Prediction = 0, True Label = x
+Image 772: Fail, Prediction = 0, True Label = x
+Image 773: Fail, Prediction = 0, True Label = x
+Image 774: Fail, Prediction = 0, True Label = x
+Image 775: Fail, Prediction = 0, True Label = x
+Image 776: Fail, Prediction = 0, True Label = x
+Image 777: Fail, Prediction = 0, True Label = x
+Image 778: Fail, Prediction = 0, True Label = x
+Image 779: Fail, Prediction = 0, True Label = x
+Image 780: Fail, Prediction = 0, True Label = x
+Image 781: Fail, Prediction = 0, True Label = x
+Image 782: Fail, Prediction = 0, True Label = x
+Image 783: Fail, Prediction = 0, True Label = x
+Image 784: Fail, Prediction = 0, True Label = x
+Image 785: Fail, Prediction = 0, True Label = x
+Image 786: Fail, Prediction = 0, True Label = x
+Image 787: Fail, Prediction = 0, True Label = x
+Image 788: Fail, Prediction = 0, True Label = x
+Image 789: Fail, Prediction = 0, True Label = x
+Image 790: Fail, Prediction = 0, True Label = x
+Image 791: Fail, Prediction = 0, True Label = x
+Image 792: Fail, Prediction = 0, True Label = x
+Image 793: Fail, Prediction = 0, True Label = x
+Image 794: Fail, Prediction = 0, True Label = x
+Image 795: Fail, Prediction = 0, True Label = x
+Image 796: Fail, Prediction = 0, True Label = x
+Image 797: Fail, Prediction = 0, True Label = x
+Image 798: Fail, Prediction = 0, True Label = x
+Image 799: Fail, Prediction = 0, True Label = x
+Image 800: Fail, Prediction = 0, True Label = x
+Image 801: Fail, Prediction = 0, True Label = x
+Image 802: Fail, Prediction = 0, True Label = x
+Image 803: Fail, Prediction = 0, True Label = x
+Image 804: Fail, Prediction = 0, True Label = x
+Image 805: Fail, Prediction = 0, True Label = x
+Image 806: Fail, Prediction = 0, True Label = x
+Image 807: Fail, Prediction = 0, True Label = x
+Image 808: Fail, Prediction = 0, True Label = x
+Image 809: Fail, Prediction = 0, True Label = x
+Image 810: Fail, Prediction = 0, True Label = x
+Image 811: Fail, Prediction = 0, True Label = x
+Image 812: Fail, Prediction = 0, True Label = x
+Image 813: Fail, Prediction = 0, True Label = x
+Image 814: Fail, Prediction = 0, True Label = x
+Image 815: Fail, Prediction = 0, True Label = x
+Image 816: Fail, Prediction = 0, True Label = x
+Image 817: Fail, Prediction = 0, True Label = x
+Image 818: Fail, Prediction = 0, True Label = x
+Image 819: Fail, Prediction = 0, True Label = x
+Image 820: Fail, Prediction = 0, True Label = x
+Image 821: Fail, Prediction = 0, True Label = x
+Image 822: Fail, Prediction = 0, True Label = x
+Image 823: Fail, Prediction = 0, True Label = x
+Image 824: Fail, Prediction = 0, True Label = x
+Image 825: Fail, Prediction = 0, True Label = x
+Image 826: Fail, Prediction = 0, True Label = x
+Image 827: Fail, Prediction = 0, True Label = x
+Image 828: Fail, Prediction = 0, True Label = x
+Image 829: Fail, Prediction = 0, True Label = x
+Image 830: Fail, Prediction = 0, True Label = x
+Image 831: Fail, Prediction = 0, True Label = x
+Image 832: Fail, Prediction = 0, True Label = x
+Image 833: Fail, Prediction = 0, True Label = x
+Image 834: Fail, Prediction = 0, True Label = x
+Image 835: Fail, Prediction = 0, True Label = x
+Image 836: Fail, Prediction = 0, True Label = x
+Image 837: Fail, Prediction = 0, True Label = x
+Image 838: Fail, Prediction = 0, True Label = x
+Image 839: Fail, Prediction = 0, True Label = x
+Image 840: Fail, Prediction = 0, True Label = x
+Image 841: Fail, Prediction = 0, True Label = x
+Image 842: Fail, Prediction = 0, True Label = x
+Image 843: Fail, Prediction = 0, True Label = x
+Image 844: Fail, Prediction = 0, True Label = x
+Image 845: Fail, Prediction = 0, True Label = x
+Image 846: Fail, Prediction = 0, True Label = x
+Image 847: Fail, Prediction = 0, True Label = x
+Image 848: Fail, Prediction = 0, True Label = x
+Image 849: Fail, Prediction = 0, True Label = x
+Image 850: Fail, Prediction = 0, True Label = x
+Image 851: Fail, Prediction = 0, True Label = x
+Image 852: Fail, Prediction = 0, True Label = x
+Image 853: Fail, Prediction = 0, True Label = x
+Image 854: Fail, Prediction = 0, True Label = x
+Image 855: Fail, Prediction = 0, True Label = x
+Image 856: Fail, Prediction = 0, True Label = x
+Image 857: Fail, Prediction = 0, True Label = x
+Image 858: Fail, Prediction = 0, True Label = x
+Image 859: Fail, Prediction = 0, True Label = x
+Image 860: Fail, Prediction = 0, True Label = x
+Image 861: Fail, Prediction = 0, True Label = x
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 850.398 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top_1000' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_1000_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Accumulator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Accumulator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_layer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FC_layer
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/MAC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MAC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Max_Pooling_ReLU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Max_Pooling_ReLU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/PE_Array.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PE_Array
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Bias.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Bias
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_Weight
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/buffer1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module buffer1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/conv2d_pe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv2d_pe
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_bias_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fc_bias_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_weight_ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fc_weight_ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/global_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module global_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/matmul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matmul
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module max_finder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/shiftBuffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shiftBuffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top_1000
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xelab -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_1000_behav xil_defaultlib.tb_top_1000 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_1000_behav xil_defaultlib.tb_top_1000 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v:151]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.global_controller
+Compiling module xil_defaultlib.conv2d_pe
+Compiling module xil_defaultlib.Accumulator
+Compiling module xil_defaultlib.PE_Array_default
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.Max_Pooling_ReLU
+Compiling module xil_defaultlib.buffer1
+Compiling module xil_defaultlib.shiftBuffer
+Compiling module xil_defaultlib.MAC
+Compiling module xil_defaultlib.matmul_default
+Compiling module xil_defaultlib.max_finder
+Compiling module xil_defaultlib.FC_layer
+Compiling module xil_defaultlib.FC_controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.fc_weight_ROM(WEIGHT_FILE="D:/Gi...
+Compiling module xil_defaultlib.fc_bias_ROM(BIAS_FILE="D:/Git_re...
+Compiling module xil_defaultlib.ROM_Weight(WEIGHT_FILE_conv1_1="...
+Compiling module xil_defaultlib.ROM_Bias(WEIGHT_FILE_bias_1="D:/...
+Compiling module xil_defaultlib.tb_top_1000
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_1000_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_1000_behav -key {Behavioral:sim_1:Functional:tb_top_1000} -tclbatch {tb_top_1000.tcl} -view {D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_behav.wcfg} -view {D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_1000_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_behav.wcfg
+WARNING: Simulation object /tb_top/clk was not found in the design.
+WARNING: Simulation object /tb_top/rstn was not found in the design.
+WARNING: Simulation object /tb_top/start_i was not found in the design.
+WARNING: Simulation object /tb_top/pixels was not found in the design.
+WARNING: Simulation object /tb_top/conv1_weight_1 was not found in the design.
+WARNING: Simulation object /tb_top/conv1_weight_2 was not found in the design.
+WARNING: Simulation object /tb_top/conv1_weight_3 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_11 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_12 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_13 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_21 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_22 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_23 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_31 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_32 was not found in the design.
+WARNING: Simulation object /tb_top/conv2_weight_33 was not found in the design.
+WARNING: Simulation object /tb_top/image_6rows was not found in the design.
+WARNING: Simulation object /tb_top/zero_bias was not found in the design.
+WARNING: Simulation object /tb_top/cycle was not found in the design.
+WARNING: Simulation object /tb_top/image_idx was not found in the design.
+WARNING: Simulation object /tb_top/weight_sel was not found in the design.
+WARNING: Simulation object /tb_top/bias_sel was not found in the design.
+WARNING: Simulation object /tb_top/image_rom_en was not found in the design.
+WARNING: Simulation object /tb_top/weight_input_packed was not found in the design.
+WARNING: Simulation object /tb_top/weight_enable was not found in the design.
+WARNING: Simulation object /tb_top/weight_indexing was not found in the design.
+WARNING: Simulation object /tb_top/fc_bias was not found in the design.
+WARNING: Simulation object /tb_top/bias_in was not found in the design.
+WARNING: Simulation object /tb_top/conv1_bias was not found in the design.
+WARNING: Simulation object /tb_top/conv2_bias was not found in the design.
+WARNING: Simulation object /tb_top/conv_weight_in1 was not found in the design.
+WARNING: Simulation object /tb_top/conv_weight_in2 was not found in the design.
+WARNING: Simulation object /tb_top/conv_weight_in3 was not found in the design.
+WARNING: Simulation object /tb_top/done was not found in the design.
+WARNING: Simulation object /tb_top/ready was not found in the design.
+WARNING: Simulation object /tb_top/result was not found in the design.
+WARNING: Simulation object /tb_top/i was not found in the design.
+WARNING: Simulation object /tb_top/VIVADO_PROJECT_LOCATION was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/data_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/filter1_weights was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/filter2_weights was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/filter3_weights was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/bias_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/acc_full_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/conv_out1 was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/conv_out2 was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/conv_out3 was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/data_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/valid_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/data_out_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/shift_reg was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch1/max_value was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch2/data_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch2/valid_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch2/data_out_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch3/data_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch3/valid_in_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/FIFO_Ch3/data_out_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch1/data_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch1/data_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch1/data_out was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch1/max_value was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch2/data_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch2/data_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch3/data_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/MaxPooling_Ch3/data_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF1/din_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF1/dout_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF1/mem was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF2/din_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF2/dout_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF2/mem was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF3/din_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF3/dout_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/BUF3/mem was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/acc_full_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/bias_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/signed_bias was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/conv_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/conv_sum was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/acc was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/wr_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/rd_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch1/cycle_count was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/bias_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/signed_bias was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/conv_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/conv_sum was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/acc_full_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/acc was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/wr_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/rd_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch2/cycle_count was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/bias_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/conv_in was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/conv_sum was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/acc_full_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/acc was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/wr_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/rd_ptr was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/cycle_count was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/PE_inst/ACC_Ch3/signed_bias was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/shiftBuffer1/register was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/shiftBuffer2/register was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/shiftBuffer3/register was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/flatten_input_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/weight_input_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/data_out was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/bias_input_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/matmul_inst/data_out_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/result_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/valid_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/inputs_i was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/result_o was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/input_wires was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/max_value was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/max_index was not found in the design.
+WARNING: Simulation object /tb_top/TOP_inst/fc_layer/max_finder_inst/i was not found in the design.
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_1000_behav.wcfg
+source tb_top_1000.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_1000_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 850.398 ; gain = 0.000
+run all
+Image 0: Success, Prediction = 0, True Label = 0
+Image 1: Success, Prediction = 1, True Label = 1
+Image 2: Success, Prediction = 2, True Label = 2
+Image 3: Success, Prediction = 3, True Label = 3
+Image 4: Success, Prediction = 4, True Label = 4
+Image 5: Fail, Prediction = 8, True Label = 5
+Image 6: Success, Prediction = 6, True Label = 6
+Image 7: Success, Prediction = 7, True Label = 7
+Image 8: Success, Prediction = 8, True Label = 8
+Image 9: Success, Prediction = 9, True Label = 9
+Image 10: Success, Prediction = 0, True Label = 0
+Image 11: Success, Prediction = 1, True Label = 1
+Image 12: Success, Prediction = 2, True Label = 2
+Image 13: Success, Prediction = 3, True Label = 3
+Image 14: Success, Prediction = 4, True Label = 4
+Image 15: Success, Prediction = 5, True Label = 5
+Image 16: Success, Prediction = 6, True Label = 6
+Image 17: Success, Prediction = 7, True Label = 7
+Image 18: Success, Prediction = 8, True Label = 8
+Image 19: Success, Prediction = 9, True Label = 9
+Image 20: Success, Prediction = 0, True Label = 0
+Image 21: Success, Prediction = 1, True Label = 1
+Image 22: Success, Prediction = 2, True Label = 2
+Image 23: Success, Prediction = 3, True Label = 3
+Image 24: Success, Prediction = 4, True Label = 4
+Image 25: Success, Prediction = 5, True Label = 5
+Image 26: Success, Prediction = 6, True Label = 6
+Image 27: Success, Prediction = 7, True Label = 7
+Image 28: Success, Prediction = 8, True Label = 8
+Image 29: Success, Prediction = 9, True Label = 9
+Image 30: Success, Prediction = 0, True Label = 0
+Image 31: Success, Prediction = 1, True Label = 1
+Image 32: Success, Prediction = 2, True Label = 2
+Image 33: Success, Prediction = 3, True Label = 3
+Image 34: Success, Prediction = 4, True Label = 4
+Image 35: Success, Prediction = 5, True Label = 5
+Image 36: Success, Prediction = 6, True Label = 6
+Image 37: Success, Prediction = 7, True Label = 7
+Image 38: Success, Prediction = 8, True Label = 8
+Image 39: Success, Prediction = 9, True Label = 9
+Image 40: Success, Prediction = 0, True Label = 0
+Image 41: Success, Prediction = 1, True Label = 1
+Image 42: Success, Prediction = 2, True Label = 2
+Image 43: Success, Prediction = 3, True Label = 3
+Image 44: Success, Prediction = 4, True Label = 4
+Image 45: Success, Prediction = 5, True Label = 5
+Image 46: Success, Prediction = 6, True Label = 6
+Image 47: Success, Prediction = 7, True Label = 7
+Image 48: Success, Prediction = 8, True Label = 8
+Image 49: Success, Prediction = 9, True Label = 9
+Image 50: Success, Prediction = 0, True Label = 0
+Image 51: Success, Prediction = 1, True Label = 1
+Image 52: Success, Prediction = 2, True Label = 2
+Image 53: Success, Prediction = 3, True Label = 3
+Image 54: Success, Prediction = 4, True Label = 4
+Image 55: Success, Prediction = 5, True Label = 5
+Image 56: Success, Prediction = 6, True Label = 6
+Image 57: Success, Prediction = 7, True Label = 7
+Image 58: Success, Prediction = 8, True Label = 8
+Image 59: Success, Prediction = 9, True Label = 9
+Image 60: Success, Prediction = 0, True Label = 0
+Image 61: Success, Prediction = 1, True Label = 1
+Image 62: Fail, Prediction = 1, True Label = 2
+Image 63: Success, Prediction = 3, True Label = 3
+Image 64: Success, Prediction = 4, True Label = 4
+Image 65: Success, Prediction = 5, True Label = 5
+Image 66: Success, Prediction = 6, True Label = 6
+Image 67: Success, Prediction = 7, True Label = 7
+Image 68: Success, Prediction = 8, True Label = 8
+Image 69: Success, Prediction = 9, True Label = 9
+Image 70: Success, Prediction = 0, True Label = 0
+Image 71: Success, Prediction = 1, True Label = 1
+Image 72: Success, Prediction = 2, True Label = 2
+Image 73: Success, Prediction = 3, True Label = 3
+Image 74: Success, Prediction = 4, True Label = 4
+Image 75: Success, Prediction = 5, True Label = 5
+Image 76: Success, Prediction = 6, True Label = 6
+Image 77: Success, Prediction = 7, True Label = 7
+Image 78: Success, Prediction = 8, True Label = 8
+Image 79: Success, Prediction = 9, True Label = 9
+Image 80: Success, Prediction = 0, True Label = 0
+Image 81: Success, Prediction = 1, True Label = 1
+Image 82: Success, Prediction = 2, True Label = 2
+Image 83: Success, Prediction = 3, True Label = 3
+Image 84: Success, Prediction = 4, True Label = 4
+Image 85: Success, Prediction = 5, True Label = 5
+Image 86: Success, Prediction = 6, True Label = 6
+Image 87: Success, Prediction = 7, True Label = 7
+Image 88: Success, Prediction = 8, True Label = 8
+Image 89: Success, Prediction = 9, True Label = 9
+Image 90: Success, Prediction = 0, True Label = 0
+Image 91: Success, Prediction = 1, True Label = 1
+Image 92: Success, Prediction = 2, True Label = 2
+Image 93: Success, Prediction = 3, True Label = 3
+Image 94: Success, Prediction = 4, True Label = 4
+Image 95: Success, Prediction = 5, True Label = 5
+Image 96: Success, Prediction = 6, True Label = 6
+Image 97: Success, Prediction = 7, True Label = 7
+Image 98: Success, Prediction = 8, True Label = 8
+Image 99: Success, Prediction = 9, True Label = 9
+Image 100: Success, Prediction = 0, True Label = 0
+Image 101: Success, Prediction = 1, True Label = 1
+Image 102: Success, Prediction = 2, True Label = 2
+Image 103: Success, Prediction = 3, True Label = 3
+Image 104: Success, Prediction = 4, True Label = 4
+Image 105: Fail, Prediction = 8, True Label = 5
+Image 106: Success, Prediction = 6, True Label = 6
+Image 107: Success, Prediction = 7, True Label = 7
+Image 108: Success, Prediction = 8, True Label = 8
+Image 109: Success, Prediction = 9, True Label = 9
+Image 110: Success, Prediction = 0, True Label = 0
+Image 111: Success, Prediction = 1, True Label = 1
+Image 112: Success, Prediction = 2, True Label = 2
+Image 113: Success, Prediction = 3, True Label = 3
+Image 114: Success, Prediction = 4, True Label = 4
+Image 115: Success, Prediction = 5, True Label = 5
+Image 116: Success, Prediction = 6, True Label = 6
+Image 117: Success, Prediction = 7, True Label = 7
+Image 118: Success, Prediction = 8, True Label = 8
+Image 119: Success, Prediction = 9, True Label = 9
+Image 120: Success, Prediction = 0, True Label = 0
+Image 121: Success, Prediction = 1, True Label = 1
+Image 122: Success, Prediction = 2, True Label = 2
+Image 123: Success, Prediction = 3, True Label = 3
+Image 124: Success, Prediction = 4, True Label = 4
+Image 125: Success, Prediction = 5, True Label = 5
+Image 126: Success, Prediction = 6, True Label = 6
+Image 127: Success, Prediction = 7, True Label = 7
+Image 128: Success, Prediction = 8, True Label = 8
+Image 129: Success, Prediction = 9, True Label = 9
+Image 130: Success, Prediction = 0, True Label = 0
+Image 131: Success, Prediction = 1, True Label = 1
+Image 132: Success, Prediction = 2, True Label = 2
+Image 133: Success, Prediction = 3, True Label = 3
+Image 134: Success, Prediction = 4, True Label = 4
+Image 135: Success, Prediction = 5, True Label = 5
+Image 136: Success, Prediction = 6, True Label = 6
+Image 137: Success, Prediction = 7, True Label = 7
+Image 138: Success, Prediction = 8, True Label = 8
+Image 139: Success, Prediction = 9, True Label = 9
+Image 140: Success, Prediction = 0, True Label = 0
+Image 141: Success, Prediction = 1, True Label = 1
+Image 142: Success, Prediction = 2, True Label = 2
+Image 143: Success, Prediction = 3, True Label = 3
+Image 144: Success, Prediction = 4, True Label = 4
+Image 145: Success, Prediction = 5, True Label = 5
+Image 146: Success, Prediction = 6, True Label = 6
+Image 147: Success, Prediction = 7, True Label = 7
+Image 148: Success, Prediction = 8, True Label = 8
+Image 149: Success, Prediction = 9, True Label = 9
+Image 150: Success, Prediction = 0, True Label = 0
+Image 151: Success, Prediction = 1, True Label = 1
+Image 152: Success, Prediction = 2, True Label = 2
+Image 153: Success, Prediction = 3, True Label = 3
+Image 154: Success, Prediction = 4, True Label = 4
+Image 155: Success, Prediction = 5, True Label = 5
+Image 156: Success, Prediction = 6, True Label = 6
+Image 157: Success, Prediction = 7, True Label = 7
+Image 158: Success, Prediction = 8, True Label = 8
+Image 159: Success, Prediction = 9, True Label = 9
+Image 160: Success, Prediction = 0, True Label = 0
+Image 161: Success, Prediction = 1, True Label = 1
+Image 162: Fail, Prediction = 1, True Label = 2
+Image 163: Success, Prediction = 3, True Label = 3
+Image 164: Success, Prediction = 4, True Label = 4
+Image 165: Success, Prediction = 5, True Label = 5
+Image 166: Success, Prediction = 6, True Label = 6
+Image 167: Success, Prediction = 7, True Label = 7
+Image 168: Success, Prediction = 8, True Label = 8
+Image 169: Success, Prediction = 9, True Label = 9
+Image 170: Success, Prediction = 0, True Label = 0
+Image 171: Success, Prediction = 1, True Label = 1
+Image 172: Success, Prediction = 2, True Label = 2
+Image 173: Success, Prediction = 3, True Label = 3
+Image 174: Success, Prediction = 4, True Label = 4
+Image 175: Success, Prediction = 5, True Label = 5
+Image 176: Success, Prediction = 6, True Label = 6
+Image 177: Success, Prediction = 7, True Label = 7
+Image 178: Success, Prediction = 8, True Label = 8
+Image 179: Success, Prediction = 9, True Label = 9
+Image 180: Success, Prediction = 0, True Label = 0
+Image 181: Success, Prediction = 1, True Label = 1
+Image 182: Success, Prediction = 2, True Label = 2
+Image 183: Success, Prediction = 3, True Label = 3
+Image 184: Success, Prediction = 4, True Label = 4
+Image 185: Success, Prediction = 5, True Label = 5
+Image 186: Success, Prediction = 6, True Label = 6
+Image 187: Success, Prediction = 7, True Label = 7
+Image 188: Success, Prediction = 8, True Label = 8
+Image 189: Success, Prediction = 9, True Label = 9
+Image 190: Success, Prediction = 0, True Label = 0
+Image 191: Success, Prediction = 1, True Label = 1
+Image 192: Success, Prediction = 2, True Label = 2
+Image 193: Success, Prediction = 3, True Label = 3
+Image 194: Success, Prediction = 4, True Label = 4
+Image 195: Success, Prediction = 5, True Label = 5
+Image 196: Success, Prediction = 6, True Label = 6
+Image 197: Success, Prediction = 7, True Label = 7
+Image 198: Success, Prediction = 8, True Label = 8
+Image 199: Success, Prediction = 9, True Label = 9
+Image 200: Success, Prediction = 0, True Label = 0
+Image 201: Success, Prediction = 1, True Label = 1
+Image 202: Success, Prediction = 2, True Label = 2
+Image 203: Success, Prediction = 3, True Label = 3
+Image 204: Success, Prediction = 4, True Label = 4
+Image 205: Fail, Prediction = 8, True Label = 5
+Image 206: Success, Prediction = 6, True Label = 6
+Image 207: Success, Prediction = 7, True Label = 7
+Image 208: Success, Prediction = 8, True Label = 8
+Image 209: Success, Prediction = 9, True Label = 9
+Image 210: Success, Prediction = 0, True Label = 0
+Image 211: Success, Prediction = 1, True Label = 1
+Image 212: Success, Prediction = 2, True Label = 2
+Image 213: Success, Prediction = 3, True Label = 3
+Image 214: Success, Prediction = 4, True Label = 4
+Image 215: Success, Prediction = 5, True Label = 5
+Image 216: Success, Prediction = 6, True Label = 6
+Image 217: Success, Prediction = 7, True Label = 7
+Image 218: Success, Prediction = 8, True Label = 8
+Image 219: Success, Prediction = 9, True Label = 9
+Image 220: Success, Prediction = 0, True Label = 0
+Image 221: Success, Prediction = 1, True Label = 1
+Image 222: Success, Prediction = 2, True Label = 2
+Image 223: Success, Prediction = 3, True Label = 3
+Image 224: Success, Prediction = 4, True Label = 4
+Image 225: Success, Prediction = 5, True Label = 5
+Image 226: Success, Prediction = 6, True Label = 6
+Image 227: Success, Prediction = 7, True Label = 7
+Image 228: Success, Prediction = 8, True Label = 8
+Image 229: Success, Prediction = 9, True Label = 9
+Image 230: Success, Prediction = 0, True Label = 0
+Image 231: Success, Prediction = 1, True Label = 1
+Image 232: Success, Prediction = 2, True Label = 2
+Image 233: Success, Prediction = 3, True Label = 3
+Image 234: Success, Prediction = 4, True Label = 4
+Image 235: Success, Prediction = 5, True Label = 5
+Image 236: Success, Prediction = 6, True Label = 6
+Image 237: Success, Prediction = 7, True Label = 7
+Image 238: Success, Prediction = 8, True Label = 8
+Image 239: Success, Prediction = 9, True Label = 9
+Image 240: Success, Prediction = 0, True Label = 0
+Image 241: Success, Prediction = 1, True Label = 1
+Image 242: Success, Prediction = 2, True Label = 2
+Image 243: Success, Prediction = 3, True Label = 3
+Image 244: Success, Prediction = 4, True Label = 4
+Image 245: Success, Prediction = 5, True Label = 5
+Image 246: Success, Prediction = 6, True Label = 6
+Image 247: Success, Prediction = 7, True Label = 7
+Image 248: Success, Prediction = 8, True Label = 8
+Image 249: Success, Prediction = 9, True Label = 9
+Image 250: Success, Prediction = 0, True Label = 0
+Image 251: Success, Prediction = 1, True Label = 1
+Image 252: Success, Prediction = 2, True Label = 2
+Image 253: Success, Prediction = 3, True Label = 3
+Image 254: Success, Prediction = 4, True Label = 4
+Image 255: Success, Prediction = 5, True Label = 5
+Image 256: Success, Prediction = 6, True Label = 6
+Image 257: Success, Prediction = 7, True Label = 7
+Image 258: Success, Prediction = 8, True Label = 8
+Image 259: Success, Prediction = 9, True Label = 9
+Image 260: Success, Prediction = 0, True Label = 0
+Image 261: Success, Prediction = 1, True Label = 1
+Image 262: Fail, Prediction = 1, True Label = 2
+Image 263: Success, Prediction = 3, True Label = 3
+Image 264: Success, Prediction = 4, True Label = 4
+Image 265: Success, Prediction = 5, True Label = 5
+Image 266: Success, Prediction = 6, True Label = 6
+Image 267: Success, Prediction = 7, True Label = 7
+Image 268: Success, Prediction = 8, True Label = 8
+Image 269: Success, Prediction = 9, True Label = 9
+Image 270: Success, Prediction = 0, True Label = 0
+Image 271: Success, Prediction = 1, True Label = 1
+Image 272: Success, Prediction = 2, True Label = 2
+Image 273: Success, Prediction = 3, True Label = 3
+Image 274: Success, Prediction = 4, True Label = 4
+Image 275: Success, Prediction = 5, True Label = 5
+Image 276: Success, Prediction = 6, True Label = 6
+Image 277: Success, Prediction = 7, True Label = 7
+Image 278: Success, Prediction = 8, True Label = 8
+Image 279: Success, Prediction = 9, True Label = 9
+Image 280: Success, Prediction = 0, True Label = 0
+Image 281: Success, Prediction = 1, True Label = 1
+Image 282: Success, Prediction = 2, True Label = 2
+Image 283: Success, Prediction = 3, True Label = 3
+Image 284: Success, Prediction = 4, True Label = 4
+Image 285: Success, Prediction = 5, True Label = 5
+Image 286: Success, Prediction = 6, True Label = 6
+Image 287: Success, Prediction = 7, True Label = 7
+Image 288: Success, Prediction = 8, True Label = 8
+Image 289: Success, Prediction = 9, True Label = 9
+Image 290: Success, Prediction = 0, True Label = 0
+Image 291: Success, Prediction = 1, True Label = 1
+Image 292: Success, Prediction = 2, True Label = 2
+Image 293: Success, Prediction = 3, True Label = 3
+Image 294: Success, Prediction = 4, True Label = 4
+Image 295: Success, Prediction = 5, True Label = 5
+Image 296: Success, Prediction = 6, True Label = 6
+Image 297: Success, Prediction = 7, True Label = 7
+Image 298: Success, Prediction = 8, True Label = 8
+Image 299: Success, Prediction = 9, True Label = 9
+Image 300: Success, Prediction = 0, True Label = 0
+Image 301: Success, Prediction = 1, True Label = 1
+Image 302: Success, Prediction = 2, True Label = 2
+Image 303: Success, Prediction = 3, True Label = 3
+Image 304: Success, Prediction = 4, True Label = 4
+Image 305: Fail, Prediction = 8, True Label = 5
+Image 306: Success, Prediction = 6, True Label = 6
+Image 307: Success, Prediction = 7, True Label = 7
+Image 308: Success, Prediction = 8, True Label = 8
+Image 309: Success, Prediction = 9, True Label = 9
+Image 310: Success, Prediction = 0, True Label = 0
+Image 311: Success, Prediction = 1, True Label = 1
+Image 312: Success, Prediction = 2, True Label = 2
+Image 313: Success, Prediction = 3, True Label = 3
+Image 314: Success, Prediction = 4, True Label = 4
+Image 315: Success, Prediction = 5, True Label = 5
+Image 316: Success, Prediction = 6, True Label = 6
+Image 317: Success, Prediction = 7, True Label = 7
+Image 318: Success, Prediction = 8, True Label = 8
+Image 319: Success, Prediction = 9, True Label = 9
+Image 320: Success, Prediction = 0, True Label = 0
+Image 321: Success, Prediction = 1, True Label = 1
+Image 322: Success, Prediction = 2, True Label = 2
+Image 323: Success, Prediction = 3, True Label = 3
+Image 324: Success, Prediction = 4, True Label = 4
+Image 325: Success, Prediction = 5, True Label = 5
+Image 326: Success, Prediction = 6, True Label = 6
+Image 327: Success, Prediction = 7, True Label = 7
+Image 328: Success, Prediction = 8, True Label = 8
+Image 329: Success, Prediction = 9, True Label = 9
+Image 330: Success, Prediction = 0, True Label = 0
+Image 331: Success, Prediction = 1, True Label = 1
+Image 332: Success, Prediction = 2, True Label = 2
+Image 333: Success, Prediction = 3, True Label = 3
+Image 334: Success, Prediction = 4, True Label = 4
+Image 335: Success, Prediction = 5, True Label = 5
+Image 336: Success, Prediction = 6, True Label = 6
+Image 337: Success, Prediction = 7, True Label = 7
+Image 338: Success, Prediction = 8, True Label = 8
+Image 339: Success, Prediction = 9, True Label = 9
+Image 340: Success, Prediction = 0, True Label = 0
+Image 341: Success, Prediction = 1, True Label = 1
+Image 342: Success, Prediction = 2, True Label = 2
+Image 343: Success, Prediction = 3, True Label = 3
+Image 344: Success, Prediction = 4, True Label = 4
+Image 345: Success, Prediction = 5, True Label = 5
+Image 346: Success, Prediction = 6, True Label = 6
+Image 347: Success, Prediction = 7, True Label = 7
+Image 348: Success, Prediction = 8, True Label = 8
+Image 349: Success, Prediction = 9, True Label = 9
+Image 350: Success, Prediction = 0, True Label = 0
+Image 351: Success, Prediction = 1, True Label = 1
+Image 352: Success, Prediction = 2, True Label = 2
+Image 353: Success, Prediction = 3, True Label = 3
+Image 354: Success, Prediction = 4, True Label = 4
+Image 355: Success, Prediction = 5, True Label = 5
+Image 356: Success, Prediction = 6, True Label = 6
+Image 357: Success, Prediction = 7, True Label = 7
+Image 358: Success, Prediction = 8, True Label = 8
+Image 359: Success, Prediction = 9, True Label = 9
+Image 360: Success, Prediction = 0, True Label = 0
+Image 361: Success, Prediction = 1, True Label = 1
+Image 362: Fail, Prediction = 1, True Label = 2
+Image 363: Success, Prediction = 3, True Label = 3
+Image 364: Success, Prediction = 4, True Label = 4
+Image 365: Success, Prediction = 5, True Label = 5
+Image 366: Success, Prediction = 6, True Label = 6
+Image 367: Success, Prediction = 7, True Label = 7
+Image 368: Success, Prediction = 8, True Label = 8
+Image 369: Success, Prediction = 9, True Label = 9
+Image 370: Success, Prediction = 0, True Label = 0
+Image 371: Success, Prediction = 1, True Label = 1
+Image 372: Success, Prediction = 2, True Label = 2
+Image 373: Success, Prediction = 3, True Label = 3
+Image 374: Success, Prediction = 4, True Label = 4
+Image 375: Success, Prediction = 5, True Label = 5
+Image 376: Success, Prediction = 6, True Label = 6
+Image 377: Success, Prediction = 7, True Label = 7
+Image 378: Success, Prediction = 8, True Label = 8
+Image 379: Success, Prediction = 9, True Label = 9
+Image 380: Success, Prediction = 0, True Label = 0
+Image 381: Success, Prediction = 1, True Label = 1
+Image 382: Success, Prediction = 2, True Label = 2
+Image 383: Success, Prediction = 3, True Label = 3
+Image 384: Success, Prediction = 4, True Label = 4
+Image 385: Success, Prediction = 5, True Label = 5
+Image 386: Success, Prediction = 6, True Label = 6
+Image 387: Success, Prediction = 7, True Label = 7
+Image 388: Success, Prediction = 8, True Label = 8
+Image 389: Success, Prediction = 9, True Label = 9
+Image 390: Success, Prediction = 0, True Label = 0
+Image 391: Success, Prediction = 1, True Label = 1
+Image 392: Success, Prediction = 2, True Label = 2
+Image 393: Success, Prediction = 3, True Label = 3
+Image 394: Success, Prediction = 4, True Label = 4
+Image 395: Success, Prediction = 5, True Label = 5
+Image 396: Success, Prediction = 6, True Label = 6
+Image 397: Success, Prediction = 7, True Label = 7
+Image 398: Success, Prediction = 8, True Label = 8
+Image 399: Success, Prediction = 9, True Label = 9
+Image 400: Success, Prediction = 0, True Label = 0
+Image 401: Success, Prediction = 1, True Label = 1
+Image 402: Success, Prediction = 2, True Label = 2
+Image 403: Success, Prediction = 3, True Label = 3
+Image 404: Success, Prediction = 4, True Label = 4
+Image 405: Fail, Prediction = 8, True Label = 5
+Image 406: Success, Prediction = 6, True Label = 6
+Image 407: Success, Prediction = 7, True Label = 7
+Image 408: Success, Prediction = 8, True Label = 8
+Image 409: Success, Prediction = 9, True Label = 9
+Image 410: Success, Prediction = 0, True Label = 0
+Image 411: Success, Prediction = 1, True Label = 1
+Image 412: Success, Prediction = 2, True Label = 2
+Image 413: Success, Prediction = 3, True Label = 3
+Image 414: Success, Prediction = 4, True Label = 4
+Image 415: Success, Prediction = 5, True Label = 5
+Image 416: Success, Prediction = 6, True Label = 6
+Image 417: Success, Prediction = 7, True Label = 7
+Image 418: Success, Prediction = 8, True Label = 8
+Image 419: Success, Prediction = 9, True Label = 9
+Image 420: Success, Prediction = 0, True Label = 0
+Image 421: Success, Prediction = 1, True Label = 1
+Image 422: Success, Prediction = 2, True Label = 2
+Image 423: Success, Prediction = 3, True Label = 3
+Image 424: Success, Prediction = 4, True Label = 4
+Image 425: Success, Prediction = 5, True Label = 5
+Image 426: Success, Prediction = 6, True Label = 6
+Image 427: Success, Prediction = 7, True Label = 7
+Image 428: Success, Prediction = 8, True Label = 8
+Image 429: Success, Prediction = 9, True Label = 9
+Image 430: Success, Prediction = 0, True Label = 0
+Image 431: Success, Prediction = 1, True Label = 1
+Image 432: Success, Prediction = 2, True Label = 2
+Image 433: Success, Prediction = 3, True Label = 3
+Image 434: Success, Prediction = 4, True Label = 4
+Image 435: Success, Prediction = 5, True Label = 5
+Image 436: Success, Prediction = 6, True Label = 6
+Image 437: Success, Prediction = 7, True Label = 7
+Image 438: Success, Prediction = 8, True Label = 8
+Image 439: Success, Prediction = 9, True Label = 9
+Image 440: Success, Prediction = 0, True Label = 0
+Image 441: Success, Prediction = 1, True Label = 1
+Image 442: Success, Prediction = 2, True Label = 2
+Image 443: Success, Prediction = 3, True Label = 3
+Image 444: Success, Prediction = 4, True Label = 4
+Image 445: Success, Prediction = 5, True Label = 5
+Image 446: Success, Prediction = 6, True Label = 6
+Image 447: Success, Prediction = 7, True Label = 7
+Image 448: Success, Prediction = 8, True Label = 8
+Image 449: Success, Prediction = 9, True Label = 9
+Image 450: Success, Prediction = 0, True Label = 0
+Image 451: Success, Prediction = 1, True Label = 1
+Image 452: Success, Prediction = 2, True Label = 2
+Image 453: Success, Prediction = 3, True Label = 3
+Image 454: Success, Prediction = 4, True Label = 4
+Image 455: Success, Prediction = 5, True Label = 5
+Image 456: Success, Prediction = 6, True Label = 6
+Image 457: Success, Prediction = 7, True Label = 7
+Image 458: Success, Prediction = 8, True Label = 8
+Image 459: Success, Prediction = 9, True Label = 9
+Image 460: Success, Prediction = 0, True Label = 0
+Image 461: Success, Prediction = 1, True Label = 1
+Image 462: Fail, Prediction = 1, True Label = 2
+Image 463: Success, Prediction = 3, True Label = 3
+Image 464: Success, Prediction = 4, True Label = 4
+Image 465: Success, Prediction = 5, True Label = 5
+Image 466: Success, Prediction = 6, True Label = 6
+Image 467: Success, Prediction = 7, True Label = 7
+Image 468: Success, Prediction = 8, True Label = 8
+Image 469: Success, Prediction = 9, True Label = 9
+Image 470: Success, Prediction = 0, True Label = 0
+Image 471: Success, Prediction = 1, True Label = 1
+Image 472: Success, Prediction = 2, True Label = 2
+Image 473: Success, Prediction = 3, True Label = 3
+Image 474: Success, Prediction = 4, True Label = 4
+Image 475: Success, Prediction = 5, True Label = 5
+Image 476: Success, Prediction = 6, True Label = 6
+Image 477: Success, Prediction = 7, True Label = 7
+Image 478: Success, Prediction = 8, True Label = 8
+Image 479: Success, Prediction = 9, True Label = 9
+Image 480: Success, Prediction = 0, True Label = 0
+Image 481: Success, Prediction = 1, True Label = 1
+Image 482: Success, Prediction = 2, True Label = 2
+Image 483: Success, Prediction = 3, True Label = 3
+Image 484: Success, Prediction = 4, True Label = 4
+Image 485: Success, Prediction = 5, True Label = 5
+Image 486: Success, Prediction = 6, True Label = 6
+Image 487: Success, Prediction = 7, True Label = 7
+Image 488: Success, Prediction = 8, True Label = 8
+Image 489: Success, Prediction = 9, True Label = 9
+Image 490: Success, Prediction = 0, True Label = 0
+Image 491: Success, Prediction = 1, True Label = 1
+Image 492: Success, Prediction = 2, True Label = 2
+Image 493: Success, Prediction = 3, True Label = 3
+Image 494: Success, Prediction = 4, True Label = 4
+Image 495: Success, Prediction = 5, True Label = 5
+Image 496: Success, Prediction = 6, True Label = 6
+Image 497: Success, Prediction = 7, True Label = 7
+Image 498: Success, Prediction = 8, True Label = 8
+Image 499: Success, Prediction = 9, True Label = 9
+Image 500: Success, Prediction = 0, True Label = 0
+Image 501: Success, Prediction = 1, True Label = 1
+Image 502: Success, Prediction = 2, True Label = 2
+Image 503: Success, Prediction = 3, True Label = 3
+Image 504: Success, Prediction = 4, True Label = 4
+Image 505: Fail, Prediction = 8, True Label = 5
+Image 506: Success, Prediction = 6, True Label = 6
+Image 507: Success, Prediction = 7, True Label = 7
+Image 508: Success, Prediction = 8, True Label = 8
+Image 509: Success, Prediction = 9, True Label = 9
+Image 510: Success, Prediction = 0, True Label = 0
+Image 511: Success, Prediction = 1, True Label = 1
+Image 512: Success, Prediction = 2, True Label = 2
+Image 513: Success, Prediction = 3, True Label = 3
+Image 514: Success, Prediction = 4, True Label = 4
+Image 515: Success, Prediction = 5, True Label = 5
+Image 516: Success, Prediction = 6, True Label = 6
+Image 517: Success, Prediction = 7, True Label = 7
+Image 518: Success, Prediction = 8, True Label = 8
+Image 519: Success, Prediction = 9, True Label = 9
+Image 520: Success, Prediction = 0, True Label = 0
+Image 521: Success, Prediction = 1, True Label = 1
+Image 522: Success, Prediction = 2, True Label = 2
+Image 523: Success, Prediction = 3, True Label = 3
+Image 524: Success, Prediction = 4, True Label = 4
+Image 525: Success, Prediction = 5, True Label = 5
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 853.410 ; gain = 3.012
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  1 13:03:00 2024...

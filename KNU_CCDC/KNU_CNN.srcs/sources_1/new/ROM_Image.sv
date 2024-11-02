@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module ROM_Image #(
-    parameter IMAGE_FILE = ""
+    parameter IMAGE_FILE = "E:/cnn_verilog/data/0_01.txt"
 ) (
     input wire clk_i,
     input wire rstn_i,

@@ -1,0 +1,264 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov  1 19:57:23 2024
+# Process ID: 19888
+# Current directory: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24036 D:\Git_repo\KNU_CCDC\KNU_CNN_verilog\KNU_CNN_verilog.xpr
+# Log file: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/vivado.log
+# Journal file: D:/Git_repo/KNU_CCDC/KNU_CNN_verilog\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/opqrs/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+set_property top tb_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_top
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xelab -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v:113]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.global_controller
+Compiling module xil_defaultlib.conv2d_pe
+Compiling module xil_defaultlib.Accumulator
+Compiling module xil_defaultlib.PE_Array_default
+Compiling module xil_defaultlib.comparator
+Compiling module xil_defaultlib.FIFO
+Compiling module xil_defaultlib.Max_Pooling_ReLU
+Compiling module xil_defaultlib.buffer1
+Compiling module xil_defaultlib.shiftBuffer
+Compiling module xil_defaultlib.MAC
+Compiling module xil_defaultlib.matmul_default
+Compiling module xil_defaultlib.max_finder
+Compiling module xil_defaultlib.FC_layer
+Compiling module xil_defaultlib.FC_controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.fc_weight_ROM(WEIGHT_FILE="D:/Gi...
+Compiling module xil_defaultlib.fc_bias_ROM(BIAS_FILE="D:/Git_re...
+Compiling module xil_defaultlib.ROM_Weight(WEIGHT_FILE_conv1_1="...
+Compiling module xil_defaultlib.ROM_Bias(WEIGHT_FILE_bias_1="D:/...
+Compiling module xil_defaultlib.tb_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_top_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/xsim.dir/tb_top_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov  1 19:57:51 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_top_behav -key {Behavioral:sim_1:Functional:tb_top} -tclbatch {tb_top.tcl} -view {D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_behav.wcfg} -view {D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_1000_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_behav.wcfg
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/clk_i was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/data_i was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/shift_en was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/data_o was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/register was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/i was not found in the design.
+open_wave_config D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/tb_top_1000_behav.wcfg
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/clk_i was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/data_i was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/shift_en was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/data_o was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/register was not found in the design.
+WARNING: Simulation object /tb_top_1000/TOP_inst/shiftBuffer1/i was not found in the design.
+source tb_top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 947.199 ; gain = 49.395
+current_wave_config {tb_top_1000_behav.wcfg}
+tb_top_1000_behav.wcfg
+add_wave {{/tb_top/TOP_inst/shiftBuffer1}} 
+current_wave_config {tb_top_1000_behav.wcfg}
+tb_top_1000_behav.wcfg
+add_wave {{/tb_top/TOP_inst/fc_layer/flatten_input_i}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xelab -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v:113]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 947.199 ; gain = 0.000
+run 10 us
+$finish called at time : 1287 ns : File "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v" Line 76
+current_wave_config {tb_top_1000_behav.wcfg}
+tb_top_1000_behav.wcfg
+add_wave {{/tb_top/TOP_inst/shiftBuffer2}} 
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_top_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim'
+"xelab -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f56de015da3246728a8e513befab3aea --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'bias_idx' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v:113]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 952.645 ; gain = 0.000
+run 10 us
+$finish called at time : 1287 ns : File "D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v" Line 76
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010iclg225-1L
+Top: top
+INFO: [Device 21-403] Loading part xc7z010iclg225-1L
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1371.188 ; gain = 180.336
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'global_controller' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/global_controller.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/global_controller.v:73]
+WARNING: [Synth 8-6014] Unused sequential element idx_clear_reg was removed.  [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/global_controller.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'global_controller' (1#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/global_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PE_Array' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/PE_Array.v:1]
+INFO: [Synth 8-6157] synthesizing module 'conv2d_pe' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/conv2d_pe.v:1]
+WARNING: [Synth 8-6014] Unused sequential element partial_sum_reg was removed.  [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/conv2d_pe.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'conv2d_pe' (2#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/conv2d_pe.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Accumulator' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Accumulator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Accumulator' (3#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Accumulator.v:1]
+WARNING: [Synth 8-3936] Found unconnected internal register 'clear_d_reg' and it is trimmed from '2' to '1' bits. [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/PE_Array.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'PE_Array' (4#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/PE_Array.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FIFO' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FIFO.v:1]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/comparator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (5#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/comparator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO' (6#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FIFO.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Max_Pooling_ReLU' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Max_Pooling_ReLU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Max_Pooling_ReLU' (7#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Max_Pooling_ReLU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'buffer1' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/buffer1.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'buffer1' (8#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/buffer1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shiftBuffer' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/shiftBuffer.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'shiftBuffer' (9#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/shiftBuffer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FC_layer' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_layer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'matmul' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/matmul.v:1]
+INFO: [Synth 8-6157] synthesizing module 'MAC' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/MAC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'MAC' (10#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/MAC.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'matmul' (11#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/matmul.v:1]
+INFO: [Synth 8-6157] synthesizing module 'max_finder' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v:1]
+WARNING: [Synth 8-6014] Unused sequential element max_value_reg was removed.  [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v:28]
+WARNING: [Synth 8-6014] Unused sequential element max_index_reg was removed.  [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'max_finder' (12#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FC_layer' (13#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_layer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'FC_controller' [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FC_controller' (14#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (15#1) [D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v:1]
+WARNING: [Synth 8-3331] design FC_controller has unconnected port next_i
+WARNING: [Synth 8-3331] design buffer1 has unconnected port clear_i
+WARNING: [Synth 8-3331] design conv2d_pe has unconnected port clear_i
+WARNING: [Synth 8-3331] design global_controller has unconnected port iPE_valid_o
+WARNING: [Synth 8-3331] design global_controller has unconnected port fc_done_i
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1440.961 ; gain = 250.109
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1440.961 ; gain = 250.109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1440.961 ; gain = 250.109
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1608.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1638.562 ; gain = 447.711
+35 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 1638.562 ; gain = 685.918

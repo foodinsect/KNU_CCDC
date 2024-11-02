@@ -10,7 +10,7 @@ module max_finder ( //2024.10.13 update
     reg [3:0] max_index;
     integer i;
 
-    always @(posedge clk_i or negedge rstn_i) begin
+    always @(posedge clk_i) begin
         if (!rstn_i) begin
             max_value <= -12'sd2048;
             max_index <= 4'd0;

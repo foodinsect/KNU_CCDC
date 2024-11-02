@@ -2,8 +2,8 @@
 
 module ROM_Bias #(
     parameter DATA_WIDTH = 8, 
-    parameter WEIGHT_FILE_bias_1 = "", 
-    parameter WEIGHT_FILE_bias_2 = ""
+    parameter WEIGHT_FILE_bias_1 = "E:/cnn_verilog/data/conv1_bias.txt", 
+    parameter WEIGHT_FILE_bias_2 = "E:/cnn_verilog/data/conv2_bias.txt"
 ) (
     output wire signed [DATA_WIDTH-1:0] oDAT_bias_1 [0:2],
     output wire signed [DATA_WIDTH-1:0] oDAT_bias_2 [0:2]

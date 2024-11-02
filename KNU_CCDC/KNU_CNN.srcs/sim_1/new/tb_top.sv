@@ -2,7 +2,7 @@
 
 module tb_top();
     /////////// MUST write VIVADO project location//////////////////////
-    parameter VIVADO_PROJECT_LOCATION = "D:/Git_repo/KNU_CCDC/KNU_CCDC";
+    parameter VIVADO_PROJECT_LOCATION = "E:/cnn_verilog";
     ////////////////////////////////////////////////////////////////////
     reg clk;
     reg rstn;
@@ -73,18 +73,6 @@ module tb_top();
         .conv1_weight_3 (conv_weight_in3),
         .bias_1(bias_in),
 
-        /*.conv2_weight_11 (conv2_weight_11),
-        .conv2_weight_12 (conv2_weight_12),
-        .conv2_weight_13 (conv2_weight_13),
-        .conv2_weight_21 (conv2_weight_21),
-        .conv2_weight_22 (conv2_weight_22),
-        .conv2_weight_23 (conv2_weight_23),
-        .conv2_weight_31 (conv2_weight_31),
-        .conv2_weight_32 (conv2_weight_32),
-        .conv2_weight_33 (conv2_weight_33),
-        .bias_2(bias_2),
-        */
-
         .weight_enable(weight_enable),
         .weight_indexing(weight_indexing),
         
@@ -115,27 +103,6 @@ module tb_top();
         $finish;
     end
 
-/*   
-    initial begin
-        // Read weights and biases for conv1
-        $readmemh("E:/cnn_verilog/data/conv1_weight_1.txt", conv1_weight_1);
-        $readmemh("E:/cnn_verilog/data/conv1_weight_2.txt", conv1_weight_2);
-        $readmemh("E:/cnn_verilog/data/conv1_weight_3.txt", conv1_weight_3);
-        $readmemh("E:/cnn_verilog/data/conv1_bias.txt", bias_1);
-
-        // Read weights and biases for conv2
-        $readmemh("E:/cnn_verilog/data/conv2_weight_11.txt", conv2_weight_11);
-        $readmemh("E:/cnn_verilog/data/conv2_weight_12.txt", conv2_weight_12);
-        $readmemh("E:/cnn_verilog/data/conv2_weight_13.txt", conv2_weight_13);
-        $readmemh("E:/cnn_verilog/data/conv2_weight_21.txt", conv2_weight_21);
-        $readmemh("E:/cnn_verilog/data/conv2_weight_22.txt", conv2_weight_22);
-        $readmemh("E:/cnn_verilog/data/conv2_weight_23.txt", conv2_weight_23);
-        $readmemh("E:/cnn_verilog/data/conv2_weight_31.txt", conv2_weight_31);
-        $readmemh("E:/cnn_verilog/data/conv2_weight_32.txt", conv2_weight_32);
-        $readmemh("E:/cnn_verilog/data/conv2_weight_33.txt", conv2_weight_33);
-        $readmemh("E:/cnn_verilog/data/conv2_bias.txt", bias_2);
-    end
-*/
     integer i;
     // image rom
     always @(posedge clk or negedge rstn) begin
@@ -159,34 +126,34 @@ module tb_top();
         end
     end
 
-// weight MUX 
+    // weight MUX 
 
-assign conv_weight_in1 = (weight_sel == 2'b00 ? conv1_weight_1 :
-                          weight_sel == 2'b01 ? conv2_weight_11:
-                          weight_sel == 2'b10 ? conv2_weight_12:
-                          conv2_weight_13);
+    assign conv_weight_in1 = (weight_sel == 2'b00 ? conv1_weight_1 :
+                            weight_sel == 2'b01 ? conv2_weight_11:
+                            weight_sel == 2'b10 ? conv2_weight_12:
+                            conv2_weight_13);
 
-assign conv_weight_in2 = (weight_sel == 2'b00 ? conv1_weight_2 :
-                          weight_sel == 2'b01 ? conv2_weight_21:
-                          weight_sel == 2'b10 ? conv2_weight_22:
-                          conv2_weight_23);
+    assign conv_weight_in2 = (weight_sel == 2'b00 ? conv1_weight_2 :
+                            weight_sel == 2'b01 ? conv2_weight_21:
+                            weight_sel == 2'b10 ? conv2_weight_22:
+                            conv2_weight_23);
 
-assign conv_weight_in3 = (weight_sel == 2'b00 ? conv1_weight_3 :
-                          weight_sel == 2'b01 ? conv2_weight_31:
-                          weight_sel == 2'b10 ? conv2_weight_32:
-                          conv2_weight_33);
+    assign conv_weight_in3 = (weight_sel == 2'b00 ? conv1_weight_3 :
+                            weight_sel == 2'b01 ? conv2_weight_31:
+                            weight_sel == 2'b10 ? conv2_weight_32:
+                            conv2_weight_33);
 
-// bias mux
-assign bias_in = (bias_sel == 2'b00 ? conv1_bias :
-                  bias_sel == 2'b01 ? conv2_bias :
-                  zero_bias);
+    // bias mux
+    assign bias_in = (bias_sel == 2'b00 ? conv1_bias :
+                    bias_sel == 2'b01 ? conv2_bias :
+                    zero_bias);
 
 
-initial begin
-    zero_bias[0] = 8'd0;
-    zero_bias[1] = 8'd0;
-    zero_bias[2] = 8'd0;
-end
+    initial begin
+        zero_bias[0] = 8'd0;
+        zero_bias[1] = 8'd0;
+        zero_bias[2] = 8'd0;
+    end
 
     fc_weight_ROM#(
         .WEIGHT_FILE({{VIVADO_PROJECT_LOCATION},{"/data/fc_weight_transposed.txt"}})
@@ -236,7 +203,7 @@ end
         .oDAT_conv2_32(conv2_weight_32),
         .oDAT_conv2_33(conv2_weight_33)
     );
-    
+
     ROM_Bias#(
         .WEIGHT_FILE_bias_1({{VIVADO_PROJECT_LOCATION},{"/data/conv1_bias.txt"}}),
         .WEIGHT_FILE_bias_2({{VIVADO_PROJECT_LOCATION},{"/data/conv2_bias.txt"}})
@@ -245,13 +212,6 @@ end
         .oDAT_bias_2(conv2_bias)
     );
     
-    // Finish simulation when done is high
-    // always @(posedge clk) begin
-    //     if (done) begin
-    //         $finish;  // End the simulation
-    //     end
-    // end
-
 /*
 ////////////////////////////////////////////////////////////////////
 // ROMs inst

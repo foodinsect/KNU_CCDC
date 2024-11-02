@@ -1,8 +1,0 @@
-00199 01a0b 04dce 025b0 fb35e fb15e fdbc1 030a5
-00df9 0443d 0444c fda9b f8276 fa7a3 fbdd5 fa250
-02f5f 057f6 00730 faf7b f9bef f9a44 f59c9 f428a
-04db4 031b1 fceb2 fa6f6 fb21d f7702 f31d5 f4f02
-03a7f fe2f5 fa3ec fae78 fab06 f3c89 f3edd f8572
-ffea5 f9eb5 fa445 fac15 f724a f3da1 f6ec9 fc391
-fc708 f7127 fa7c8 f9483 f39e1 f5b7c f9f28 ff853
-f576c f2009 f4629 f675f f3a31 f8766 fdd0f 00000

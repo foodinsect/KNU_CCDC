@@ -1,0 +1,26 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.sim/sim_1/behav/xsim/glbl.v,1730339592,verilog,,,,glbl,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v,1730433559,verilog,,,,tb_top,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top_1000.v,1730433749,verilog,,,,tb_top_1000,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Accumulator.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_controller.v,,Accumulator,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_controller.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_layer.v,,FC_controller,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FC_layer.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FIFO.v,,FC_layer,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/FIFO.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/MAC.v,,FIFO,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/MAC.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Max_Pooling_ReLU.v,,MAC,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/Max_Pooling_ReLU.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/PE_Array.v,,Max_Pooling_ReLU,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/PE_Array.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Bias.v,,PE_Array,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Bias.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v,,ROM_Bias,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/ROM_Weight.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/buffer1.v,,ROM_Weight,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/buffer1.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/comparator.v,,buffer1,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/comparator.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/conv2d_pe.v,,comparator,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/conv2d_pe.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_bias_ROM.v,,conv2d_pe,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_bias_ROM.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_weight_ROM.v,,fc_bias_ROM,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/fc_weight_ROM.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/global_controller.v,,fc_weight_ROM,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/global_controller.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/matmul.v,,global_controller,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/matmul.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v,,matmul,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/max_finder.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/shiftBuffer.v,,max_finder,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/shiftBuffer.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v,,shiftBuffer,,,,,,,,
+D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/source_1/top.v,1730339592,verilog,,D:/Git_repo/KNU_CCDC/KNU_CNN_verilog/KNU_CNN_verilog.srcs/sim_1/tb_top.v,,top,,,,,,,,

@@ -12,17 +12,18 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="26900000001fs"></ZoomEndTime>
-      <Cursor1Time time="6435000000fs"></Cursor1Time>
+      <ZoomEndTime time="57300000001fs"></ZoomEndTime>
+      <Cursor1Time time="10150000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="206"></NameColumnWidth>
-      <ValueColumnWidth column_width="124"></ValueColumnWidth>
+      <ValueColumnWidth column_width="247"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="56" />
    <wvobject fp_name="group775" type="group">
       <obj_property name="label">ROM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/tb_top/pixels" type="array">
          <obj_property name="ElementShortName">pixels[0:783][7:0]</obj_property>
          <obj_property name="ObjectShortName">pixels[0:783][7:0]</obj_property>
@@ -97,9 +98,8 @@
    <wvobject fp_name="/tb_top/TOP_inst/result" type="array">
       <obj_property name="ElementShortName">result[3:0]</obj_property>
       <obj_property name="ObjectShortName">result[3:0]</obj_property>
-      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider367">
       <obj_property name="label">controller</obj_property>
@@ -836,8 +836,6 @@
       <wvobject fp_name="/tb_top/TOP_inst/fc_layer/matmul_inst/\mac_inst[0].MAC_inst /mac_en_i" type="logic">
          <obj_property name="ElementShortName">mac_en_i</obj_property>
          <obj_property name="ObjectShortName">mac_en_i</obj_property>
-         <obj_property name="CustomSignalColor">#00FF00</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_top/TOP_inst/fc_layer/matmul_inst/\mac_inst[0].MAC_inst /mac_en2" type="logic">
          <obj_property name="ElementShortName">mac_en2</obj_property>
@@ -850,6 +848,10 @@
       <wvobject fp_name="/tb_top/TOP_inst/fc_layer/matmul_inst/\mac_inst[0].MAC_inst /clear1" type="logic">
          <obj_property name="ElementShortName">clear1</obj_property>
          <obj_property name="ObjectShortName">clear1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_top/TOP_inst/fc_layer/matmul_inst/\mac_inst[0].MAC_inst /clear2" type="logic">
+         <obj_property name="ElementShortName">clear2</obj_property>
+         <obj_property name="ObjectShortName">clear2</obj_property>
       </wvobject>
       <wvobject fp_name="/tb_top/TOP_inst/fc_layer/matmul_inst/\mac_inst[0].MAC_inst /valid_out_o" type="logic">
          <obj_property name="ElementShortName">valid_out_o</obj_property>
